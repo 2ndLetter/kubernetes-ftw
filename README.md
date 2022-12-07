@@ -4,12 +4,13 @@
 
 ## To Do:
 - [ ] Finish the Udemy CKA course
-- [ ] Find and practice the killer.sh labs
+- [ ] Practice killer.sh Simulator
 
 ## Learning Material:
 - [x] [Docker Certified Associate (A Cloud Guru)](https://learn.acloud.guru/course/6b00566d-6246-4ebe-8257-f98f989321cf/overview)
 - [x] [Learn Kubernetes by Doing (A Cloud Guru)](https://learn.acloud.guru/course/82b39fac-b9f7-43d1-8f52-6a89efe5202f/dashboard)
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+- [ ] [Killer Shell Simulator](https://killer.sh/)
 
 ## Lessons Learned:
 - I completed the ACG Docker course to prepare me for diving into Kubernetes
