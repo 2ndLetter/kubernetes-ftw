@@ -22,5 +22,7 @@
 - `kubectl get pods -o wide` [List more details]
 - `kubectl run --help` [Help file]
 - `kubectl run nginx --image=nginx` [Create pod]
-- `kubectl describe pod <pod-name>` [Get specific pod details]
-- ``
+- `kubectl describe pod <pod_name>` [Get specific pod details]
+- `kubectl delete pod <pod_name>`[Delete pod]
+- `kubectl run <pod_name> --image=<image_name> --dry-run -o yaml` [Create pod-definition YAML file]
+
