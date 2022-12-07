@@ -19,11 +19,15 @@
 - This was a great move!
 - The Udemy course is a GREAT resource
 - Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
+    - Udemy course, video 32 has related tips!
+- Exam_Note: Learn the short form of commands [Example: `kubectl get rs <replicaset_name>`]
+
 
 
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
+- `kubectl get all` [Get all resources]
 - `kubectl run <pod_name> --image=<image_name> --dry-run=client -o yaml > file.yaml` [Create pod-definition]
 - `kubectl run nginx --image=nginx` [Create nginx pod]
 - `kubectl describe pod <pod_name>` [Get specific pod details]
@@ -33,6 +37,8 @@
 - `kubectl scale ...` [Set a new size for a Deployment, RelicaSet, Replication Controller, or StatefulSet]
 - `kubectl replace ...` [Replace a resource by filename or stdin]
 - `kubectl edit ...` [Edit a resource from the default editor]
+- `kubectl explain <resource> ...` [List the fileds for supported resources]
+
 
 ## Kubernetes Architecture: [LINK](https://kubernetes.io/docs/concepts/overview/components/)
 - Control Plane:
