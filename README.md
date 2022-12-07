@@ -18,13 +18,12 @@
 
 
 ## Useful commands:
-- `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
-- `kubectl get pods -o wide` [List more details]
 - `kubectl --help` [Help documentation]
-- `kubectl run nginx --image=nginx` [Create pod]
+- `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
+- `kubectl run <pod_name> --image=<image_name> --dry-run=client -o yaml > file.yaml` [Create pod-definition]
+- `kubectl run nginx --image=nginx` [Create nginx pod]
 - `kubectl describe pod <pod_name>` [Get specific pod details]
 - `kubectl delete pod <pod_name>` [Delete pod]
-- `kubectl run <pod_name> --image=<image_name> --dry-run=client -o yaml > file.yaml` [Create pod-definition]
 - `kubectl create -f FILENAME` [Create a resource from a file or from stdin]
 - `kubectl apply -f FILENAME` [Apply a config to a resource by file name or stdin]
 - `kubectl scale ...` [Set a new size for a Deployment, RelicaSet, Replication Controller, or StatefulSet]
