@@ -31,11 +31,11 @@
 - Control Plane:
     - ETCD: Highly-available key-value store used to store all cluster data
     - kube-apiserver: Exposes the Kubernetes API
-    - kube Controller Manager: 
-    - kube-scheduler: 
+    - kube Controller Manager: Runs controller processes "Node, Job, EndpointSlice, ServiceAccount"
+    - kube-scheduler: Chooses which node to run a new Pod if its not already assigned
 - Worker Node:
-    - kubelet: 
-    - kube-proxy: 
-    - Container Runtime Engine: 
+    - kubelet: An agent that runs on each node, ensuring the containers are running in a Pod
+    - kube-proxy: Network proxy that runs on each node
+    - Container Runtime Engine: Software responsible for running containers
 
 ![alt text](kubernetes__architecture.PNG "Diagram")
