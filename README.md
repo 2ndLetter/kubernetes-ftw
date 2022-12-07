@@ -3,6 +3,7 @@
 *The purpose of this **unfinished** repository is to document my Kubernetes journey, and nerd-out!*
 
 ## To Do:
+- [ ] Finish the Udemy CKA course
 
 ## Learning Material:
 - [x] [Docker Certified Associate (A Cloud Guru)](https://learn.acloud.guru/course/6b00566d-6246-4ebe-8257-f98f989321cf/overview)
