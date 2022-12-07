@@ -18,9 +18,9 @@
 
 
 ## Useful commands:
-- `kubectl get pods` [List pods in default namespace]
+- `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
 - `kubectl get pods -o wide` [List more details]
-- `kubectl run --help` [Help file]
+- `kubectl --help` [Help documentation]
 - `kubectl run nginx --image=nginx` [Create pod]
 - `kubectl describe pod <pod_name>` [Get specific pod details]
 - `kubectl delete pod <pod_name>` [Delete pod]
