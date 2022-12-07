@@ -10,10 +10,17 @@
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 
 ## Lessons Learned:
-- I completed the ACG Docker course as a container refresher before diving into Kubernetes
+- I completed the ACG Docker course to prepare me for diving into Kubernetes
 - The Udemy course was hard to follow when I had zero hands-on experience
 - After a few videos in, I pivoted to the ACG Learn Kubernetes by Doing course to get my hands dirty
 - This was a great move!
 - The Udemy course is a GREAT resource
 
 
+## Useful commands:
+- `kubectl get pods` [List pods in default namespace]
+- `kubectl get pods -o wide` [List more details]
+- `kubectl run --help` [Help file]
+- `kubectl run nginx --image=nginx` [Create pod]
+- `kubectl describe pod <pod-name>` [Get specific pod details]
+- ``
