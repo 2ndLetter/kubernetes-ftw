@@ -37,3 +37,5 @@
     - kubelet: 
     - kube-proxy: 
     - Container Runtime Engine: 
+
+![alt text](kubernetes_architecture.PNG "Diagram")
