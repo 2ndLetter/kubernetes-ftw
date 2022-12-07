@@ -28,6 +28,7 @@
 - `kubectl apply -f FILENAME` [Apply a config to a resource by file name or stdin]
 - `kubectl scale ...` [Set a new size for a Deployment, RelicaSet, Replication Controller, or StatefulSet]
 - `kubectl replace ...` [Replace a resource by filename or stdin]
+- `kubectl edit ...` [Edit a resource from the default editor]
 
 ## Kubernetes Architecture: [LINK](https://kubernetes.io/docs/concepts/overview/components/)
 - Control Plane:
