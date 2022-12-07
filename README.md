@@ -18,6 +18,7 @@
 - After a few videos in, I pivoted to the ACG Learn Kubernetes by Doing course to get my hands dirty
 - This was a great move!
 - The Udemy course is a GREAT resource
+- Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
 
 
 ## Useful commands:
