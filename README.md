@@ -25,7 +25,10 @@
 - `kubectl describe pod <pod_name>` [Get specific pod details]
 - `kubectl delete pod <pod_name>` [Delete pod]
 - `kubectl run <pod_name> --image=<image_name> --dry-run=client -o yaml > file.yaml` [Create pod-definition]
-- `kubectl apply -f file.yaml` [Create pod]
+- `kubectl create -f FILENAME` [Create a resource from a file or from stdin]
+- `kubectl apply -f FILENAME` [Apply a config to a resource by file name or stdin]
+- `kubectl scale ...` [Set a new size for a Deployment, RelicaSet, Replication Controller, or StatefulSet]
+- `kubectl replace ...` [Replace a resource by filename or stdin]
 
 ## Kubernetes Architecture: [LINK](https://kubernetes.io/docs/concepts/overview/components/)
 - Control Plane:
