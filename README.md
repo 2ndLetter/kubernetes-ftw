@@ -20,10 +20,14 @@
 - The Udemy course is a GREAT resource
 - Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
     - Udemy course, video 32 has related tips!
-- Exam_Note: Learn the short form of commands [Example: `kubectl get rs <replicaset_name>`]
+- Exam_Note: Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
+    - svc [service]
+    - rs [replicaset]
+    - ns [amespaces]
+- Exam_Note: SHORTCUTS
+    - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
+    - `-A` vs `--all-namespaces`
 - Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
-
-
 
 ## Useful commands:
 - `kubectl --help` [Help documentation]
@@ -40,7 +44,6 @@
 - `kubectl replace ...` [Replace a resource by filename or stdin]
 - `kubectl edit ...` [Edit a resource from the default editor]
 - `kubectl explain <resource> ...` [List the fileds for supported resources]
-
 
 ## Kubernetes Architecture: [LINK](https://kubernetes.io/docs/concepts/overview/components/)
 - Control Plane:
