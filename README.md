@@ -21,6 +21,7 @@
 - Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
     - Udemy course, video 32 has related tips!
 - Exam_Note: Learn the short form of commands [Example: `kubectl get rs <replicaset_name>`]
+- Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
 
 
 
