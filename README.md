@@ -27,6 +27,8 @@
 - Exam_Note: SHORTCUTS
     - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
     - `-A` vs `--all-namespaces`
+- Exam_Notes:
+    - Use Imperative commands to save time during the exam (video 43)
 - Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
 
 ## Useful commands:
