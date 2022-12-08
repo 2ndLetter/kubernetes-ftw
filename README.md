@@ -33,6 +33,7 @@
 - `kubectl describe pod <pod_name>` [Get specific pod details]
 - `kubectl delete pod <pod_name>` [Delete pod]
 - `kubectl create -f FILENAME` [Create a resource from a file or from stdin]
+- `kubectl create deployment my-dep --image=httpd:2.4-alpine --replicas=3` [Create deployment w/o a YAML file]
 - `kubectl apply -f FILENAME` [Apply a config to a resource by file name or stdin]
 - `kubectl scale ...` [Set a new size for a Deployment, RelicaSet, Replication Controller, or StatefulSet]
 - `kubectl replace ...` [Replace a resource by filename or stdin]
