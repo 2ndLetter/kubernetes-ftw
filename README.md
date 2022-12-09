@@ -11,6 +11,7 @@
 - [x] [Learn Kubernetes by Doing (A Cloud Guru)](https://learn.acloud.guru/course/82b39fac-b9f7-43d1-8f52-6a89efe5202f/dashboard)
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 - [ ] [Killer Shell Simulator](https://killer.sh/)
+    - This is free after registering for your exam [link](https://killer.sh/pricing)
 
 ## Lessons Learned:
 - I completed the ACG Docker course to prepare me for diving into Kubernetes
