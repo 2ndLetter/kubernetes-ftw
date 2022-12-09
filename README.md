@@ -23,7 +23,10 @@
 - Exam_Note: Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
     - svc [service]
     - rs [replicaset]
-    - ns [amespaces]
+    - rc [replicationcontroller]
+    - ns [namespaces]
+    - po [pod]
+    - deploy [deployment]
 - Exam_Note: SHORTCUTS
     - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
     - `-A` vs `--all-namespaces`
