@@ -30,6 +30,8 @@
 - Exam_Notes:
     - Use Imperative commands to save time during the exam (video 43/44)
 - Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
+- Exam_Notes:
+    - Run `kubectl <command> --help` and pipe to grep for examples [Example: `kubectl expose --help | grep "kubectl expose"`]
 
 ## Useful commands:
 - `kubectl --help` [Help documentation]
