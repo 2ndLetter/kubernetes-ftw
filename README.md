@@ -38,6 +38,10 @@
     - Run `kubectl <command> --help` and pipe to grep for examples
     - Example: `kubectl expose --help | grep "kubectl expose"`
     - Look into creating an alias for kubectl = k
+    - Learn VIM quick commands, specifically around editing yaml files quickly
+- If creating via Imperative:
+    - `kubectl create <object> ..`
+    - `kubectl edit <object> ..`
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
