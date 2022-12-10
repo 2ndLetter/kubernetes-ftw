@@ -37,7 +37,7 @@
 - Exam_Tips:
     - Run `kubectl <command> --help` and pipe to grep for examples
     - Example: `kubectl expose --help | grep "kubectl expose"`
-    - Look into creating an alias for kubectl = k
+    - Look into creating an alias for kubectl = k (This may already be on some systems?)
     - Learn VIM quick commands, specifically around editing yaml files quickly
     - A lot of tips are located in 1min "videos"
 - If creating via Imperative:
