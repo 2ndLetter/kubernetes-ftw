@@ -40,6 +40,7 @@
     - Look into creating an alias for kubectl = k (This may already be on some systems?)
     - Learn VIM quick commands, specifically around editing yaml files quickly
     - A lot of tips are located in 1min "videos"
+    - If need to create a YAML for DaemonSet, create a YAML for a Deployment and vim the YAML
 - If creating via Imperative:
     - `kubectl create <object> ..` THEN `kubectl edit <object> ..`
     - Use `kubectl replace ...` to replace a running pod using a pod defnintion file
