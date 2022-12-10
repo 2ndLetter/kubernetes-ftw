@@ -21,23 +21,23 @@
 - The Udemy course is a GREAT resource
 - Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
     - Udemy course, video 32 has related tips!
-- Exam_Note: Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
+- Exam_Tips: Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
     - svc [service]
     - rs [replicaset]
     - rc [replicationcontroller]
     - ns [namespaces]
     - po [pod]
     - deploy [deployment]
-- Exam_Note: SHORTCUTS
+- Exam_Tips: SHORTCUTS
     - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
     - `-A` vs `--all-namespaces`
-- Exam_Notes:
+- Exam_Tips:
     - Use Imperative commands to save time during the exam (video 43/44)
 - Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
-- Exam_Notes:
+- Exam_Tips:
     - Run `kubectl <command> --help` and pipe to grep for examples
     - Example: `kubectl expose --help | grep "kubectl expose"`
-
+    - Look into creating an alias for kubectl = k
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
