@@ -41,8 +41,8 @@
     - Learn VIM quick commands, specifically around editing yaml files quickly
     - A lot of tips are located in 1min "videos"
 - If creating via Imperative:
-    - `kubectl create <object> ..`
-    - `kubectl edit <object> ..`
+    - `kubectl create <object> ..` THEN `kubectl edit <object> ..`
+    - Use `kubectl replace ...` to replace a running pod using a pod defnintion file
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
