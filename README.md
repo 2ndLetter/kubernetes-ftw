@@ -44,6 +44,12 @@
 - If creating via Imperative:
     - `kubectl create <object> ..` THEN `kubectl edit <object> ..`
     - Use `kubectl replace ...` to replace a running pod using a pod defnintion file
+- Switching Gears:
+    - About 25% through the course I found I didn't properly record notes for definition files
+    - This is super important as these definition files build on each other
+    - I'm going to passively watch the rest of the course to get familiar with Kubernetes theory
+    - I'll take the course again from begining to end while properly organizing my notes
+    - "This Is The Way..."
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
