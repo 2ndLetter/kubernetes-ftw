@@ -3,7 +3,8 @@
 *The purpose of this **unfinished** repository is to document my Kubernetes journey, and nerd-out!*
 
 ## To Do:
-- [ ] Finish the Udemy CKA course
+- [x] Finish the Udemy CKA course (1st pass)
+- [ ] Finish the Udemy CKA course (2nd pass)
 - [ ] Practice killer.sh Simulator
 
 ## Learning Material:
@@ -19,37 +20,38 @@
 - After a few videos in, I pivoted to the ACG Learn Kubernetes by Doing course to get my hands dirty
 - This was a great move!
 - The Udemy course is a GREAT resource
-- Exam_Note: Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
-    - Udemy course, video 32 has related tips!
-- Exam_Tips: Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
-    - svc [service]
-    - rs [replicaset]
-    - rc [replicationcontroller]
-    - ns [namespaces]
-    - po [pod]
-    - deploy [deployment]
-- Exam_Tips: SHORTCUTS
-    - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
-    - `-A` vs `--all-namespaces`
-- Exam_Tips:
-    - Use Imperative commands to save time during the exam (video 43/44)
 - Definition file examples can be found [here](https://kubernetes.io/docs/concepts/workloads/)
-- Exam_Tips:
-    - Run `kubectl <command> --help` and pipe to grep for examples
-    - Example: `kubectl expose --help | grep "kubectl expose"`
-    - Look into creating an alias for kubectl = k (This may already be on some systems?)
-    - Learn VIM quick commands, specifically around editing yaml files quickly
-    - A lot of tips are located in 1min "videos"
-    - If need to create a YAML for DaemonSet, create a YAML for a Deployment and vim the YAML
-- If creating via Imperative:
-    - `kubectl create <object> ..` THEN `kubectl edit <object> ..`
-    - Use `kubectl replace ...` to replace a running pod using a pod defnintion file
 - Switching Gears:
     - About 25% through the course I found I didn't properly record notes for definition files
     - This is super important as these definition files build on each other
     - I'm going to passively watch the rest of the course to get familiar with Kubernetes theory
     - I'll take the course again from begining to end while properly organizing my notes
     - "This Is The Way..."
+
+## Exam Tips:
+- Read if exam takers recommend using the `kubectl edit` command versus editing the YAML files directly
+    - Udemy course, video 32 has related tips!
+- Learn the short form of commands [Example: `kubectl get <resource> <resource_name>`]
+    - svc [service]
+    - rs [replicaset]
+    - rc [replicationcontroller]
+    - ns [namespaces]
+    - po [pod]
+    - deploy [deployment]
+- SHORTCUTS:
+    - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
+    - `-A` vs `--all-namespaces`
+- Use Imperative commands to save time during the exam (video 43/44)
+- Run `kubectl <command> --help` and pipe to grep for examples
+- Example: `kubectl expose --help | grep "kubectl expose"`
+- Look into creating an alias for kubectl = k (This may already be on some systems?)
+- Learn VIM quick commands, specifically around editing yaml files quickly
+- A lot of tips are located in 1min "videos"
+- If need to create a YAML for DaemonSet, create a YAML for a Deployment and vim the YAML
+- If creating via Imperative:
+    - `kubectl create <object> ..` THEN `kubectl edit <object> ..`
+    - Use `kubectl replace ...` to replace a running pod using a pod defnintion file
+
 ## Useful commands:
 - `kubectl --help` [Help documentation]
 - `kubectl get pods` [List pods in default namespace, add `-o wide` for more details]
