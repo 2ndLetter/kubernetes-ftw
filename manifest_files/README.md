@@ -1,5 +1,14 @@
 # manifest_files
 
+## Example:
+```yaml
+apiVersion: v1 | apps/v1
+kind: Pod | Service | ReplicaSet | Deployment
+metadata:
+  name: MyObject
+spec:
+```
+
 ## apiVersion: (string)
 - Specifies the API version to use
 
@@ -10,12 +19,5 @@
 - Specifies data about the object (ie. Name, Labels, etc.)
 
 ## spec:
+- TBD
 
-
-```yaml
-apiVersion: v1 | apps/v1
-kind: Pod | Service | ReplicaSet | Deployment
-metadata:
-  name: nginx
-spec:
-```
