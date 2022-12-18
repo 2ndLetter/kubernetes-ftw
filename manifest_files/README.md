@@ -5,7 +5,9 @@
 apiVersion: v1 | apps/v1
 kind: Pod | Service | ReplicaSet | Deployment
 metadata:
-  name: MyObject
+  name: myapp-pod
+  labels:
+    app: myapp
 spec:
 ```
 
