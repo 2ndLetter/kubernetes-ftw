@@ -19,5 +19,5 @@ spec:
 - Specifies data about the object (ie. Name, Labels, etc.)
 
 ## spec:
-- TBD
+- Specification of the desired behavior of the object
 
