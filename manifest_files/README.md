@@ -1,4 +1,4 @@
-# manifest_files
+# Manifest Files
 
 ## Example:
 ```yaml
