@@ -7,6 +7,7 @@
   - `kubectl run <pod_name> --image=<image_name>`
   - `kubectl describe pod <pod_name>`
   - `kubectl delete pod <pod_name>`
+  - `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
 ## ReplicaSets:
 - tbd
 ## Deployments:
