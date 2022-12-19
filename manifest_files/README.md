@@ -1,4 +1,4 @@
-# Manifest Files
+# Manifest File Notes
 
 ## Minimal Example:
 ```yaml
