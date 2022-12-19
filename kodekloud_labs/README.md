@@ -8,6 +8,8 @@
   - `kubectl describe pod <pod_name>`
   - `kubectl delete pod <pod_name>`
   - `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
+    - Manually update file as required (via vim)
+    - `kubectl create -f redis.yml`
 ## ReplicaSets:
 - tbd
 ## Deployments:
