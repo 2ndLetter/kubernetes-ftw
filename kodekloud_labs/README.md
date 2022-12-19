@@ -3,7 +3,7 @@
 # Core Concepts:
 ## PODs: (video 27)
 - Commands used:
-  - `kubectl get pods`
+  - `kubectl get pods -o wide`
   - `kubectl run <pod_name> --image=<image_name>`
   - `kubectl describe pod <pod_name>`
 ## ReplicaSets:
