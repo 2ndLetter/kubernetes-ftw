@@ -1,4 +1,4 @@
-# Manifest File Notes
+# Manifest File Notes & Examples
 
 ## Minimal Example:
 ```yaml
@@ -27,19 +27,40 @@ spec:
 ## spec: (dict)
 - Specification of the desired behavior of the object
 
-## Pod Manifest Example:
+## Pod Example:
 ```yaml
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: myapp-pod
   labels:
-    app: nginx
-    tier: frontend
+    app: myapp
+    tier: front-end
 spec:
   containers:
-  - name: nginx
+  - name: nginx-container
     image: nginx
-    ports:
-    - containerPort: 80
+```
+
+## Replication Controller Example:
+```yaml
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: myapp-rc
+  labels:
+    app: myapp
+    type: front-end
+spec:
+  template:
+    metadata:
+      name: myapp-pod
+      labels:
+        app: myapp
+        tier: front-end
+    spec:
+      containers:
+      - name: nginx-container
+        image: nginx
+    
 ```
