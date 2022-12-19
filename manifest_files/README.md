@@ -1,6 +1,6 @@
 # Manifest Files
 
-## Example:
+## Minimal Example:
 ```yaml
 apiVersion: v1 | apps/v1
 kind: Pod | Service | ReplicaSet | Deployment
