@@ -73,7 +73,7 @@ metadata:
   name: myapp-replicaset
   labels:
     app: myapp
-    type: front-end
+    type: front-end # THIS MUST MATCH
 spec:
   template:
     metadata:
@@ -86,5 +86,7 @@ spec:
       - name: nginx-container
         image: nginx
   replicas: 3
-  selector: 
+  selector:
+    matchLabels:
+      type: front-end # THIS MUST MATCH
 ```
