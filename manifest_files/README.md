@@ -27,3 +27,19 @@ spec:
 ## spec: (dict)
 - Specification of the desired behavior of the object
 
+## Pod Manifest Example:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  labels:
+    app: nginx
+    tier: frontend
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    ports:
+    - containerPort: 80
+```
