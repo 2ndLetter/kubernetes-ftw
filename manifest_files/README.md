@@ -73,14 +73,14 @@ metadata:
   name: myapp-replicaset
   labels:
     app: myapp
-    type: front-end # THIS MUST MATCH
+    type: front-end
 spec:
   template:
     metadata:
       name: myapp-pod
       labels:
         app: myapp
-        tier: front-end
+        tier: front-end # THIS MUST MATCH
     spec:
       containers:
       - name: nginx-container
