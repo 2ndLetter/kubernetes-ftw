@@ -12,6 +12,7 @@
     - `kubectl create -f redis.yml`
 ## ReplicaSets:
 - Commands used:
+  - `kubectl explain replicaset`
   - `kubectl describe ReplicaSets` | `kubect describe rs`
   - `kubectl apply -f replicaset-definition.yml`
   - `kubectl get replicaset`
