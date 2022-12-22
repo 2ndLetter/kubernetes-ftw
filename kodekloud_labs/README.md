@@ -11,7 +11,12 @@
     - Manually update file as required (via vim)
     - `kubectl create -f redis.yml`
 ## ReplicaSets:
-- tbd
+- Commands used:
+  - `kubectl create -f replicaset-definition.yml`
+  - `kubectl get replicaset`
+  - `kubectl delete replicaset myapp-replicaset`
+  - `kubectl replace -f replicaset-definition.yml`
+  - `kubectl scale -replicas=6`
 ## Deployments:
 - tbd
 ## Namespaces:
