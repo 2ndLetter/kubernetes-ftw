@@ -80,7 +80,7 @@ spec:
       name: myapp-pod
       labels:
         app: myapp
-        tier: front-end # THIS MUST MATCH
+        tier: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
     spec:
       containers:
       - name: nginx-container
@@ -88,5 +88,5 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      type: front-end # THIS MUST MATCH
+      type: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
