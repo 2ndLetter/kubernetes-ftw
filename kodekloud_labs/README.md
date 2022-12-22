@@ -12,11 +12,16 @@
     - `kubectl create -f redis.yml`
 ## ReplicaSets:
 - Commands used:
-  - `kubectl create -f replicaset-definition.yml`
+  - `kubectl describe ReplicaSets` | `kubect describe rs`
+  - `kubectl apply -f replicaset-definition.yml`
   - `kubectl get replicaset`
-  - `kubectl delete replicaset myapp-replicaset`
-  - `kubectl replace -f replicaset-definition.yml`
-  - `kubectl scale -replicas=6`
+  - `kubectl delete rs replicaset-1 replicaset2`
+  - `kubectl get rs new-replica-set -o yaml > new-replica-set.yml`
+    - `kubectl replace -f new-replica-set.yml`
+    - `kubectl delete pod pod1 pod2 pod3`
+  - `kubectl edit rs new-replica-set`
+    - Scale pods up or down, then save
+  - `kubectl scale -replicas=2 rs new-replia-set`
 ## Deployments:
 - tbd
 ## Namespaces:
