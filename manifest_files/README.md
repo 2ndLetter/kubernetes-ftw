@@ -153,4 +153,14 @@ spec:
 
 ## Service (LoadBalancer) Example:
 ```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30008
 ```
