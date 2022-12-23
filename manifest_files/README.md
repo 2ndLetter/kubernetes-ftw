@@ -116,3 +116,8 @@ spec:
     matchLabels:
       type: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
+
+### Services Example:
+```yaml
+
+```
