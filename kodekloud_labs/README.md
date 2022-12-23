@@ -30,7 +30,9 @@
 ## Namespaces:
 - tbd
 ## Services:
-- tbd
+- `kubectl get service`
+- `kubectl get svc`
+- `kubectl describe svc <service_name>`
 ## Imperative Commands:
 - tbd
 

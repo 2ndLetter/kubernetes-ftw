@@ -164,3 +164,11 @@ spec:
       port: 80
       nodePort: 30008
 ```
+
+## Namespace Example:
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+```
