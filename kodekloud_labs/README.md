@@ -24,7 +24,7 @@
     - Scale pods up or down, then save
   - `kubectl scale -replicas=2 rs new-replia-set`
 ## Deployments:
-- tbd
+- `kubectl get all`
 ## Namespaces:
 - tbd
 ## Services:
