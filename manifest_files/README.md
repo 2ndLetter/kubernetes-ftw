@@ -149,7 +149,7 @@ spec:
 - `kubectl create -f service-clusterip-definition.yml`
 - `kubectl get services`
 - `curl http://<cluster_ip>`
-- - `curl http://backend-end`
+- `curl http://backend-end`
 
 ## Service (LoadBalancer) Example:
 ```yaml
