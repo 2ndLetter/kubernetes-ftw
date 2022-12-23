@@ -28,8 +28,8 @@ kind: Pod
 metadata:
   name: myapp-pod
   labels:
-    app: myapp
-    tier: front-end
+    app: myapp # CAN BE USED TO LINK POD TO SERVICE
+    tier: front-end # CAN BE USED TO LINK POD TO SERVICE
 spec:
   containers:
   - name: nginx-container
@@ -111,7 +111,30 @@ spec:
       type: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
 
-### Services Example:
+## Service (NodePort) Example:
 ```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: myapp-service
+spec:
+  type: NodePort
+  ports: # THIS IS AN ARRAY
+    - targetPort: 80 # POD PORT (OPTIONAL)
+      port: 80 # SERVICE PORT
+      nodePort: 30008 # NODE PORT, RANGE 30000 - 32767 (OPTIONAL)
+  selector:
+    app: myapp # LINKS SERVICE TO POD
+    type: front-end # LINKS SERVICE TO POD
+```
+- `kubectl create -f service-definition.yml`
+- `kubectl get services`
+- `curl http://<node_ip>:30008`
 
+## Service (ClusterIP) Example:
+```yaml
+```
+
+## Service (LoadBalancer) Example:
+```yaml
 ```
