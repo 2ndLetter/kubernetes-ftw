@@ -1,5 +1,5 @@
 # Manifest File Notes & Examples
-
+___
 ### apiVersion (string): Specifies the API version to use
 ### kind (string): Specifies the type of resource you want to create
 ### metadata (dict): Specifies data about the object (ie. Name, Labels, etc.)
