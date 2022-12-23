@@ -1,5 +1,17 @@
 # Manifest File Notes & Examples
 
+## apiVersion: (string)
+- Specifies the API version to use
+
+## kind: (string)
+- Specifies the type of resource you want to create
+
+## metadata: (dict)
+- Specifies data about the object (ie. Name, Labels, etc.)
+
+## spec: (dict)
+- Specification of the desired behavior of the object
+
 ## Minimal Example:
 ```yaml
 apiVersion: v1 | apps/v1
@@ -14,18 +26,6 @@ spec:
     <key>: <value>
     <key>: <value>
 ```
-
-## apiVersion: (string)
-- Specifies the API version to use
-
-## kind: (string)
-- Specifies the type of resource you want to create
-
-## metadata: (dict)
-- Specifies data about the object (ie. Name, Labels, etc.)
-
-## spec: (dict)
-- Specification of the desired behavior of the object
 
 ## Pod Example:
 ```yaml
@@ -42,7 +42,7 @@ spec:
     image: nginx
 ```
 
-## Replication Controller Example:
+## ReplicationController Example:
 ```yaml
 apiVersion: v1
 kind: ReplicationController
@@ -65,7 +65,7 @@ spec:
   replicas: 3
 ```
 
-## Replica Set Example:
+## ReplicaSet Example:
 ```yaml
 apiVersion: apps/v1
 kind: ReplicaSet
