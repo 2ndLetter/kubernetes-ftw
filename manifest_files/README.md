@@ -127,13 +127,29 @@ spec:
     app: myapp # LINKS SERVICE TO POD
     type: front-end # LINKS SERVICE TO POD
 ```
-- `kubectl create -f service-definition.yml`
+- `kubectl create -f service-nodeport-definition.yml`
 - `kubectl get services`
 - `curl http://<node_ip>:30008`
 
 ## Service (ClusterIP) Example:
 ```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-end
+spec:
+  type: ClusterIP # DEFAULT TYPE
+  ports:
+    - targetPort: 80
+      port: 80
+  selector:
+    app: myapp # LINKS SERVICE TO POD
+    type: front-end # LINKS SERVICE TO POD
 ```
+- `kubectl create -f service-clusterip-definition.yml`
+- `kubectl get services`
+- `curl http://<cluster_ip>`
+- - `curl http://backend-end`
 
 ## Service (LoadBalancer) Example:
 ```yaml
