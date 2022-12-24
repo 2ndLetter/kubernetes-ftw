@@ -28,6 +28,7 @@
 - `kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yml`
 - `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yml`
 ## Namespaces:
+- `kubectl get ns`
 - `kubectl create namespace <namespace_name>`
 - `kubectl get pod --all-namespaces`
 - `kubectl get pod -A`
