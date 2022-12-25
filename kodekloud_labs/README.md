@@ -2,14 +2,13 @@
 
 # Core Concepts:
 ## PODs: (video 27)
-- Commands used:
-  - `kubectl get pods -o wide`
-  - `kubectl run <pod_name> --image=<image_name>`
-  - `kubectl describe pod <pod_name>`
-  - `kubectl delete pod <pod_name>`
-  - `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
-    - Manually update file as required (via vim)
-    - `kubectl create -f redis.yml`
+- `kubectl get pods -o wide`
+- `kubectl run <pod_name> --image=<image_name>`
+- `kubectl describe pod <pod_name>`
+- `kubectl delete pod <pod_name>`
+- `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
+  - Manually update file as required (via vim)
+  - `kubectl create -f redis.yml`
 ## ReplicaSets:
 - `kubectl explain replicaset`
 - `kubectl describe ReplicaSets` | `kubect describe rs`
