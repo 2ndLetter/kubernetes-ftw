@@ -11,18 +11,17 @@
     - Manually update file as required (via vim)
     - `kubectl create -f redis.yml`
 ## ReplicaSets:
-- Commands used:
-  - `kubectl explain replicaset`
-  - `kubectl describe ReplicaSets` | `kubect describe rs`
-  - `kubectl apply -f replicaset-definition.yml`
-  - `kubectl get replicaset`
-  - `kubectl delete rs replicaset-1 replicaset2`
-  - `kubectl get rs new-replica-set -o yaml > new-replica-set.yml`
-    - `kubectl replace -f new-replica-set.yml`
-    - `kubectl delete pod pod1 pod2 pod3`
-  - `kubectl edit rs new-replica-set`
-    - Scale pods up or down, then save
-  - `kubectl scale -replicas=2 rs new-replia-set`
+- `kubectl explain replicaset`
+- `kubectl describe ReplicaSets` | `kubect describe rs`
+- `kubectl apply -f replicaset-definition.yml`
+- `kubectl get replicaset`
+- `kubectl delete rs replicaset-1 replicaset2`
+- `kubectl get rs new-replica-set -o yaml > new-replica-set.yml`
+  - `kubectl replace -f new-replica-set.yml`
+  - `kubectl delete pod pod1 pod2 pod3`
+- `kubectl edit rs new-replica-set`
+  - Scale pods up or down, then save
+- `kubectl scale -replicas=2 rs new-replia-set`
 ## Deployments:
 - `kubectl get all`
 - `kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yml`
