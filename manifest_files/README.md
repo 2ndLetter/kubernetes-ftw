@@ -291,7 +291,7 @@ spec:
 - `kubectl label nodes <node-name> <label-key>=<label-value>` # LABEL COMMAND EXAMPLE
 - `kubectl label nodes node-1 size=Large` # RUN THIS COMMAND BEFORE DEPLOYING THE ABOVE POD
 
-## Node Affinity - PODs:
+## Node Affinity - PODs: [documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -303,7 +303,7 @@ spec:
     image: data-processor
   affinity:
     nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution: [documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)
+      requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
           - key: size
