@@ -76,6 +76,11 @@
 - `kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml`
   - This will NOT use the pods labels as selectors
   - Creates NodePort
+### Service Creation Summary:
+- `kubectl create service ...` # Can't accept a selector
+- `kubectl expose pod ...` # Can't accept a node port
+- Recommend using `kubectl expose ...`
+  - if you need to specify a node port, generate a manifest file and manually input the node port
 
 # Scheduling:
 
