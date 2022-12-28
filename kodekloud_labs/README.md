@@ -90,6 +90,7 @@
 ## Labels and Selectors:
 - `kubectl get pod --selector env=dev`
 - `kubectl get pod --selector bu=finance`
+- `kubectl get pod --selector bu=finance --no-headers | wc -l` # Returns number of Objects
 - `kubectl get all --selector env=prod,bu=finance,tier=frontend`
 - `kubectl apply -f replicaset-definition-1.yaml`
   - Fixed replicaset-definition-1.yaml
