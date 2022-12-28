@@ -257,3 +257,20 @@ spec:
       - name: simple-webapp
         image: simple-webapp
 ```
+
+## Tolerations - PODs:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: nginx-container
+    image: nginx
+  tolerations:
+  - key: "app"
+    operator: "Equal"
+    value: "blue"
+    effect: "NoSchedule"
+```

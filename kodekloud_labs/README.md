@@ -97,7 +97,9 @@
   - Selector matchLabels didn't match Pod's label
   - Run `k apply ....` again
 ## Taints and Tolerations:
-- `kubectl ...`
+- `kubectl taint nodes <node-name> <key=value>:<taint-effect>` # Example syntax
+  - taint-effect: NoSchedule | PreferNoSchedule | NoExecute
+- `kubectl taint nodes node1 app=blue:NoSchedule`
 ## Node Affinity:
 - `kubectl ...`
 ## Resource Limits:
