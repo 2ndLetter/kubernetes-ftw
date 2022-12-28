@@ -230,25 +230,27 @@ metadata:
     app: App1           # LABEL
     function: Front-end # LABEL
 ```
-- `kubectl get pods --selector app-App1` # Return object based on label
+- `kubectl get pods --selector app-App1` # Returns object based on label
 
 ```yaml
 apiVersion: apps/v1
 kind: ReplicaSet
 metdata:
   name: simple-webapp
-  labels:               # REPLICASET OBJECT LABEL
-    app: App1           # REPLICASET OBJECT LABEL
-    function: Front-end # REPLICASET OBJECT LABEL
+  labels:                   # REPLICASET OBJECT LABEL
+    app: App1               # REPLICASET OBJECT LABEL
+    function: Front-end     # REPLICASET OBJECT LABEL
+  annotations:
+    buildversion: 1.34      # METADATA
 spec:
   replicas: 3
-  selector:
-    matchLabels:
-      app: App1
+  selector:                 # CONNECTS REPLICASET TO POD
+    matchLabels:            # CONNECTS REPLICASET TO POD
+      app: App1             # CONNECTS REPLICASET TO POD
   template:
     metadata:
-      labels:
-        app: App1
+      labels:               # CONNECTS REPLICASET TO POD
+        app: App1           # CONNECTS REPLICASET TO POD
         function: Front-end
     spec:
       containers:
