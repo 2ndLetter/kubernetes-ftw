@@ -137,9 +137,50 @@
 ---
 
 # ==Security==
+## View Certificate Details:
+- `kubectl ...`
+## Certificates API:
+- `kubectl ...`
+## KubeConfig:
+- `kubectl ...`
+## Role BAsed Access Controls:
+- `kubectl ...`
+## Cluster Roles:
+- `kubectl ...`
+## Service Accounts:
+- `kubectl ...`
+## Image Security:
+- `kubectl ...`
+## Security Contexts:
+- `kubectl ...`
+## Network Policies:
+- `kubectl ...`
+---
+
+# ==Storage==
+## Persistent Volume Claims:
+- `kubectl ...`
+## storage Class:
+- `kubectl ...`
 ---
 
 # ==Networking==
+## Explore Environment:
+- `kubectl ...`
+## CNI:
+- `kubectl ...`
+## Deploy Network Solution:
+- `kubectl ...`
+## Networking Weave:
+- `kubectl ...`
+## Service Networking:
+- `kubectl ...`
+## CoreDNS in Kubernetes:
+- `kubectl ...`
+## Ingress Networking - 1:
+- `kubectl ...`
+## Ingress Networking - 2:
+- `kubectl ...`
 ---
 
 # ==Install==
