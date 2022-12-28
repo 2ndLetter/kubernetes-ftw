@@ -63,10 +63,19 @@
 - `kubectl <command> <command_options> --dry-run=client -o yaml > path/to/manifest/file.yaml` # Generate
 - `kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml`
 - `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml`
-- `kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml` # Uses Pod's labels as selectors
-- `kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml` # Assumes selectors is app=redis
+- `kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml`
+  - Uses Pod's labels as selectors
+  - Creates ClusterIP by default
+- `kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml`
+  - Assumes selectors is app=redis
   - You cannot pass in selectors as an option, so generate the file and update it
-
+  - Creates ClusterIP by default
+- `kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml`
+  - You cannot specify the node port, so generate the file and update it
+  - Creates NodePort
+- `kubectl create service nodeport nginx --tcp=80:80 --node-port=30080 --dry-run=client -o yaml`
+  - This will NOT use the pods labels as selectors
+  - Creates NodePort
 
 # Scheduling:
 
