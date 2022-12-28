@@ -88,7 +88,13 @@
 - `kubectl apply -f nginx.yaml`
 - `kubectl replace --force -f nginx.yaml`
 ## Labels and Selectors:
-- `kubectl ...`
+- `kubectl get pod --selector env=dev`
+- `kubectl get pod --selector bu=finance`
+- `kubectl get all --selector env=prod,bu=finance,tier=frontend`
+- `kubectl apply -f replicaset-definition-1.yaml`
+  - Fixed replicaset-definition-1.yaml
+  - Selector matchLabels didn't match Pod's label
+  - Run `k apply ....` again
 ## Taints and Tolerations:
 - `kubectl ...`
 ## Node Affinity:
