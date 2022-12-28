@@ -83,7 +83,7 @@
 - `kubectl create deployment redis-deploy -n dev-ns --image=redis --replicas=2`
 - `kubectl run httpd --image=httpd:alpine --expose --port=80`
 
-# Scheduling:
+# ==Scheduling==
 ## Manual Scheuling:
 - `kubectl apply -f nginx.yaml`
 - `kubectl replace --force -f nginx.yaml`
@@ -102,27 +102,27 @@
 ## Multiple Schedulers:
 - `kubectl ..`
 
-# Logging & Monitoring:
+# ==Logging & Monitoring==
 ## Monitor Cluster Components:
 - `kubectl ..`
 ## Managing Application Logs:
 - `kubectl ..`
 
-# Application Lifecycle Management:
+# ==Application Lifecycle Management==
 
-# Cluster Maintenance:
+# ==Cluster Maintenance==
 
-# Security:
+# ==Security==
 
-# Networking:
+# ==Networking==
 
-# Install:
+# ==Install==
 
-# Troubleshooting:
+# ==Troubleshooting==
 
-# Other Topics:
+# ==Other Topics==
 
-# Lighting Labs:
+# ==Lighting Labs==
 
-# Mock Exams:
+# ==Mock Exams==
 
