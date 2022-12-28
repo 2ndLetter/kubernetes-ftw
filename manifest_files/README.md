@@ -28,7 +28,7 @@ kind: Pod
 metadata:
   name: myapp-pod
   labels:
-    app: myapp # CAN BE USED TO LINK POD TO SERVICE
+    app: myapp      # CAN BE USED TO LINK POD TO SERVICE
     tier: front-end # CAN BE USED TO LINK POD TO SERVICE
   namespace: <namespace_name>
 spec:
@@ -83,7 +83,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      tier: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
+      tier: front-end   # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
 
 ## Deployment Example:
@@ -109,7 +109,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      tier: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
+      tier: front-end   # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
 
 ## Service (NodePort) Example:
@@ -120,13 +120,13 @@ metadata:
   name: myapp-service
 spec:
   type: NodePort
-  ports: # THIS IS AN ARRAY
-    - targetPort: 80 # POD PORT (OPTIONAL)
-      port: 80 # SERVICE PORT
+  ports:              # THIS IS AN ARRAY
+    - targetPort: 80  # POD PORT (OPTIONAL)
+      port: 80        # SERVICE PORT
       nodePort: 30008 # NODE PORT, RANGE 30000 - 32767 (OPTIONAL)
   selector:
-    app: myapp # LINKS SERVICE TO POD
-    type: front-end # LINKS SERVICE TO POD
+    app: myapp        # LINKS SERVICE TO POD
+    type: front-end   # LINKS SERVICE TO POD
 ```
 - `kubectl create -f service-nodeport-definition.yml`
 - `kubectl get services`
@@ -139,12 +139,12 @@ kind: Service
 metadata:
   name: back-end
 spec:
-  type: ClusterIP # DEFAULT TYPE
+  type: ClusterIP   # DEFAULT TYPE
   ports:
     - targetPort: 80
       port: 80
   selector:
-    app: myapp # LINKS SERVICE TO POD
+    app: myapp      # LINKS SERVICE TO POD
     type: front-end # LINKS SERVICE TO POD
 ```
 - `kubectl create -f service-clusterip-definition.yml`
@@ -220,4 +220,38 @@ target:
 ```
 - Send a post request: `curl --header "Content-Type:application/json" --request POST --data '{"apiVersion":"v1", "kind": "Binding" ... }' http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/`
 
-## Labels and Selectors:
+## Labels | Selectors | Annotations:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp
+  labels:
+    app: App1           # LABEL
+    function: Front-end # LABEL
+```
+- `kubectl get pods --selector app-App1` # Return object based on label
+
+```yaml
+apiVersion: apps/v1
+kind: ReplicaSet
+metdata:
+  name: simple-webapp
+  labels:               # REPLICASET OBJECT LABEL
+    app: App1           # REPLICASET OBJECT LABEL
+    function: Front-end # REPLICASET OBJECT LABEL
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: App1
+  template:
+    metadata:
+      labels:
+        app: App1
+        function: Front-end
+    spec:
+      containers:
+      - name: simple-webapp
+        image: simple-webapp
+```
