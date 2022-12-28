@@ -35,7 +35,22 @@
 - `kubectl get svc`
 - `kubectl describe svc <service_name>`
 ## Imperative Commands:
-- tbd
+### Imperative examples:
+- `kubectl run --image=nginx nginx` # Create Objects
+- `kubectl create deployment --image=nginx nginx` # Create Objects
+- `kubectl create -f nginx.yaml` # Create Objects
+- `kubectl expose deployment nginx --port 80` # Create Objects
+- `kubectl scale deployment nginx --replicas=5` # Update Objects
+- `kubectl set image deployment nginx nginx=nginx:1.18` # Update Objects
+- `kubectl edit deployment nginx` # Update Objects
+- `kubectl replace -f nginx.yaml` # Update Objects
+- `kuberctl delete -f nginx.yaml`
+### Imperative workflow:
+1. `kubectl create -f nginx.yaml`
+2. `kubectl edit deployment nginx`
+3. `kubectl replace -f nginx.yaml`
+### Delcarative example:
+- `kubectl apply -f nginx.yaml`
 
 
 
