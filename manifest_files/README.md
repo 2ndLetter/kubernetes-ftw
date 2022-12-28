@@ -83,7 +83,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      type: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
+      tier: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
 
 ## Deployment Example:
@@ -109,7 +109,7 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      type: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
+      tier: front-end # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
 
 ## Service (NodePort) Example:
@@ -219,3 +219,5 @@ target:
   name: node02
 ```
 - Send a post request: `curl --header "Content-Type:application/json" --request POST --data '{"apiVersion":"v1", "kind": "Binding" ... }' http://$SERVER/api/v1/namespaces/default/pods/$PODNAME/binding/`
+
+## Labels and Selectors:
