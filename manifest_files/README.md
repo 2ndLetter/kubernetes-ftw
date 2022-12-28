@@ -274,3 +274,19 @@ spec:
     value: "blue"
     effect: "NoSchedule"
 ```
+
+## Node Selectors - PODs:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+spec:
+  containers:
+  - name: data-processor
+    image: data-processor
+  nodeSelector:
+    size: Large # LABELS ASSIGNED TO NODES
+```
+- `kubectl label nodes <node-name> <label-key>=<label-value>` # LABEL COMMAND EXAMPLE
+- `kubectl label nodes node-1 size=Large` # RUN THIS COMMAND BEFORE DEPLOYING THE ABOVE POD
