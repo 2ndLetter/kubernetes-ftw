@@ -1,6 +1,7 @@
 # [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
 
 # Core Concepts:
+
 ## PODs: (video 27)
 - `kubectl get pods -o wide`
 - `kubectl run <pod_name> --image=<image_name>`
@@ -9,6 +10,7 @@
 - `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
   - Manually update file as required (via vim)
   - `kubectl create -f redis.yml`
+
 ## ReplicaSets:
 - `kubectl explain replicaset`
 - `kubectl describe ReplicaSets` | `kubect describe rs`
@@ -21,19 +23,23 @@
 - `kubectl edit rs new-replica-set`
   - Scale pods up or down, then save
 - `kubectl scale -replicas=2 rs new-replia-set`
+
 ## Deployments:
 - `kubectl get all`
 - `kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yml`
 - `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yml`
+
 ## Namespaces:
 - `kubectl get ns`
 - `kubectl create namespace <namespace_name>`
 - `kubectl get pod --all-namespaces`
 - `kubectl get pod -A`
+
 ## Services:
 - `kubectl get service`
 - `kubectl get svc`
 - `kubectl describe svc <service_name>`
+
 ## Imperative Commands:
 ### Imperative examples:
 - `kubectl run --image=nginx nginx` # Create Objects
@@ -48,12 +54,10 @@
 ### Imperative workflow:
 1. `kubectl create -f nginx.yaml`
 2. `kubectl edit deployment nginx`
-3. `kubectl replace -f nginx.yaml`
+3. `kubectl replace -f nginx.yaml` # Add the "--force" option to immediately remove/recreate objects
 ### Delcarative example:
 - `kubectl apply -f nginx.yaml`
-
-
-
+- `kubectl apply -f /path /to/config-files` # Creates using multiple manifest files within a directory
 
 # Scheduling:
 
