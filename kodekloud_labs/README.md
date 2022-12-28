@@ -101,28 +101,28 @@
 - `kubectl ..`
 ## Multiple Schedulers:
 - `kubectl ..`
-
+---
 # ==Logging & Monitoring==
 ## Monitor Cluster Components:
 - `kubectl ..`
 ## Managing Application Logs:
 - `kubectl ..`
-
+---
 # ==Application Lifecycle Management==
-
+---
 # ==Cluster Maintenance==
-
+---
 # ==Security==
-
+---
 # ==Networking==
-
+---
 # ==Install==
-
+---
 # ==Troubleshooting==
-
+---
 # ==Other Topics==
-
+---
 # ==Lighting Labs==
-
+---
 # ==Mock Exams==
-
+---
