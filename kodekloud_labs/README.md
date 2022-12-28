@@ -50,7 +50,7 @@
 - `kubectl set image deployment nginx nginx=nginx:1.18` # Update Objects
 - `kubectl edit deployment nginx` # Update Objects
 - `kubectl replace -f nginx.yaml` # Update Objects
-- `kuberctl delete -f nginx.yaml`
+- `kuberctl delete -f nginx.yaml` # Delete Objects
 ### Imperative workflow:
 1. `kubectl create -f nginx.yaml`
 2. `kubectl edit deployment nginx`
