@@ -1,5 +1,5 @@
 # [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
-
+---
 # ==Core Concepts==
 
 ## PODs: (video 27)
@@ -82,7 +82,7 @@
 - `kubectl create namespace dev-ns`
 - `kubectl create deployment redis-deploy -n dev-ns --image=redis --replicas=2`
 - `kubectl run httpd --image=httpd:alpine --expose --port=80`
-
+---
 # ==Scheduling==
 ## Manual Scheuling:
 - `kubectl apply -f nginx.yaml`
