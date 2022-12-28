@@ -81,6 +81,12 @@
 - `kubectl expose pod ...` # Can't accept a node port
 - Recommend using `kubectl expose ...`
   - if you need to specify a node port, generate a manifest file and manually input the node port
+### Lab Commands used:
+- `kubectl run redis --image=redis:alpine --labels="tier=db"`
+- `kubectl expose pod redis --port=6379 --name=redis-service`
+- `kubectl create namespace dev-ns`
+- `kubectl create deployment redis-deploy -n dev-ns --image=redis --replicas=2`
+- `kubectl run httpd --image=httpd:alpine --expose --port=80`
 
 # Scheduling:
 
