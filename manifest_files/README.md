@@ -296,26 +296,19 @@ spec:
 apiVersion: v1
 kind: Pod
 metadata:
-  name: with-node-affinity
+  name: data-processor
 spec:
+  containers:
+  - name: data-processor
+    image: data-processor
   affinity:
     nodeAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
+      requiredDuringSchedulingIgnoredDuringExecution: [documentation](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#node-affinity)
         nodeSelectorTerms:
         - matchExpressions:
           - key: size
-            operator: In
+            operator: In | NotIn | Exists
             values:
             - Large
-      preferredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        preference:
-          matchExpressions:
-          - key: another-node-label-key
-            operator: In
-            values:
-            - another-node-label-value
-  containers:
-  - name: with-node-affinity
-    image: registry.k8s.io/pause:2.0
+            - Medium
 ```
