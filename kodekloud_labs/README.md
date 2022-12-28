@@ -100,6 +100,7 @@
 - `kubectl taint nodes <node-name> <key=value>:<taint-effect>` # Example syntax
   - taint-effect: NoSchedule | PreferNoSchedule | NoExecute
 - `kubectl taint nodes node1 app=blue:NoSchedule`
+- `kubectl describe node kubemaster | grep Taint` # Review taints on the Master node
 ## Node Affinity:
 - `kubectl ...`
 ## Resource Limits:
