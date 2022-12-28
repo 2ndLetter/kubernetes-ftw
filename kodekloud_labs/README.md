@@ -1,8 +1,6 @@
 # [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
 
-# Core Concepts:
-
-==hello==
+# ==Core Concepts==:
 
 ## PODs: (video 27)
 - `kubectl get pods -o wide`
