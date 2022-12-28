@@ -1,7 +1,6 @@
 # [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
 
 # Core Concepts:
-
 ## PODs: (video 27)
 - `kubectl get pods -o wide`
 - `kubectl run <pod_name> --image=<image_name>`
@@ -10,7 +9,6 @@
 - `kubectl run redis --image=redis --dry-run=client -o yaml > redis.yml`
   - Manually update file as required (via vim)
   - `kubectl create -f redis.yml`
-
 ## ReplicaSets:
 - `kubectl explain replicaset`
 - `kubectl describe ReplicaSets` | `kubect describe rs`
@@ -23,23 +21,19 @@
 - `kubectl edit rs new-replica-set`
   - Scale pods up or down, then save
 - `kubectl scale -replicas=2 rs new-replia-set`
-
 ## Deployments:
 - `kubectl get all`
 - `kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yml`
 - `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yml`
-
 ## Namespaces:
 - `kubectl get ns`
 - `kubectl create namespace <namespace_name>`
 - `kubectl get pod --all-namespaces`
 - `kubectl get pod -A`
-
 ## Services:
 - `kubectl get service`
 - `kubectl get svc`
 - `kubectl describe svc <service_name>`
-
 ## Imperative Commands:
 ### Imperative examples:
 - `kubectl run --image=nginx nginx` # Create Objects
@@ -89,10 +83,29 @@
 - `kubectl run httpd --image=httpd:alpine --expose --port=80`
 
 # Scheduling:
+## Manual Scheuling:
 - `kubectl apply -f nginx.yaml`
 - `kubectl replace --force -f nginx.yaml`
+## Labels and Selectors:
+- `kubectl ..`
+## Taints and Tolerations:
+- `kubectl ..`
+## Node Affinity:
+- `kubectl ..`
+## Resource Limits:
+- `kubectl ..`
+## DaemonSets:
+- `kubectl ..`
+## Static PODs:
+- `kubectl ..`
+## Multiple Schedulers:
+- `kubectl ..`
 
 # Logging & Monitoring:
+## Monitor Cluster Components:
+- `kubectl ..`
+## Managing Application Logs:
+- `kubectl ..`
 
 # Application Lifecycle Management:
 
