@@ -89,6 +89,8 @@
 - `kubectl run httpd --image=httpd:alpine --expose --port=80`
 
 # Scheduling:
+- `kubectl apply -f nginx.yaml`
+- `kubectl replace --force -f nginx.yaml`
 
 # Logging & Monitoring:
 
