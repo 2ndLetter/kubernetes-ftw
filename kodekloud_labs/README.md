@@ -1,7 +1,6 @@
 # [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
 ---
 # ==Core Concepts==
-
 ## PODs:
 - `kubectl get pods -o wide`
 - `kubectl run <pod_name> --image=<image_name>`
@@ -83,46 +82,77 @@
 - `kubectl create deployment redis-deploy -n dev-ns --image=redis --replicas=2`
 - `kubectl run httpd --image=httpd:alpine --expose --port=80`
 ---
+
 # ==Scheduling==
 ## Manual Scheuling:
 - `kubectl apply -f nginx.yaml`
 - `kubectl replace --force -f nginx.yaml`
 ## Labels and Selectors:
-- `kubectl ..`
+- `kubectl ...`
 ## Taints and Tolerations:
-- `kubectl ..`
+- `kubectl ...`
 ## Node Affinity:
-- `kubectl ..`
+- `kubectl ...`
 ## Resource Limits:
-- `kubectl ..`
+- `kubectl ...`
 ## DaemonSets:
-- `kubectl ..`
+- `kubectl ...`
 ## Static PODs:
-- `kubectl ..`
+- `kubectl ...`
 ## Multiple Schedulers:
-- `kubectl ..`
+- `kubectl ...`
 ---
+
 # ==Logging & Monitoring==
 ## Monitor Cluster Components:
-- `kubectl ..`
+- `kubectl ...`
 ## Managing Application Logs:
-- `kubectl ..`
+- `kubectl ...`
 ---
+
 # ==Application Lifecycle Management==
+## Rolling Updates and Rollbacks:
+- `kubectl ...`
+## Commands and Arguments:
+- `kubectl ...`
+## Env Variables:
+- `kubectl ...`
+## Secrets:
+- `kubectl ...`
+## Multi Container PODs:
+- `kubectl ...`
+## Init Containers:
+- `kubectl ...`
 ---
+
 # ==Cluster Maintenance==
+## OS Upgrades:
+- `kubectl ...`
+## Cluster Upgrade Process:
+- `kubectl ...`
+## Backup and Restore Methods:
+- `kubectl ...`
+## Backup and Restore Methods 2:
+- `kubectl ...`
 ---
+
 # ==Security==
 ---
+
 # ==Networking==
 ---
+
 # ==Install==
 ---
+
 # ==Troubleshooting==
 ---
+
 # ==Other Topics==
 ---
+
 # ==Lighting Labs==
 ---
+
 # ==Mock Exams==
 ---
