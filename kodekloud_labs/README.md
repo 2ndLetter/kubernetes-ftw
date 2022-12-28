@@ -55,9 +55,18 @@
 1. `kubectl create -f nginx.yaml`
 2. `kubectl edit deployment nginx`
 3. `kubectl replace -f nginx.yaml` # Add the "--force" option to immediately remove/recreate objects
-### Delcarative example:
+### Declarative example:
 - `kubectl apply -f nginx.yaml`
 - `kubectl apply -f /path /to/config-files` # Creates using multiple manifest files within a directory
+### Imperative Commands to view/generate manifest files:
+- `kubectl <command> <command_options> --dry-run=client -o yaml` # View
+- `kubectl <command> <command_options> --dry-run=client -o yaml > path/to/manifest/file.yaml` # Generate
+- `kubectl run nginx --image=nginx --dry-run=client -o yaml > pod.yaml`
+- `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yaml`
+- `kubectl expose pod redis --port=6379 --name redis-service --dry-run=client -o yaml` # Uses Pod's labels as selectors
+- `kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml` # Assumes selectors is app=redis
+  - You cannot pass in selectors as an option, so generate the file and update it
+
 
 # Scheduling:
 
