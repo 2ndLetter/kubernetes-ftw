@@ -211,6 +211,7 @@
   - Edit the manifest file via VIM
   - `kubectl replace --force -f elephant.yaml`
   - `kubect delete po elephant`
+- OOMKilled means the pod ran out of Memory
 ## DaemonSets:
 - `kubectl ...`
 ## Static PODs:
