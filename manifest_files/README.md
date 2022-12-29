@@ -362,3 +362,27 @@ spec:
       cpu: 0.5
     type: Container
 ```
+
+## DaemonSet Example:
+```yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: myapp-daemon
+spec:
+  selector:
+    matchLabels:
+      app: monitoring-agent
+  template:
+    metadata:
+      labels:
+        app: monitoring-agent
+    spec:
+      containers:
+      - name: monitoring-agent
+        image: monitoring-agent  
+```
+
+
+
+
