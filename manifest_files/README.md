@@ -392,7 +392,7 @@ kind: KubeSchedulerConfiguration
 profiles:
 - schedulerName: my-scheduler
 leaderElection:
-  leaderElect: true
+  leaderElect: true # MULTI-MASTER LEADER ELECTION
   resourceNamespace: kube-system
   resourceName: lock-object-my-scheduler
 ```
@@ -412,6 +412,18 @@ spec:
     - --config=/etc/kubernetes/my-scheduler-config.yaml
     image: k8s.grc.io/kube-scheduler-amd64:v1.11.3
     name: kube-scheduler
+```
+pod-definition.yaml
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+spec:
+  containers:
+  - image: nginx
+    name: nginx
+  schedulerName: my-custom-scheduler
 ```
 
 
