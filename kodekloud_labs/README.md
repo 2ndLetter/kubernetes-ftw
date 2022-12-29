@@ -202,7 +202,11 @@
   status: {}
   ```
 ## Resource Limits:
-- `kubectl ...`
+- `kubectl get pod webapp -o yaml > my-new-pod.yaml` # Generate a manifest file from a running resource
+  - Edit the manifest file via VIM
+  - Delete the resource
+  - Re-create using the newly generated manifest file
+- `kubectl edit deployment my-deployment` # Edit a pod that is part of a deployment
 ## DaemonSets:
 - `kubectl ...`
 ## Static PODs:
