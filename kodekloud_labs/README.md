@@ -207,6 +207,10 @@
   - Delete the resource
   - Re-create using the newly generated manifest file
 - `kubectl edit deployment my-deployment` # Edit a pod that is part of a deployment
+- `kubectl get pod elephant -o yaml > elephant.yaml`
+  - Edit the manifest file via VIM
+  - `kubectl replace --force -f elephant.yaml`
+  - `kubect delete po elephant`
 ## DaemonSets:
 - `kubectl ...`
 ## Static PODs:
