@@ -245,6 +245,7 @@ spec:
     - OR
     - provide a path to using "--config=kubeconfig.yaml"
   - kubeconfig.yaml: "staticPodPath: <path/to/manifests>"
+- `docker ps` # Use to see running pods
 - `kubectl ...`
 ## Multiple Schedulers:
 - `kubectl ...`
