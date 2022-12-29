@@ -238,6 +238,13 @@ spec:
 ```
 - `kubectl apply -f fluentd.yaml`
 ## Static PODs:
+- How to find path to Static Pods:
+  - Default directory "/etc/kubernetes/manifests"
+  - kubelet.service config file:
+    - "--pod-manifest-path=<path/to/manifests>"
+    - OR
+    - provide a path to using "--config=kubeconfig.yaml"
+  - kubeconfig.yaml: "staticPodPath: <path/to/manifests>"
 - `kubectl ...`
 ## Multiple Schedulers:
 - `kubectl ...`
