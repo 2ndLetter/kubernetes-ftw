@@ -126,6 +126,8 @@
     - This removes the default taint on the controlplane node
 ## Node Affinity:
 - Learn to manipulate multiple lines via VIM, improper spacing causes problems
+  - Shift + V
+  - Shift + >
 - `kubectl label node node01 color=blue`
 - `kubectl create deployment blue --image=nginx --replicas=3 --dry-run=client -o yaml > blue.yaml`
   - `kubectl apply -f blue.yaml`
