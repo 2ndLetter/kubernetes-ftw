@@ -363,7 +363,7 @@ spec:
     type: Container
 ```
 
-## DaemonSet Example:
+## DaemonSet Example: [docs](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 ```yaml
 apiVersion: apps/v1
 kind: DaemonSet
@@ -372,7 +372,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: monitoring-agent
+      app: monitoring-agent # ENSURE THIS LABEL MATCHES THE POD TEMPLATE
   template:
     metadata:
       labels:
@@ -382,7 +382,7 @@ spec:
       - name: monitoring-agent
         image: monitoring-agent  
 ```
-
+- `kubectl get daemonsets`
 
 
 

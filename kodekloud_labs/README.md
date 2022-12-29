@@ -213,7 +213,28 @@
   - `kubect delete po elephant`
 - OOMKilled means the pod ran out of Memory
 ## DaemonSets:
-- `kubectl ...`
+- `kubectl get daemonset -A -o wide`
+- `kubectl describe ds kube-proxy -n kube-system`
+```yaml
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: elasticsearch
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      name: elasticsearch
+  template:
+    metadata:
+      labels:
+        name: elasticsearch
+    spec:
+      containers:
+      - name: elasticsearch
+        image: k8s.gcr.io/fluentd-elasticsearch:1.20
+```
+- `kubectl apply -f fluentd.yaml`
 ## Static PODs:
 - `kubectl ...`
 ## Multiple Schedulers:
