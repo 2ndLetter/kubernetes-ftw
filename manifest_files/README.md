@@ -425,5 +425,7 @@ spec:
     name: nginx
   schedulerName: my-custom-scheduler
 ```
+- `kubectl get events -o wide` # See events in the current namespace
+- `kubectl logs my-custom-scheduler --name-space=kube-system`
 
 
