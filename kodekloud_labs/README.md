@@ -215,6 +215,8 @@
 ## DaemonSets:
 - `kubectl get daemonset -A -o wide`
 - `kubectl describe ds kube-proxy -n kube-system`
+- `kubectl create deplyment elasticsearch -n kube-system --image=k8s.gcr.io/fluentd-elasticsearch:1.20 --dry-run=client -o yaml > fluentd.yaml`
+- Change kind to DaemonSet, remove replicas
 ```yaml
 apiVersion: apps/v1
 kind: DaemonSet
