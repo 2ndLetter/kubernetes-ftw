@@ -247,6 +247,19 @@ spec:
   - kubeconfig.yaml: "staticPodPath: <path/to/manifests>"
 - `docker ps` # Use to see running pods
 - `kubectl ...`
+- `ps -aux | grep kubelet > output`
+  - vim output
+  - search for "--config"
+- `cat /var/lib/kubelet/config.yaml | grep static`
+- `cat /var/kubernetes/manifest/kube-apiserver.yaml | grep image`
+- `kubectl run static-busybox --image=busybox --dry-run=client -o yaml --command -- sleep 1000 > /etc/kubernetes/manifests/static.yaml`
+- Update the image within the static.yaml
+- `kubectl delete po static-busybox-controlplane`
+- `k get nodes -o wide`
+- `ssh <nod01_ip_address>`
+- `ps -aux | grep kubelet`
+- `cat /var/lib/kubelet/config.yaml | grep static`
+- Remove file in the identified directory
 ## Multiple Schedulers:
 - `kubectl ...`
 ---
