@@ -261,7 +261,9 @@ spec:
 - `cat /var/lib/kubelet/config.yaml | grep static`
 - Remove file in the identified directory
 ## Multiple Schedulers:
-- `kubectl ...`
+- `kubectl describe pod kube-scheduler-controlplane -n kube-system`
+- `kubectl get all -A`
+- ``
 ---
 
 # ==Logging & Monitoring==
