@@ -273,10 +273,10 @@ spec:
 - `git clone https://github.com/kubernetes-incubator/metrics-server.git`
 - kubectl apply -f deploy/1.8+/
 - `kubectl top pod`
+- ``
+## Managing Application Logs:
 - `kubectl top node`
 - `kubectl logs pod webapp-1`
-## Managing Application Logs:
-- `kubectl ...`
 ---
 
 # ==Application Lifecycle Management==
