@@ -313,8 +313,22 @@ spec:
         command: ["sleep2.0"] # OVERRIDES ENTRYPOINT
         args: ["10"]          # OVERRIDES CMD
   ```
-
-- `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > green.yaml`
+- ubuntu-sleeper-2.yaml:
+  ```yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: ubuntu-sleeper-2
+  spec:
+    containers:
+      - name: ubuntu
+        image: ubuntu
+        command: ["sleep", "5000"]
+        OR
+        
+        args: ["5000"]
+  ```
+- `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > ubuntu-sleeper-2.yaml`
 ## Env Variables:
 - `kubectl ...`
 ## Secrets:
