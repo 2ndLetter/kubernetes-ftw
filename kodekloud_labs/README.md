@@ -313,6 +313,8 @@ spec:
         command: ["sleep2.0"] # OVERRIDES ENTRYPOINT
         args: ["10"]          # OVERRIDES CMD
   ```
+
+- `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > green.yaml`
 ## Env Variables:
 - `kubectl ...`
 ## Secrets:
