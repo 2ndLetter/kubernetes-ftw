@@ -323,10 +323,15 @@ spec:
     containers:
       - name: ubuntu
         image: ubuntu
+        ###
         command: ["sleep", "5000"]
         OR
-        
+        command: ["sleep"]
         args: ["5000"]
+        OR
+        command:
+          - "sleep"
+          - "5000"
   ```
 - `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > ubuntu-sleeper-2.yaml`
 ## Env Variables:
