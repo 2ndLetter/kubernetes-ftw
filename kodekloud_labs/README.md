@@ -274,7 +274,7 @@ spec:
 - kubectl apply -f deploy/1.8+/
 - `kubectl top pod`
 - `kubectl top node`
-- ``
+- `kubectl logs pod webapp-1`
 ## Managing Application Logs:
 - `kubectl ...`
 ---
