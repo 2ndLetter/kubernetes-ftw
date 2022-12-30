@@ -334,6 +334,7 @@ spec:
           - "5000"
   ```
 - `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > ubuntu-sleeper-2.yaml`
+- `kubectl run nginx --image=nginx -- <arg1> <arg2> ... <argN>` # Start default command with custom args
 ## Env Variables:
 - `kubectl ...`
 ## Secrets:
