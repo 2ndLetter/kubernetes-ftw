@@ -296,10 +296,23 @@ spec:
 - DOCKERFILE ubuntu-sleeper:
   ```yaml
   FROM Ubuntu
-  ENTRYPOINT ["sleep"]
-  CMD ["5"]
+  ENTRYPOINT ["sleep"] # ENTRYPOINT
+  CMD ["5"]            # CMD
   ```
   - `docker run ubuntu-sleeper 10`
+- pod-definition.yml:
+  ```yaml
+  apiVersion: v1
+  kind: Pod
+  metadata:
+    name: ubuntu-sleeper-pod
+  spec:
+    containers:
+      - name: ubuntu-sleeper
+        image: ubuntu-sleeper
+        command: ["sleep2.0"] # OVERRIDES ENTRYPOINT
+        args: ["10"]          # OVERRIDES CMD
+  ```
 ## Env Variables:
 - `kubectl ...`
 ## Secrets:
