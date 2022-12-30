@@ -270,7 +270,11 @@ spec:
 
 # ==Logging & Monitoring==
 ## Monitor Cluster Components:
-- `kubectl ...`
+- `git clone https://github.com/kubernetes-incubator/metrics-server.git`
+- kubectl apply -f deploy/1.8+/
+- `kubectl top pod`
+- `kubectl top node`
+- ``
 ## Managing Application Logs:
 - `kubectl ...`
 ---
