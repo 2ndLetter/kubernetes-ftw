@@ -38,6 +38,9 @@
     - ns [namespaces]
     - po [pod]
     - deploy [deployment]
+    - ds [daemonset]
+    - sts [statefulset]
+    - cj [cronjob]
 - SHORTCUTS:
     - `-n=<namespace_name>` vs `--namespace=<namespace_name>`
     - `-A` vs `--all-namespaces`
