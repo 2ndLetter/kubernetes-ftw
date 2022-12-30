@@ -290,7 +290,16 @@ spec:
 - `kubectl rollout undo deployment myapp-deployment`
 - `kubectl set image deployment frontend simple-webapp=kodecloud/webapp-color:v2`
 ## Commands and Arguments:
-- `kubectl ...`
+- `docker run ubuntu sleep 5`
+- `docker ps`
+- `docker ps -a`
+- DOCKERFILE ubuntu-sleeper:
+  ```yaml
+  FROM Ubuntu
+  ENTRYPOINT ["sleep"]
+  CMD ["5"]
+  ```
+  - `docker run ubuntu-sleeper 10`
 ## Env Variables:
 - `kubectl ...`
 ## Secrets:
