@@ -275,8 +275,10 @@ spec:
 - `kubectl top pod`
 - `kubectl top node`
 ## Managing Application Logs:
+- `docker logs -f ecf`
 - `kubectl top node`
-- `kubectl logs pod webapp-1`
+- `kubectl logs -f pod webapp-1`
+- If multiple containers within a Pod, you must provide the Pod and Container name
 ---
 
 # ==Application Lifecycle Management==
