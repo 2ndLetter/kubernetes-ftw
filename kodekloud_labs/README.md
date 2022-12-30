@@ -288,6 +288,7 @@ spec:
 - `kubectl rollout history deployment myapp-deployment`
 - `kubectl set image deployment myapp-deployment ngninx=nginx:1.9.1`
 - `kubectl rollout undo deployment myapp-deployment`
+- `kubectl set image deployment frontend simple-webapp=kodecloud/webapp-color:v2`
 ## Commands and Arguments:
 - `kubectl ...`
 ## Env Variables:
