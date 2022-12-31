@@ -30,7 +30,7 @@
 - [00-scheduling-multi-profile-scheduler](notes/00-scheduling-multi-profile-scheduler.md)
 - [00-logging-monitoring](notes/00-logging-monitoring.md)
 - [00-app-mgmt-deployment-strategy](notes/00-app-mgmt-deployment-strategy.md)
-- [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars.md)
+- [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars-configmap.md)
 - [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args.md)
 - []()
 - []()
