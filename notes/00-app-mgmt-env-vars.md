@@ -19,16 +19,12 @@
     APP_COLOR: blue
     APP_MODE: prod
   ```
-  - kubectl create -f config-map.yaml
+  - `kubectl create -f config-map.yaml`
 
+## Commands:
+  - `kubectl get configmaps`
 
-- `kubectl get configmaps`
-
-
-
-
-
-## ENV Variables - PODs:
+## Usage:
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -38,7 +34,6 @@ spec:
   containers:
     - name: simple-webapp-color
       image: simple-webapp-color
-  # PLAIN KEY VALUE
   env:
     - name: APP_COLOR
       value: pink
