@@ -336,7 +336,15 @@ spec:
 - `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > ubuntu-sleeper-2.yaml`
 - `kubectl run nginx --image=nginx -- <arg1> <arg2> ... <argN>` # Start default command with custom args
 ## Env Variables:
-- `kubectl ...`
+- Imperative way:
+  - `kubectl create config map <config-name> --from-literal=<key>=<value>`
+  - `kubectl create config map app-config --from-literal=APP_COLOR=blue --from-literal=APP_MOD=prod` 
+  - `kubectl create configmap app-config --from-file=<path-to-file>`
+- Declaritive:
+  - kubectl create -f 
+  ```yaml
+  tbd
+  ```
 ## Secrets:
 - `kubectl ...`
 ## Multi Container PODs:
