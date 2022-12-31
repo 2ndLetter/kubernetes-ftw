@@ -2,11 +2,6 @@
 
 *The purpose of this **unfinished** repository is to document my Kubernetes journey, and nerd-out!*
 
-## To Do:
-- [x] Finish the Udemy CKA course (1st pass)
-- [ ] Finish the Udemy CKA course (2nd pass)
-- [ ] Practice killer.sh Simulator
-
 ## Learning Material:
 - [x] [Docker Certified Associate (A Cloud Guru)](https://learn.acloud.guru/course/6b00566d-6246-4ebe-8257-f98f989321cf/overview)
 - [x] [Learn Kubernetes by Doing (A Cloud Guru)](https://learn.acloud.guru/course/82b39fac-b9f7-43d1-8f52-6a89efe5202f/dashboard)
