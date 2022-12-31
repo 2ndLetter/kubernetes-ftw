@@ -16,15 +16,15 @@
 
 ## Notes Glossary:
 - [00-tbd]()
-- [00-minimal-manifest](01-minimal-manifest.md)
-- [00-basic-pod](02-basic-pod.md)
+- [00-manifest-basics](00-manifest-basics.md)
+- [00-basic-pod](00-basic-pod.md)
 - [00-replicationcontroller]()
 - [00-replicaset]()
 - [00-deployment]()
 - [00-service]()
 - [00-namespace]()
 - [00-resource-quota]()
-- [00-binding]()
+- [00-scheduling-manual]()
 - []()
 - []()
 - []()
