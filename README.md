@@ -128,7 +128,7 @@
     - kubelet: An agent that runs on each node, ensuring the containers are running in a Pod
     - kube-proxy: Network proxy that runs on each node
     - Container Runtime Engine: Software responsible for running containers
-- High Level architecture:
-![alt text](k8_architecture.PNG "High Level")
-- Low Level architecture:
-![alt text](pod_architecture.PNG "Low Level")
+- K8s Architecture:
+![alt text](k8_architecture.PNG)
+- Pod Architecture:
+![alt text](pod_architecture.PNG)
