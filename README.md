@@ -15,8 +15,8 @@
     - This is free after registering for your exam [link](https://killer.sh/pricing)
 
 ## Notes Glossary:
-[01-minimal-manifest](01-minimal-manifest.md)
-[02-basic-pod](02-basic-pod.md)
+- [01-minimal-manifest](01-minimal-manifest.md)
+- [02-basic-pod](02-basic-pod.md)
 
 
 
