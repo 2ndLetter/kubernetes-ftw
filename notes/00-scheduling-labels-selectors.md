@@ -51,3 +51,13 @@ spec:
 ```
 - `kubectl label nodes <node-name> <label-key>=<label-value>` # LABEL COMMAND EXAMPLE
 - `kubectl label nodes node-1 size=Large` # RUN THIS COMMAND BEFORE DEPLOYING THE ABOVE POD
+
+## Labels and Selectors:
+- `kubectl get pod --selector env=dev`
+- `kubectl get pod --selector bu=finance`
+- `kubectl get pod --selector bu=finance --no-headers | wc -l` # Returns number of Objects
+- `kubectl get all --selector env=prod,bu=finance,tier=frontend`
+- `kubectl apply -f replicaset-definition-1.yaml`
+  - Fixed replicaset-definition-1.yaml
+  - Selector matchLabels didn't match Pod's label
+  - Run `k apply ....` again

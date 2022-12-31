@@ -1,7 +1,3 @@
-# [KodeKloud Labs](https://kodekloud.com/courses/labs-certified-kubernetes-administrator-with-practice-tests/)
----
-
-
 
 
 # ==Scheduling==
