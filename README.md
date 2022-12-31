@@ -109,6 +109,15 @@
 - `kubectl edit ...` [Edit a resource from the default editor]
 - `kubectl explain <resource> ...` [List the fileds for supported resources]
 
+## kubectl: Controls the Kubernetes cluster manager
+- [Reference Docs](https://kubernetes.io/docs/reference/kubectl/)
+- [Command Docs](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands)
+- [Official Cheat Sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/)
+
+## etcdctl: A simple command line client for etcd.
+- [manpage](https://manpages.org/etcdctl)
+
+
 ## Kubernetes Architecture: [LINK](https://kubernetes.io/docs/concepts/overview/components/)
 - Control Plane:
     - ETCD: Highly-available key-value store used to store all cluster data
