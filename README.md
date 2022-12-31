@@ -129,6 +129,6 @@
     - kube-proxy: Network proxy that runs on each node
     - Container Runtime Engine: Software responsible for running containers
 - High Level architecture:
-![alt text](kubernetes__architecture.PNG "High Level")
+![alt text](k8_architecture.PNG "High Level")
 - Low Level architecture:
 ![alt text](pod_node_container.PNG "Low Level")
