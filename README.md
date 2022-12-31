@@ -19,7 +19,7 @@
 - [00-minimal-manifest](01-minimal-manifest.md)
 - [00-basic-pod](02-basic-pod.md)
 - [00-replicationcontroller]()
-- [00-replicationset]()
+- [00-replicaset]()
 - [00-deployment]()
 - [00-service]()
 - [00-namespace]()
