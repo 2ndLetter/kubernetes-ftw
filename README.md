@@ -231,6 +231,6 @@
     - kube-proxy: Network proxy that runs on each node
     - Container Runtime Engine: Software responsible for running containers
 - K8s Architecture:
-![alt text](k8_architecture.PNG)
+![alt text](images/k8_architecture.PNG)
 - Pod Architecture:
-![alt text](pod_architecture.PNG)
+![alt text](images/pod_architecture.PNG)
