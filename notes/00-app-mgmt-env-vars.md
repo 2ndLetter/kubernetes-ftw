@@ -4,6 +4,9 @@
 ## Commands:
 - `tbd`
 ## Usage:
+- Imperative Way:
+  - `kubectl run nginx --image=nginx --env"ENVIRONMENT=prod"`
+- Delcarative Way:
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -21,7 +24,6 @@ spec:
     - name: DEMO_FAREWELL
       value: "Such a sweet sorrow"
 ```
----
 
 # ConfigMap:
 ## Documentation:
