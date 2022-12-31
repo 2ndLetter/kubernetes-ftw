@@ -15,9 +15,21 @@
     - This is free after registering for your exam [link](https://killer.sh/pricing)
 
 ## Notes Glossary:
+- [00-tbd]()
 - [01-minimal-manifest](01-minimal-manifest.md)
 - [02-basic-pod](02-basic-pod.md)
-
+- [03-replicationcontroller]()
+- [04-replicationset]()
+- [05-deployment]()
+- [06-service]()
+- [07-namespace]()
+- [08-resource-quota]()
+- [09-binding]()
+- []()
+- []()
+- []()
+- []()
+- 
 
 
 
