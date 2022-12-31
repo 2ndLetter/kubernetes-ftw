@@ -1,10 +1,3 @@
-# Manifest File Notes & Examples
-___
-### apiVersion (string): Specifies the API version to use
-### kind (string): Specifies the type of resource you want to create
-### metadata (dict): Specifies data about the object (ie. Name, Labels, etc.)
-### spec (dict): Specification of the desired behavior of the object
-
 ## Minimal Basics:
 ```yaml
 apiVersion: v1 | apps/v1
@@ -19,3 +12,7 @@ spec:
     <key>: <value>
     <key>: <value>
 ```
+- apiVersion (string): Specifies the API version to use
+- kind (string): Specifies the type of resource you want to create
+- metadata (dict): Specifies data about the object (ie. Name, Labels, etc.)
+- spec (dict): Specification of the desired behavior of the object
