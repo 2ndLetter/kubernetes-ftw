@@ -56,29 +56,15 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: simple-webapp-color
+  labels: simple-webapp-color
 spec:
   containers:
     - name: simple-webapp-color
       image: simple-webapp-color
-  env:
-    - name: APP_COLOR
-      value: pink
+  envFrom:
+    - configMapRef:
+      name: app-config
 ```
-```yaml
-# CONFIGMAP
-env:
-  - name: APP_COLOR
-    valueFrom:
-      configMapKeyRef:
-```
-```yaml
-# SECRETS
-env:
-  - name: APP_COLOR
-    valueFrom:
-      secretKeyRef:
-```
-- `docker run -e APP_COLOR=pink simple-webapp-color` # DOCKER RUN WAY
 ---
 
 # Secrets:
