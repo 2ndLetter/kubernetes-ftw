@@ -1,3 +1,6 @@
+## Docs:
+- https://kubernetes.io/docs/concepts/configuration/configmap/
+
 ## ENV Variables - PODs:
 ```yaml
 apiVersion: v1
