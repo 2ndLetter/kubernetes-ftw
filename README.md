@@ -6,8 +6,7 @@
 - [x] [Docker Certified Associate (A Cloud Guru)](https://learn.acloud.guru/course/6b00566d-6246-4ebe-8257-f98f989321cf/overview)
 - [x] [Learn Kubernetes by Doing (A Cloud Guru)](https://learn.acloud.guru/course/82b39fac-b9f7-43d1-8f52-6a89efe5202f/dashboard)
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
-- [ ] [Killer Shell Simulator](https://killer.sh/)
-    - This is free after registering for your exam [link](https://killer.sh/pricing)
+- [ ] [Killer Shell Simulator](https://killer.sh/)[link](https://killer.sh/pricing)
 
 ## Notes Glossary:
 - [00-tbd]()
