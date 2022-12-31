@@ -131,4 +131,4 @@
 - High Level architecture:
 ![alt text](k8_architecture.PNG "High Level")
 - Low Level architecture:
-![alt text](pod_node_container.PNG "Low Level")
+![alt text](pod_architecture.PNG "Low Level")
