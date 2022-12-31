@@ -6,36 +6,6 @@ ___
 ### spec (dict): Specification of the desired behavior of the object
 ___
 
-## Minimal Example:
-```yaml
-apiVersion: v1 | apps/v1
-kind: Pod | Service | ReplicaSet | Deployment
-metadata:
-  name: <name_of_object>
-  labels:
-    <key>: <value>
-    <key>: <value>
-spec:
-  <object_specific_item>
-    <key>: <value>
-    <key>: <value>
-```
-
-## Pod Example:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-  labels:
-    app: myapp      # CAN BE USED TO LINK POD TO SERVICE
-    tier: front-end # CAN BE USED TO LINK POD TO SERVICE
-  namespace: <namespace_name>
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
 
 ## ReplicationController Example:
 ```yaml
