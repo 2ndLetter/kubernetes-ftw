@@ -16,7 +16,7 @@
 
 ## Notes Glossary:
 - [00-tbd]()
-- [00-core-concepts-manifest](00-manifest-basics.md)
+- [00-core-concepts-manifest](notes/00-core-concepts-manifest-basics.md)
 - [00-core-concepts-pod](00-basic-pod.md)
 - [00-core-concepts-replicationcontroller]()
 - [00-core-concepts-replicaset]()
