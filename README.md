@@ -8,7 +8,7 @@
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
 - [ ] [Killer Shell Simulator](https://killer.sh/)
 
-## Notes Glossary:
+## My Notes:
 - [00-tbd]()
 - [00-core-concepts-manifest](notes/00-core-concepts-manifest-basics.md)
 - [00-core-concepts-pod](notes/00-core-concepts-pod.md)
