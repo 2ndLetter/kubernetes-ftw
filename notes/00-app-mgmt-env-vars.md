@@ -1,8 +1,31 @@
-# ConfigMap
+# Plain Key/Value:
+## Documentation:
+- https://kubernetes.io/docs/tasks/inject-data-application/define-environment-variable-container/
+## Commands:
+- `tbd`
+## Usage:
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: envar-demo
+  labels:
+    purpose: demonstrate-envars
+spec:
+  containers:
+  - name: envar-demo-container
+    image: gcr.io/google-samples/node-hello:1.0
+    env:
+    - name: DEMO_GREETING
+      value: "Hello from the environment"
+    - name: DEMO_FAREWELL
+      value: "Such a sweet sorrow"
+```
+---
 
+# ConfigMap:
 ## Documentation:
 - https://kubernetes.io/docs/concepts/configuration/configmap/
-
 ## Creation:
 - Imperative Way:
   - `kubectl create configmap <config-name> --from-literal=<key>=<value>`
@@ -53,4 +76,6 @@ env:
       secretKeyRef:
 ```
 - `docker run -e APP_COLOR=pink simple-webapp-color` # DOCKER RUN WAY
+---
 
+# Secrets:
