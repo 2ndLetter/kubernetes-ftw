@@ -13,7 +13,7 @@
 - [00-core-concepts-manifest](notes/00-core-concepts-manifest-basics.md)
 - [00-core-concepts-pod](notes/00-core-concepts-pod.md)
 - [00-core-concepts-replicationcontroller](notes/00-core-concepts-replicationcontroller.md)
-- [00-core-concepts-replicase]()
+- [00-core-concepts-replicase](notes/00-core-concepts-replicaset.md)
 - [00-core-concepts-deployment]()
 - [00-core-concepts-services]()
 - [00-core-concepts-namespace]()
