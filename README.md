@@ -33,18 +33,21 @@
 - [00-scheduling-daemonset]()
 - [00-scheduling-schedulers]()
 - [00-scheduling-multi-profile-scheduler]()
+- [00-logging-monitoring]()
+- [00-app-mgmnt-deployment-strategy]()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
+- []()
 - []()
 - []()
 - []()
 - 
-
-
-
-
-
-
-
-
 
 
 
