@@ -1,4 +1,4 @@
-## Service (NodePort) Example:
+## Services (NodePort) Example:
 ```yaml
 apiVersion: v1
 kind: Service
@@ -51,3 +51,8 @@ spec:
       port: 80
       nodePort: 30008
 ```
+
+## Services:
+- `kubectl get service`
+- `kubectl get svc`
+- `kubectl describe svc <service_name>

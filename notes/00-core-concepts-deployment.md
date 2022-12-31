@@ -23,3 +23,8 @@ spec:
     matchLabels:
       tier: front-end   # THIS MUST MATCH SO THE RS CAN MANAGE THE PODS
 ```
+
+## Deployments:
+- `kubectl get all`
+- `kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > nginx-deployment.yml`
+- `kubectl create deployment --image=nginx nginx --replicas=4 --dry-run=client -o yaml > nginx-deployment.yml`
