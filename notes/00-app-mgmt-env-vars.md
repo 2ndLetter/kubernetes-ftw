@@ -8,18 +8,21 @@ spec:
   containers:
     - name: simple-webapp-color
       image: simple-webapp-color
-  env:                # PLAIN KEY VALUE
+  # PLAIN KEY VALUE
+  env:
     - name: APP_COLOR
       value: pink
 ```
 ```yaml
-env:                  # CONFIGMAP
+# CONFIGMAP
+env:
   - name: APP_COLOR
     valueFrom:
       configMapKeyRef:
 ```
 ```yaml
-env:                  # SECRETS
+# SECRETS
+env:
   - name: APP_COLOR
     valueFrom:
       secretKeyRef:
