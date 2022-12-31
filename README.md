@@ -14,6 +14,20 @@
 - [ ] [Killer Shell Simulator](https://killer.sh/)
     - This is free after registering for your exam [link](https://killer.sh/pricing)
 
+## Notes Organization:
+[01-minimal-manifest](01-minimal-manifest.md)
+
+
+
+
+
+
+
+
+
+
+
+
 ## Lessons Learned:
 - I completed the ACG Docker course to prepare me for diving into Kubernetes
 - The Udemy course was hard to follow when I had zero hands-on experience
