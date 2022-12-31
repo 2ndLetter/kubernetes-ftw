@@ -48,6 +48,7 @@ data:
 
 ## Commands:
   - `kubectl get configmaps`
+  - `kubectl describe configmaps`
 
 ## Usage:
 ```yaml
