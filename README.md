@@ -31,7 +31,7 @@
 - [00-logging-monitoring](notes/00-logging-monitoring)
 - [00-app-mgmt-deployment-strategy](notes/00-app-mgmt-deployment-strategy)
 - [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars)
-- [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args)
+- [00-app-mgmt-commands-args]()
 - []()
 - []()
 - []()
