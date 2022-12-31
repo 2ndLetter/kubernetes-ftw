@@ -2,12 +2,7 @@
 
 
 # ==Application Lifecycle Management==
-## Rolling Updates and Rollbacks:
-- `kubectl rollout status deployment myapp-deployment`
-- `kubectl rollout history deployment myapp-deployment`
-- `kubectl set image deployment myapp-deployment ngninx=nginx:1.9.1`
-- `kubectl rollout undo deployment myapp-deployment`
-- `kubectl set image deployment frontend simple-webapp=kodecloud/webapp-color:v2`
+
 ## Commands and Arguments:
 - `docker run ubuntu sleep 5`
 - `docker ps`
@@ -54,24 +49,7 @@
   ```
 - `kubectl run webapp-green --image kodekloud/webapp-color --dry-run=client -o yaml --command -- --color=green > ubuntu-sleeper-2.yaml`
 - `kubectl run nginx --image=nginx -- <arg1> <arg2> ... <argN>` # Start default command with custom args
-## Env Variables:
-- Imperative way:
-  - `kubectl create config map <config-name> --from-literal=<key>=<value>`
-  - `kubectl create config map app-config --from-literal=APP_COLOR=blue --from-literal=APP_MOD=prod` 
-  - `kubectl create configmap app-config --from-file=<path-to-file>`
-- Declaritive way:
-  - config-map.yaml:
-  ```yaml
-  apiVersion: v1
-  kind: ConfigMap
-  metadata:
-    name: app-config
-  data:
-    APP_COLOR: blue
-    APP_MODE: prod
-  ```
-  - kubectl create -f config-map.yaml
-- `kubectl get configmaps`
+
 ## Secrets:
 - `kubectl ...`
 ## Multi Container PODs:
