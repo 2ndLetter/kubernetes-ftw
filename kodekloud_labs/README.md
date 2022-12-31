@@ -352,6 +352,7 @@ spec:
     APP_MODE: prod
   ```
   - kubectl create -f config-map.yaml
+- `kubectl get configmaps`
 ## Secrets:
 - `kubectl ...`
 ## Multi Container PODs:
