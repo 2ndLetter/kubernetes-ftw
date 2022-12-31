@@ -23,7 +23,7 @@
 - [00-deployment]()
 - [00-service]()
 - [00-namespace]()
-- [00-resource-quota]()
+- [00-scheduling-resource-quota]()
 - [00-scheduling-manual]()
 - [00-scheduling-labels-selectors]()
 - [00-scheduling-tolerations]()
