@@ -21,7 +21,7 @@
 - [00-core-concepts-replicationcontroller]()
 - [00-core-concepts-replicaset]()
 - [00-core-concepts-deployment]()
-- [00-core-concepts-service]()
+- [00-core-concepts-services]()
 - [00-core-concepts-namespace]()
 - [00-scheduling-resource-quota]()
 - [00-scheduling-manual]()
