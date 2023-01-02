@@ -91,6 +91,7 @@ spec:
     - configMapRef:
         name: webapp-config-map
 ```
+- `kubectl replace --force -f webapp-color.yaml`
 ---
 
 # Secrets:
