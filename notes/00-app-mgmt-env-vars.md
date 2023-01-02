@@ -154,7 +154,10 @@ spec:
 - `kubectl created -f pod-definition.yaml`
 
 ## Notes:
-- NEED TO MAKE NOTES ABOUT "SECRETS IN PODS" WHICH SHOWS VOLUMES
+- NEED TO MAKE NOTES ABOUT "SECRETS IN PODS" OPTIONS, INCUDING VOLUMES
+- Secrets are not Encrypte4d, only Encoded. Don't check into SCM!
+- Secrets are not encrypted in ETCD, so use Encryption-at-rest
+  - https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
 
 ## KodeKloud Lab:
 - `kubectl ...`
