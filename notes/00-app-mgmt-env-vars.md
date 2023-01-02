@@ -125,7 +125,7 @@ data:
         ```
 
 ## Commands:
-- `kubectl ...`
+- `kubectl get secrets`
 
 ## Usage:
 ```yaml
