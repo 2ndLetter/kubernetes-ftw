@@ -51,6 +51,7 @@ data:
   - `kubectl describe configmaps`
 
 ## Usage:
+- envFrom: Retrieves all values from a config map
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -65,6 +66,25 @@ spec:
   - configMapRef:
       name: app-config
 ```
+- env: Retrieves a single value from a config map
+```yaml
+# Snippet
+env: 
+  - name: APP_COLOR
+  valueFrom:
+    configMapKeyRef:
+      name: app-config
+      key: APP_COLOR
+```
+- volumes: 
+```yaml
+volumes:
+- name: app-config-volume
+  configMap:
+    name: app-config
+```
+
+
 
 ## KodeKloud Lab:
 - `kubectl get configmaps`
