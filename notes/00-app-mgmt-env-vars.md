@@ -100,7 +100,7 @@ spec:
 
 ## Creation:
 - Imperative Way:
-  - `tbd`
+  - `kubectl create secret generic <secret-name> --from-literal=<key>=<value> --from-literal=<key>=<value>`
 - Declarative Way:
   - tbd.yaml
 ```yaml
