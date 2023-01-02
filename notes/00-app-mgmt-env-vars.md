@@ -51,7 +51,7 @@ data:
   - `kubectl describe configmaps`
 
 ## Usage:
-- envFrom: Retrieves all values from a config map
+- envFrom: Injects the entire data into a pod
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -66,9 +66,9 @@ spec:
   - configMapRef:
       name: app-config
 ```
-- env: Retrieves a single value from a config map
+- env: Injects as a single env var into a pod
 ```yaml
-# Snippet
+# SNIPPET
 env: 
   - name: APP_COLOR
   valueFrom:
@@ -76,8 +76,9 @@ env:
       name: app-config
       key: APP_COLOR
 ```
-- volumes: 
+- volumes: Injects the entire data into a pod as files in a volume
 ```yaml
+# SNIPPET
 volumes:
 - name: app-config-volume
   configMap:
