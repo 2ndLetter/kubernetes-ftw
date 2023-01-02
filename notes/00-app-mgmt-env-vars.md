@@ -85,8 +85,6 @@ volumes:
     name: app-config
 ```
 
-
-
 ## KodeKloud Lab:
 - `kubectl get configmaps`
 - `kubectl get po webapp-color -o yaml > webapp-color.yaml`
@@ -158,6 +156,7 @@ data:
 - `kubectl get secrets <secret-name> -o yaml` # SHOWS VALUES
 
 ## Usage:
+- envFrom: Injects the whole Secret into a pod
 ```yaml
 apiVersion: v1
 kind: Pod
@@ -172,10 +171,26 @@ spec:
   - secretRef:
       name: app-secret
 ```
-- `kubectl created -f pod-definition.yaml`
+- env: Injects as a single env var into a pod
+```yaml
+# SNIPPET
+env: 
+  - name: APP_COLOR
+  valueFrom:
+    secretKeyRef:
+      name: app-secret
+      key: DB_PASSWORD
+```
+- volumes: Injects the whole secret into a pod as files in a volume
+```yaml
+# SNIPPET
+volumes:
+- name: app-secret-volume
+  secret:
+    name: app-secret
+```
 
 ## Notes:
-- NEED TO MAKE NOTES ABOUT "SECRETS IN PODS" OPTIONS, INCUDING VOLUMES
 - Secrets are not Encrypte4d, only Encoded. Don't check into SCM!
 - Secrets are not encrypted in ETCD, so use Encryption-at-rest
   - https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
