@@ -65,6 +65,32 @@ spec:
     - configMapRef:
       name: app-config
 ```
+
+## Lab:
+- `kubectl get configmaps`
+- `kubectl get po webapp-color -o yaml > webapp-color.yaml`
+- Change plain key/value via VIM
+- `kubectl replace --force -f webapp-color.yaml`
+- `kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue --dry-run=client -o yaml > webapp-config-map.yaml`
+```yaml
+apiVersion: v1
+data:
+  APP_COLOR: darkblue
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: webapp-config-map
+```
+- `kubectl apply -f webapp-config-map.yaml`
+- Change webapp-color.yaml to use configmap:
+```yaml
+# Snippet
+spec:
+  containers:
+  - envFrom:
+    - configMapRef:
+        name: webapp-config-map
+```
 ---
 
 # Secrets:
