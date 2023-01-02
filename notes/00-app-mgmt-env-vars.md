@@ -95,3 +95,26 @@ spec:
 ---
 
 # Secrets:
+## Documenation:
+- tbd
+
+## Creation:
+- Imperative Way:
+  - `tbd`
+- Declarative Way:
+  - tbd.yaml
+```yaml
+tbd
+```
+- `kubectl ...`
+
+## Commands:
+- `kubectl ...`
+
+## Usage:
+```yaml
+tbd
+```
+
+## KodeKloud Lab:
+- `kubectl ...`
