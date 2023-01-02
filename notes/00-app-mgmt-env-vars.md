@@ -230,3 +230,24 @@ spec:
           name: db-secret
 ```
 - `kubectl replace --force -f webapp-pod.yaml`
+
+## Encryption at Rest:
+- Documentation:
+  - https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
+- encrypt.yaml:
+```yaml
+apiVersion: apiserver.config.k8s.io/v1
+kind: EncryptionConfiguration
+resources:
+  - resources:
+      - secrets
+      - configmaps
+      - pandas.awesome.bears.example
+    providers:
+      - aescbc:
+          keys:
+            - name: key1
+              secret: <BASE 64 ENCODED SECRET>
+      - identity: {}
+```
+- `kubectl apply -f encrypt.yaml`
