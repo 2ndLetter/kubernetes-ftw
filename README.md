@@ -32,7 +32,9 @@
 - [00-app-mgmt-deployment-strategy](notes/00-app-mgmt-deployment-strategy.md)
 - [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args.md)
 - [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars.md)
-- [00-app-mgmt-]
+- [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
+- [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
+- [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
 - []()
 - []()
 - []()
