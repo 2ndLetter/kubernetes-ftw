@@ -66,7 +66,7 @@ spec:
       name: app-config
 ```
 
-## Lab:
+## KodeKloud Lab:
 - `kubectl get configmaps`
 - `kubectl get po webapp-color -o yaml > webapp-color.yaml`
 - Change plain key/value via VIM
