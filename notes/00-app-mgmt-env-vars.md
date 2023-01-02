@@ -206,4 +206,27 @@ volumes:
   - https://kubernetes.io/docs/tasks/administer-cluster/encrypt-data/
 
 ## KodeKloud Lab:
-- `kubectl ...`
+- `kubectl get secrets`
+- `kubectl create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123 --dry-run=client -o yaml > db-secret.yaml`
+```yaml
+apiVersion: v1
+data:
+  DB_Host: c3FsMDE=
+  DB_Password: cGFzc3dvcmQxMjM=
+  DB_User: cm9vdA==
+kind: Secret
+metadata:
+  creationTimestamp: null
+  name: db-secret
+```
+- `kubectl apply -f db-secret.yaml`
+- Update deployed pod to use db-secret (webapp-pod.yaml)
+```yaml
+# SNIPPPET
+spec:
+  containers:
+    - envFrom:
+      - secretRef:
+          name: db-secret
+```
+- `kubectl replace --force -f webapp-pod.yaml`
