@@ -123,9 +123,18 @@ data:
         ```
         bXlzcWw=
         ```
+  - base64 decoding:
+    - `echo -n <value> | base64 --decode`
+    - Example:
+      - `echo -n 'bXlzcWw=' | base64`
+        ```
+        mysql
+        ```
 
 ## Commands:
 - `kubectl get secrets`
+- `kubectl describe secrets` # HIDES VALUES
+- `kubectl get secrets <secret-name> -o yaml` # SHOWS VALUES
 
 ## Usage:
 ```yaml
