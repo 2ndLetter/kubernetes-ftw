@@ -199,7 +199,6 @@ volumes:
     ```
     paswrd
     ```
-  
 
 ## Notes:
 - Secrets are not Encrypte4d, only Encoded. Don't check into SCM!
