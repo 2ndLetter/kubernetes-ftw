@@ -82,7 +82,7 @@ metadata:
   name: webapp-config-map
 ```
 - `kubectl apply -f webapp-config-map.yaml`
-- Change webapp-color.yaml to use configmap:
+- Change webapp-color.yaml to use configmap via VIM:
 ```yaml
 # Snippet
 spec:
