@@ -189,6 +189,17 @@ volumes:
   secret:
     name: app-secret
 ```
+  - Secrets in volumes (mounted on the Container) have a file for each Key (named as the key)
+  - `ls /opt/app-secret-volumes`
+    ```
+    DB_Host DB_Password DB_User
+    ```
+  - The contents of each file is the Key's Value
+  - `cat /opt/app-secret-volumes/DB_Password`
+    ```
+    paswrd
+    ```
+  
 
 ## Notes:
 - Secrets are not Encrypte4d, only Encoded. Don't check into SCM!
