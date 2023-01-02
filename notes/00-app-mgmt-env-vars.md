@@ -27,7 +27,7 @@ spec:
 
 # ConfigMap:
 ## Documentation:
-- https://kubernetes.io/docs/concepts/configuration/configmap/
+- https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 ## Creation:
 - Imperative Way:
   - `kubectl create configmap <config-name> --from-literal=<key>=<value>`
@@ -62,7 +62,7 @@ spec:
     - name: simple-webapp-color
       image: simple-webapp-color
   envFrom:
-    - configMapRef:
+  - configMapRef:
       name: app-config
 ```
 
@@ -87,16 +87,16 @@ metadata:
 # Snippet
 spec:
   containers:
-  - envFrom:
-    - configMapRef:
-        name: webapp-config-map
+    - envFrom:
+      - configMapRef:
+          name: webapp-config-map
 ```
 - `kubectl replace --force -f webapp-color.yaml`
 ---
 
 # Secrets:
 ## Documenation:
-- tbd
+- https://kubernetes.io/docs/concepts/configuration/secret/
 
 ## Creation:
 - Imperative Way:
@@ -138,8 +138,20 @@ data:
 
 ## Usage:
 ```yaml
-tbd
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-webapp-color
+  labels: simple-webapp-color
+spec:
+  containers:
+    - name: simple-webapp-color
+      image: simple-webapp-color
+  envFrom:
+  - secretRef:
+      name: app-secret
 ```
+- `kubectl created -f pod-definition.yaml`
 
 ## KodeKloud Lab:
 - `kubectl ...`
