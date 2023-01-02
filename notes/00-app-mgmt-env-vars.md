@@ -101,12 +101,28 @@ spec:
 ## Creation:
 - Imperative Way:
   - `kubectl create secret generic <secret-name> --from-literal=<key>=<value> --from-literal=<key>=<value>`
+  - `kubectl create secret generic <secret-name> --from-file=<path-to-file>`
+    - Example: `kubectl create secret generic app-secret --from-file=app_secret.properties`
 - Declarative Way:
-  - tbd.yaml
+  - secret-data.yaml:
 ```yaml
-tbd
+apiVersion: v1
+kind: Secret
+metadata:
+  name: app-secret
+data:
+  DB_Host: mysql # DB_HOST: bXlzcWw=
+  DB_User: root
+  DB_Password: paswrd
 ```
-- `kubectl ...`
+  - `kubectl create -f secret-data.yaml`
+  - base64 encoding:
+    - `echo -n '<value>' | base64`
+    - Example:
+      - `echo -n 'mysql' | base64`
+        ```
+        bXlzcWw=
+        ```
 
 ## Commands:
 - `kubectl ...`
