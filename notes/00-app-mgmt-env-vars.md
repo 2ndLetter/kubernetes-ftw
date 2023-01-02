@@ -153,7 +153,8 @@ spec:
 ```
 - `kubectl created -f pod-definition.yaml`
 
-## NEED TO MAKE NOTES ABOUT "SECRETS IN PODS" WHICH SHOWS VOLUMES
+## Notes:
+- NEED TO MAKE NOTES ABOUT "SECRETS IN PODS" WHICH SHOWS VOLUMES
 
 ## KodeKloud Lab:
 - `kubectl ...`
