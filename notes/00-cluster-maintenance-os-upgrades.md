@@ -17,8 +17,10 @@ spec:
     image: nginx
 ```
 ## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+- `kube-controller-manager --pod-eviction-timeout=5m0s ...`
+- `kubectl drain node-1` # evict pods, which are deployed on other nodes
+- `kubectl uncordon node-1` # Pods *can* be deployed to node-1 again
+- `kubectl uncordon node-1` # Prevents new pods from being scheduled on the node
 
 ## Notes:
 - TBD
