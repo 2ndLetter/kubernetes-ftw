@@ -1,7 +1,7 @@
-# Multi-Container-pod:
+# Init Containers:
 
 ## Documentation:
-- https://stackoverflow.com/questions/59451056/differences-between-sidecar-and-ambassador-and-adapter-pattern
+- tbd
 
 ```yaml
 apiVersion: v1
