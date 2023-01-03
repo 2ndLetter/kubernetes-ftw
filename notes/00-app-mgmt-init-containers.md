@@ -42,4 +42,25 @@ spec:
 ```
 
 ## KodeKloud Lab:
-- `kubectl ...`
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: red
+  namespace: default
+spec:
+  initContainers:
+  - command:
+    - sh
+    - -c
+    - sleep 20
+    image: busybox
+    name: init-container
+  containers:
+  - command:
+    - sh
+    - -c
+    - echo The app is running! && sleep 3600
+    image: busybox:1.28
+    name: red-container
+```
