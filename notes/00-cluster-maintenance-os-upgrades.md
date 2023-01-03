@@ -23,7 +23,8 @@ spec:
 - `kubectl cordon node-1` # Prevents new pods from being scheduled on the node
 
 ## Notes:
-- TBD
+- Error when running `k drain node01 --ignore-daemonsets` while a hr-app was on it, which isn't part of any of the mentioned objects:
+  - error: cannot delete Pods not managed by RC, RS, Job, DaemonSet, or StatefulSet (use --force to override)
 
 ## KodeKloud Lab:
 - `kubectl get pods -l app=blue -o wide`
