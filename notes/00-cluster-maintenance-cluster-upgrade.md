@@ -17,11 +17,13 @@ spec:
     image: nginx
 ```
 ## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+- `kubeadm upgrade plan`
+- `kubeadm upgrade apply`
 
 ## Notes:
-- TBD
+- Strategy 1: All at once
+- Stretegy 2: Rolling (using the same Nodes, "pets")
+- strategy 3: Rolling (using new Nodes, "cattle")
 
 ## KodeKloud Lab:
 - `kubectl ...`
