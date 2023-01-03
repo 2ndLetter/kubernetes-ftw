@@ -26,16 +26,9 @@ spec:
 - TBD
 
 ## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
+- `kubectl get pods -l app=blue -o wide`
+- `kubectl drain node01 --ignore-daemonsets`
+- `kubectl uncordon node01`
+- `kubectl describe node controlplane | grep Taint`
+- `kubectl drain node01 --ignore-daemonsets --force`
+- `kubectl cordon node01`
