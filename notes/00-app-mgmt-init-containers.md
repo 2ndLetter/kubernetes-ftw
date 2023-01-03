@@ -64,3 +64,4 @@ spec:
     image: busybox:1.28
     name: red-container
 ```
+- `kubectl logs orange -c init-myservice`
