@@ -18,9 +18,9 @@ spec:
 ```
 ## Commands:
 - `kube-controller-manager --pod-eviction-timeout=5m0s ...`
-- `kubectl drain node-1` # evict pods, which are deployed on other nodes
+- `kubectl drain node-1` # evict pods and cordon the node, which are deployed on other nodes
 - `kubectl uncordon node-1` # Pods *can* be deployed to node-1 again
-- `kubectl uncordon node-1` # Prevents new pods from being scheduled on the node
+- `kubectl cordon node-1` # Prevents new pods from being scheduled on the node
 
 ## Notes:
 - TBD
