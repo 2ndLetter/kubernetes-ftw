@@ -2,6 +2,7 @@
 
 ## Documentation:
 - https://stackoverflow.com/questions/59451056/differences-between-sidecar-and-ambassador-and-adapter-pattern
+- https://www.containiq.com/post/kubernetes-sidecar-container
 
 ```yaml
 apiVersion: v1
