@@ -33,7 +33,7 @@
 - [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args.md)
 - [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars.md)
 - [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
-- []()
+- [00-app-mgmt-init-containers](notes/00-app-mgmt-init-containers.md)
 - []()
 - []()
 - []()
