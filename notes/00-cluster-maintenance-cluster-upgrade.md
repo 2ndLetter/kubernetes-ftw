@@ -1,26 +1,23 @@
 # Cluster Upgrade:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+- https://kubernetes.io/docs/tasks/administer-cluster/cluster-upgrade/
 
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
 ## Commands:
-- `kubeadm upgrade plan`
-- `apt-get upgrade -y kubeadm=1.12.0-00`
-- `kubeadm upgrade apply v1.12.0`
-- `kubectl get nodes` # This shows the version of the kubelet
+- Master Node:
+  - `kubeadm upgrade plan`
+  - `apt-get upgrade -y kubeadm=1.12.0-00`
+  - `kubeadm upgrade apply v1.12.0`
+  - `kubectl get nodes` # This shows the version of the kubelet
+  - `apt-get upgrade -y kubelet=1.12.0-00`
+  - `systemctl restart kubelet`
+- Worker Node: (rinse repeat for each worker node)
+  - `kubectl drain node-1`
+  - `apt-get upgarde -y kubeadm=1.12.0-00`
+  - `apt-get upgrade -y kubelet=1.12.0-00`
+  - `kubeadm upgrade node config --kubelet-version v1.12.0`
+  - `systemctl restart kubelet`
+  - `kubectl uncordon node-1`
 
 ## Notes:
 - Strategy 1: All at once
