@@ -18,12 +18,16 @@ spec:
 ```
 ## Commands:
 - `kubeadm upgrade plan`
-- `kubeadm upgrade apply`
+- `apt-get upgrade -y kubeadm=1.12.0-00`
+- `kubeadm upgrade apply v1.12.0`
+- `kubectl get nodes` # This shows the version of the kubelet
 
 ## Notes:
 - Strategy 1: All at once
 - Stretegy 2: Rolling (using the same Nodes, "pets")
 - strategy 3: Rolling (using new Nodes, "cattle")
+- You have to upgrade kubeadm before using it to upgrade the cluster
+- You have to manually upgrade the kubelet, kubeadm doesn't manage kubelet
 
 ## KodeKloud Lab:
 - `kubectl ...`
