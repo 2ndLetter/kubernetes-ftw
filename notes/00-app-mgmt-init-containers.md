@@ -9,21 +9,37 @@ kind: Pod
 metadata:
   name: myapp-pod
   labels:
-    app: simple-webaps
+    app: myapp
 spec:
   containers:
-  - name: simple-webapp
-    image: simple-webapp
-    ports:
-      - containerPort: 8080
-  - name: log-agent
-    image: log-agent
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+  initContainers:
+  - name: init-myservice
+    image: busybox
+    command: ['sh', '-c', 'git clone <some-repository-that-will-be-used-by-application> ; done;']
+```
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: myapp-pod
+  labels:
+    app: myapp
+spec:
+  containers:
+  - name: myapp-container
+    image: busybox:1.28
+    command: ['sh', '-c', 'echo The app is running! && sleep 3600']
+  initContainers:
+  - name: init-myservice
+    image: busybox:1.28
+    command: ['sh', '-c', 'until nslookup myservice; do echo waiting for myservice; sleep 2; done;']
+  - name: init-mydb
+    image: busybox:1.28
+    command: ['sh', '-c', 'until nslookup mydb; do echo waiting for mydb; sleep 2; done;']
 ```
 
 ## KodeKloud Lab:
-- `kubectl run yellow --image=busybox --dry-run=client -o yaml --command -- sleep 1000 > yellow.yaml`
-- Add second container to yellow.yaml via VIM
-- `kubectl apply -f yellow.yaml`
-- `kubectl -n elastic-stack logs kibana -f`
-- `kubectl get po app -n elastic-stack -o yaml > app.yaml`
-- `kubectl replace --force -f app.yaml`
+- `kubectl ...`
