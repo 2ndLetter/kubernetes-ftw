@@ -10,6 +10,7 @@
 
 ## My Notes:
 - [00-tbd]()
+
 - [00-core-concepts-manifest](notes/00-core-concepts-manifest-basics.md)
 - [00-core-concepts-pod](notes/00-core-concepts-pod.md)
 - [00-core-concepts-replicationcontroller](notes/00-core-concepts-replicationcontroller.md)
@@ -17,6 +18,7 @@
 - [00-core-concepts-deployment](notes/00-core-concepts-deployment.md)
 - [00-core-concepts-services](/notes/00-core-concepts-services.md)
 - [00-core-concepts-namespace](notes/00-core-concepts-namespace.md)
+
 - [00-scheduling-resource-quota](notes/00-scheduling-resource-quota.md)
 - [00-scheduling-manual](notes/00-scheduling-manual.md)
 - [00-scheduling-labels-selectors](notes/00-scheduling-labels-selectors.md)
@@ -28,13 +30,16 @@
 - [00-scheduling-schedulers](notes/00-scheduling-schedulers.md)
 - [00-scheduling-static-pods](notes/00-scheduling-static-pods.md)
 - [00-scheduling-multi-profile-scheduler](notes/00-scheduling-multi-profile-scheduler.md)
+
 - [00-logging-monitoring](notes/00-logging-monitoring.md)
+
 - [00-app-mgmt-deployment-strategy](notes/00-app-mgmt-deployment-strategy.md)
 - [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args.md)
 - [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars.md)
 - [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
 - [00-app-mgmt-init-containers](notes/00-app-mgmt-init-containers.md)
 
+- [00-cluster-maintenance-os-upgrades](notes/00-cluster-maintenance-os-upgrades.md)
 
 # Sections Left to Cover:
 
