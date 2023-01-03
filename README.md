@@ -37,9 +37,6 @@
 
 
 # Sections Left to Cover:
-# ==Application Lifecycle Management==
-## Init Containers:
----
 
 # ==Cluster Maintenance==
 ## OS Upgrades:
@@ -52,7 +49,7 @@
 ## View Certificate Details:
 ## Certificates API:
 ## KubeConfig:
-## Role BAsed Access Controls:
+## Role Based Access Controls:
 ## Cluster Roles:
 ## Service Accounts:
 ## Image Security:
