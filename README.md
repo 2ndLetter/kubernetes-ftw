@@ -45,7 +45,6 @@
 # Sections Left to Cover:
 
 # ==Cluster Maintenance==
-## Cluster Upgrade Process:
 ## Backup and Restore Methods:
 ## Backup and Restore Methods 2:
 ---
