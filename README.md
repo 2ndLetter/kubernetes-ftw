@@ -40,11 +40,11 @@
 - [00-app-mgmt-init-containers](notes/00-app-mgmt-init-containers.md)
 
 - [00-cluster-maintenance-os-upgrades](notes/00-cluster-maintenance-os-upgrades.md)
+- [00-cluster-maintenance-cluster-upgrade](notes/00-cluster-maintenance-cluster-upgrade.md)
 
 # Sections Left to Cover:
 
 # ==Cluster Maintenance==
-## OS Upgrades:
 ## Cluster Upgrade Process:
 ## Backup and Restore Methods:
 ## Backup and Restore Methods 2:
