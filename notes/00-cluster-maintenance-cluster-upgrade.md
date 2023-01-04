@@ -1,6 +1,7 @@
 # Cluster Upgrade:
 ## Documentation:
 - https://kubernetes.io/docs/tasks/administer-cluster/kubeadm/kubeadm-upgrade/
+- https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-upgrade/
 - https://kubernetes.io/docs/tasks/administer-cluster/cluster-upgrade/
 
 ## Commands:
