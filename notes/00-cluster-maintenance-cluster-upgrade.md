@@ -40,6 +40,7 @@
 - `k get pods -l app=blue`
 - `kubectl drain controlplane --ignore-daemonsets`
 - `k get pods -l app=blue`
+- `cat /etc/*release*`
 - `apt update`
 - `apt-get install kubeadm=1.25.0-00`
 - `kubeadm upgrade plan`
