@@ -36,7 +36,7 @@
 - `kubeadm upgrade plan`
 - `k get nodes -A`
 - `k describe node controlplane | grep Taint`
-- `k describe node node01 | grep Taint`
+- `k describe node | grep Taint`
 - `k get pods -l app=blue`
 - `kubectl drain controlplane --ignore-daemonsets`
 - `k get pods -l app=blue`
