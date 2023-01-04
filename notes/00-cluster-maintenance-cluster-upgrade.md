@@ -11,10 +11,11 @@
   - `kubeadm upgrade apply v1.12.0`
   - `kubectl get nodes` # This shows the version of the kubelet
   - `apt-get upgrade -y kubelet=1.12.0-00`
+  - `systemctl daemon-reload`
   - `systemctl restart kubelet`
 - Worker Node: (rinse repeat for each worker node)
   - `kubectl drain node-1`
-  - `apt-get upgarde -y kubeadm=1.12.0-00`
+  - `apt-get upgrade -y kubeadm=1.12.0-00`
   - `apt-get upgrade -y kubelet=1.12.0-00`
   - `kubeadm upgrade node config --kubelet-version v1.12.0`
   - `systemctl restart kubelet`
