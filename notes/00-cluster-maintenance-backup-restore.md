@@ -28,7 +28,15 @@ spec:
   - `systemctl daemon-reload`
   - `systemctl restart etcd`
   - `service kube-apiserver start`
-
+- For each etcdctl commands add the below options:
+  ```
+  ETCDCTL_API=3 etcdctl \
+    snapshot save snapshot.db \
+    --endpoints=https://127.0.0.1:2379 \
+    --cacert=/etc/etcd/ca.crt \
+    --cert=/etc/etcd/etcd-server.crt \
+    --key=/etc/etcd/etcd-server.key
+  ```
 ## Notes:
 - Store manifests in GitHub (SCM)
 - Backup the actual directory where etcd.service keeps its data (--data-dir=/var/lib/etcd)
