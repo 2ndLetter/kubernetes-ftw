@@ -55,5 +55,16 @@ spec:
   --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
   ```
 - `cat notes` # Easily view information
-- `etcdctl snapshot save /opt/snapshot-pre-boot.db --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key`
-- 
+- Backup etcd:
+  - `etcdctl snapshot save /opt/snapshot-pre-boot.db --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key`
+- Restore etcd:
+  - `etcdctl --data-dir /var/lib/etcd-from-backup snapshot restore /opt/snapshot-pre-boot.db --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key`
+- Edit etcd Static Pod:
+  - `vim /etc/kubernetes/manifest/etcd.yaml`
+  - Change the path of the volume's etcd-data to the restored location:
+    ```
+    path: /var/lib/etcd-from-backup
+    ```
+  - `watch "crictl ps | grep etcd"` # Wait for etcd pod to come back online
+- Verify Deployments and Services are online:
+  - `kubect get deploy,svc`
