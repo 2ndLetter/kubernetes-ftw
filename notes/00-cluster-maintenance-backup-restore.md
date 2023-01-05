@@ -19,6 +19,7 @@ spec:
 ```
 ## Commands:
 - `kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml` # Backups the resources as yaml
+- `export ETCDCTL_API=3` # Set variable
 - `ETCDCTL_API=3 etcdctl snapshot save </path-to-new-snapshot/>snapshot.db`
 - `ETCDCTL_API=3 etcdctl snapshot status </path-to-new-snapshot/>snapshot.db`
 - Restore snapshot:
