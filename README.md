@@ -10,7 +10,7 @@
 
 ## My Notes:
 - [00-boilerplate](notes/00-boilerplate.md)
-
+---
 - [00-core-concepts-manifest](notes/00-core-concepts-manifest-basics.md)
 - [00-core-concepts-pod](notes/00-core-concepts-pod.md)
 - [00-core-concepts-replicationcontroller](notes/00-core-concepts-replicationcontroller.md)
