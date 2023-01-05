@@ -33,7 +33,11 @@
 - You have to manually upgrade the kubelet, kubeadm doesn't manage kubelet
 
 ## KodeKloud Lab:
-- "https://kubernetes.io/docs/home/" > Search "upgrade" > Select "Upgrading kubeadm clusters"
+- Documentation:
+  - "https://kubernetes.io/docs/home/"
+  - Search "upgrade"
+  - Select "Upgrading kubeadm clusters"
+  - Select "the version <source> to <destination>" link
 - `kubeadm upgrade plan`
 - `k get nodes -A`
 - `k describe node controlplane | grep Taint`
