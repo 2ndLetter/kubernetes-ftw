@@ -29,6 +29,7 @@
 - Store manifests in GitHub (SCM)
 - Backup the actual directory where etcd.service keeps its data (--data-dir=/var/lib/etcd)
 - Reminder if pod name is appended with "-controlplane", it's a Static Pod
+- Always check your work by doing `kubectl describe <object>` commands
 
 ## KodeKloud Lab:
 - `kubectl get deploy`
