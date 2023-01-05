@@ -46,6 +46,8 @@
 - [00-cluster-maintenance-os-upgrades](notes/00-cluster-maintenance-os-upgrades.md)
 - [00-cluster-maintenance-cluster-upgrade](notes/00-cluster-maintenance-cluster-upgrade.md)
 - [00-cluster-maintenance-backup-restore](notes/00-cluster-maintenance-backup-restore.md)
+- [00-cluster-maintenance-backup-restore-2](notes/00-cluster-maintenance-backup-restore-2.md)
+
 
 # Sections Left to Cover:
 
