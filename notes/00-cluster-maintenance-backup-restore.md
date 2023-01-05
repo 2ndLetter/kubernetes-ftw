@@ -77,7 +77,7 @@ spec:
     - --advertise-client-urls=https://10.2.255.9:2379
     - --cert-file=/etc/kubernetes/pki/etcd/server.crt
     - --client-cert-auth=true
-    - --data-dir=/var/lib/etcd # THIS MUST MATCH
+    - --data-dir=/var/lib/etcd # <------------------------------------------ THIS MUST MATCH
     - --experimental-initial-corrupt-check=true
     - --initial-advertise-peer-urls=https://10.2.255.9:2380
     - --initial-cluster=controlplane=https://10.2.255.9:2380
@@ -120,7 +120,7 @@ spec:
       periodSeconds: 10
       timeoutSeconds: 15
     volumeMounts:
-    - mountPath: /var/lib/etcd # THIS MUST MATCH
+    - mountPath: /var/lib/etcd # <------------------------------------------ THIS MUST MATCH
       name: etcd-data
     - mountPath: /etc/kubernetes/pki/etcd
       name: etcd-certs
