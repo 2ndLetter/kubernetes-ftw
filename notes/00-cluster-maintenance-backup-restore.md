@@ -17,11 +17,21 @@ spec:
     image: nginx
 ```
 ## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+- `kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml` # Backups the resources as yaml
+- `ETCDCTL_API=3 etcdctl snapshot save </path-to-new-snapshot/>snapshot.db`
+- `ETCDCTL_API=3 etcdctl snapshot status </path-to-new-snapshot/>snapshot.db`
+- Restore snapshot:
+  - `service kube-apiservice stop`
+  - `ETCDCTL_API=3 etcdctl snapshot restore snapshot.db --data-dir /var/lib/etcd-from-backup`
+  - Configure etcd.service to use new data directory:
+    - `--data-dir=/var/lib/etcd-from-backup`
+  - `systemctl daemon-reload`
+  - `systemctl restart etcd`
+  - `service kube-apiserver start`
 
 ## Notes:
-- TBD
+- Store manifests in GitHub (SCM)
+- Backup the actual directory where etcd.service keeps its data (--data-dir=/var/lib/etcd)
 
 ## KodeKloud Lab:
 - `kubectl ...`
