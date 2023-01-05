@@ -44,16 +44,16 @@ spec:
 - Backup the actual directory where etcd.service keeps its data (--data-dir=/var/lib/etcd)
 
 ## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
+- `kubectl get deploy`
+- `kubectl get svc`
+- `kubectl describe -n kube-system pod etcd-controlplane`
+- Copy etcd pod into a file called "notes":
+  ```
+  --data-dir=/var/lib/etcd
+  --cert-file=/etc/kubernetes/pki/etcd/server.crt
+  --key-file=/etc/kubernetes/pki/etcd/server.key
+  --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+  ```
+- `cat notes` # Easily view information
+- `etcdctl snapshot save /opt/snapshot-pre-boot.db --cacert=/etc/kubernetes/pki/etcd/ca.crt --cert=/etc/kubernetes/pki/etcd/server.crt --key=/etc/kubernetes/pki/etcd/server.key`
+- 
