@@ -18,7 +18,7 @@
 - [00-core-concepts-deployment](notes/00-core-concepts-deployment.md)
 - [00-core-concepts-services](/notes/00-core-concepts-services.md)
 - [00-core-concepts-namespace](notes/00-core-concepts-namespace.md)
-
+---
 - [00-scheduling-resource-quota](notes/00-scheduling-resource-quota.md)
 - [00-scheduling-manual](notes/00-scheduling-manual.md)
 - [00-scheduling-labels-selectors](notes/00-scheduling-labels-selectors.md)
