@@ -135,7 +135,7 @@ spec:
       type: DirectoryOrCreate
     name: etcd-certs
   - hostPath:
-      path: /var/lib/etcd-from-backup
+      path: /var/lib/etcd-from-backup # <----------------------------------- THIS IS WHAT I UPDATED TO POINT TO THE NEW ETCD DB
       type: DirectoryOrCreate
     name: etcd-data
 status: {}
