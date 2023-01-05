@@ -3,20 +3,6 @@
 - https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#backing-up-an-etcd-cluster
 - https://github.com/etcd-io/etcd
 
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
 ## Commands:
 - `kubectl get all --all-namespaces -o yaml > all-deploy-services.yaml` # Backups the resources as yaml
 - `export ETCDCTL_API=3` # Set variable
