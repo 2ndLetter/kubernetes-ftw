@@ -38,6 +38,7 @@
   - Search "upgrade"
   - Select "Upgrading kubeadm clusters"
   - Select "the version <source> to <destination>" link
+- `cat /etc/*release*` # View OS
 - `kubeadm upgrade plan`
 - `k get nodes -A`
 - `k describe node controlplane | grep Taint`
@@ -45,7 +46,6 @@
 - `k get pods -l app=blue`
 - `kubectl drain controlplane --ignore-daemonsets`
 - `k get pods -l app=blue`
-- `cat /etc/*release*`
 - `apt update`
 - `apt-get install kubeadm=1.25.0-00`
 - `kubeadm upgrade plan`
