@@ -30,15 +30,15 @@
 - [00-scheduling-schedulers](notes/00-scheduling-schedulers.md)
 - [00-scheduling-static-pods](notes/00-scheduling-static-pods.md)
 - [00-scheduling-multi-profile-scheduler](notes/00-scheduling-multi-profile-scheduler.md)
-
+---
 - [00-logging-monitoring](notes/00-logging-monitoring.md)
-
+---
 - [00-app-mgmt-deployment-strategy](notes/00-app-mgmt-deployment-strategy.md)
 - [00-app-mgmt-commands-args](notes/00-app-mgmt-commands-args.md)
 - [00-app-mgmt-env-vars](notes/00-app-mgmt-env-vars.md)
 - [00-app-mgmt-multi-container-pods](notes/00-app-mgmt-multi-container-pods.md)
 - [00-app-mgmt-init-containers](notes/00-app-mgmt-init-containers.md)
-
+---
 - [00-cluster-maintenance-os-upgrades](notes/00-cluster-maintenance-os-upgrades.md)
 - [00-cluster-maintenance-cluster-upgrade](notes/00-cluster-maintenance-cluster-upgrade.md)
 - [00-cluster-maintenance-backup-restore](notes/00-cluster-maintenance-backup-restore.md)
