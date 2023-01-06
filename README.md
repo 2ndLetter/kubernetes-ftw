@@ -49,7 +49,8 @@
 - [00-cluster-maintenance-backup-restore-2](notes/00-cluster-maintenance-backup-restore-2.md) [DO LAB AGAIN!!!!]
 ---
 ### Security:
-- [00-security-authentication](notes/00-security-authentication.md)
+- [00-security-basic-authentication](notes/00-security-basic-authentication.md)
+- [00-security-tls-basics](notes/00-security-tls-basics.md)
 
 # Sections Left to Cover:
 
