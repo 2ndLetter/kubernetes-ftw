@@ -51,6 +51,7 @@
 ### Security:
 - [00-security-basic-authentication](notes/00-security-basic-authentication.md)
 - [00-security-tls](notes/00-security-tls.md)
+- [00-security-tls-certificate-creation](notes/00-security-tls-certificate-creation.md)
 
 # Sections Left to Cover:
 
