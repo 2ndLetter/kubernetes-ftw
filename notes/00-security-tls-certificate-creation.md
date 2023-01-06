@@ -41,8 +41,18 @@ admin.crt
   - SYSTEM:KUBE-CONTROLLER-MANAGER
   - SYSTEM:KUBE-PROXY
 
-
-
+### Using the admin key/certificate:
+- `curl https://kube-apiserver:6443/api/v1/pods --key admin.key --cert admin.crt --cacert ca.crt`
+```
+{
+  "kind": "PodList",
+  "apiVersion": "v1",
+  "metadata": {
+    "selfLink": "/api/v1/pods",
+  },
+  "items": []
+}
+```
 
 ## Notes:
 
