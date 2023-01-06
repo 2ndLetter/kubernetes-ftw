@@ -50,7 +50,7 @@
 ---
 ### Security:
 - [00-security-basic-authentication](notes/00-security-basic-authentication.md)
-- [00-security-tls-basics](notes/00-security-tls-basics.md)
+- [00-security-tls](notes/00-security-tls.md)
 
 # Sections Left to Cover:
 
