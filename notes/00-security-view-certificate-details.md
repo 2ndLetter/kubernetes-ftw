@@ -26,7 +26,21 @@ spec:
     - --tls-cert-file=/etc/kubernetes/pki/apiserver.crt
     - --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
 ```
-
+- Example certificate inspection (/etc/kubernetes/pki/apiserver.crt):
+- `openssl x509 -in /etc/kubernetes/pki/apiserver.crt -text -noout`
+```
+Certificate:
+  Data:
+    ...
+    Validity
+      Not Before: Feb 11 05:39:19 2019 GMT
+      Not After : Feb 11 05:39:20 2020 GMT
+    Subject: CN=kube-apiserver
+    ...
+    X509v3 extensions:
+      X509v3 Subject Alternative Name:
+        DNS:master, DNS:kubernetes, DNS:kubernetes.default, DNS:kubernetes.default.svc, DNS:kubernetes.default.svc.cluster.local, IP Address:10.96.0.1, IP Address:172.17.0.27
+```
 
 
 
