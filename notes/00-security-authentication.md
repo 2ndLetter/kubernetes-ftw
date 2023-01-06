@@ -21,7 +21,23 @@ spec:
 - `kubectl describe ...`
 
 ## Notes:
-- TBD
+- Authentication Mechanisms: (kube-apiserver)
+  - Static Password File
+    - user-details.csv:
+    ```
+    password123,user1,u0001
+    password123,user2,u0002
+    password123,user3,u0003
+    ```
+    kube-apiserver.service:
+    ```
+    ....
+    --basic-auth-file=user-details.csv
+    ...
+    ```
+  - Static Token File
+  - Certificates
+  - Identity Services
 
 ## KodeKloud Lab:
 - `kubectl ...`
