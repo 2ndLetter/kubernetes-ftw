@@ -1,6 +1,7 @@
 # View Certificate Details:
 ## Documentation:
 - https://kubernetes.io/docs/home/
+- https://github.com/mmumshad/kubernetes-the-hard-way/tree/master/tools
 ---
 
 ## Commands/Notes:
