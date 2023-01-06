@@ -48,6 +48,7 @@ spec:
   ```
   - To authenticate using basic credentials:
     - `curl -v -k https://master-node-ip:6443/api/v1/pods -u "user1:password123"`
+  ---
   ### Static Token File:
   - user-token-details.csv:
   ```
@@ -58,20 +59,12 @@ spec:
   - Use this option: `--token-auth-file=user-details.csv`
   - To authenticate using a token file:
     - `curl -v -k https://master-node-ip:6443/api/v1/pods --header "Authorization: Bearer LKIJ3kj3l4kLKJ3kjLk4k3kkdfls"`
+  ---
+  - IMPORTANT NOTES:
+    - Static Password/Token file is NOT recommended
+    - Consider volume mount while providing the auth file in kubeadm setup
+    - Setup RBAC for new users
+    - Basic Authentication was deprecated in 1.19 (2020-08-26)
   ### Certificates:
   ### Identity Services:
 
-## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
