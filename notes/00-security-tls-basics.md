@@ -1,6 +1,6 @@
-# Section Title:
+# TLS Basics:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 
 ## Usage:
 - Imperative Way:
