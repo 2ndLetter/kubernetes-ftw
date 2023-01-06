@@ -134,17 +134,17 @@ apiserver.csr
 apiserver.crt
 ```
 - Configuration passed into the Kube API Servers executable or config file:
-```yaml
+```conf
 ExecStart=/usr/local/bin/kube-apiserver \\
-  --etcd-cafile=/var/lib/kubernetes/ca.pem \\
-  --etcd-certfile=/var/lib/kubernetes/apiserver-etcd-client.crt \\
-  --etcd-keyfile=/var/lib/kubernetes/apiserver-etcd-client.key \\
-  --kubelet-certificate-authority=/var/lib/kubernetes/ca.pem \\
-  --kubelet-client-certificate=/var/lib/kubernetes/apiserver-kubelet-client.crt \\
-  --kubelet-client-key=/var/lib/kubernetes/apiserver-kubelete-client.key \\
-  --client-ca-file=/var/lib/kubernetes/ca.pem \\
-  --tls-cert-file=/var/lib/kubernetes/apiserver.crt \\
-  --tls-private-key-file=/var/lib/kubernetes/apiserver.key \\
+  --etcd-cafile=/var/lib/kubernetes/ca.pem \\                                      # Connect to etcd
+  --etcd-certfile=/var/lib/kubernetes/apiserver-etcd-client.crt \\                 # Connect to etcd
+  --etcd-keyfile=/var/lib/kubernetes/apiserver-etcd-client.key \\                  # Connect to etcd
+  --kubelet-certificate-authority=/var/lib/kubernetes/ca.pem \\                    # Connect to kubeletes
+  --kubelet-client-certificate=/var/lib/kubernetes/apiserver-kubelet-client.crt \\ # Connect to kubeletes
+  --kubelet-client-key=/var/lib/kubernetes/apiserver-kubelete-client.key \\        # Connect to kubeletes
+  --client-ca-file=/var/lib/kubernetes/ca.pem \\                                   # CA cert
+  --tls-cert-file=/var/lib/kubernetes/apiserver.crt \\                             # Kube API Server cert
+  --tls-private-key-file=/var/lib/kubernetes/apiserver.key \\                      # Kube API Server key
   ...
 ```
 
