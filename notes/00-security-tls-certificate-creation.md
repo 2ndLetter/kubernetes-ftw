@@ -1,6 +1,7 @@
 # TLS Certificate Creation:
 ## Documentation:
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
+- https://kubernetes.io/docs/tasks/administer-cluster/certificates/
 
 ## Commands:
 
@@ -34,7 +35,11 @@ admin.crt
 - NOTE: Add group to Certificate Signing Request when you need to identify the user as a Admin:
   - `openssl req -new -key admin.key -subj "/CN=kube-admin/OU=system:masters" -out admin.csr`
 
-
+### Systemctl Client Certificates:
+- Client Certificates for system components must be prefixed with prefixed "SYSTEM":
+  - SYSTEM:KUBE-SCHEDULER
+  - SYSTEM:KUBE-CONTROLLER-MANAGER
+  - SYSTEM:KUBE-PROXY
 
 
 
