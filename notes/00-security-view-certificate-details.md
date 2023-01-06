@@ -32,6 +32,7 @@ spec:
 Certificate:
   Data:
     ...
+    Issuer: CN=kubernetes
     Validity
       Not Before: Feb 11 05:39:19 2019 GMT
       Not After : Feb 11 05:39:20 2020 GMT
