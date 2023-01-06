@@ -3,7 +3,7 @@
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 - https://kubernetes.io/docs/tasks/administer-cluster/certificates/
 
-## Commands:
+## Commands/Notes:
 
 ### Generate Certificate for the Kubernetes Certificate Authority:
 - Generate Private Key: `openssl genrsa -out ca.key 2048`
@@ -35,11 +35,14 @@ admin.crt
 - NOTE: Add group to Certificate Signing Request when you need to identify the user as a Admin:
   - `openssl req -new -key admin.key -subj "/CN=kube-admin/OU=system:masters" -out admin.csr`
 
-### Systemctl Client Certificates:
+### System Client Certificates:
 - Client Certificates for system components must be prefixed with prefixed "SYSTEM":
   - SYSTEM:KUBE-SCHEDULER
   - SYSTEM:KUBE-CONTROLLER-MANAGER
   - SYSTEM:KUBE-PROXY
+
+### Client Certificate Notes:
+- When Clients use their certificates, they need a copy of the Kubernetes CA's root certificate
 
 ### Using the admin key/certificate:
 - Rest API Call: `curl https://kube-apiserver:6443/api/v1/pods --key admin.key --cert admin.crt --cacert ca.crt`
@@ -69,7 +72,15 @@ users:
     client-key: admin.key
 ```
 
-## Notes:
+### ETCD SERVERS:
+- 
+
+
+
+
+
+
+
 
 ### Server Certificates:
 - KUBE-API SERVER: #
