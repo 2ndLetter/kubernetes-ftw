@@ -42,7 +42,9 @@ Certificate:
       X509v3 Subject Alternative Name:
         DNS:master, DNS:kubernetes, DNS:kubernetes.default, DNS:kubernetes.default.svc, DNS:kubernetes.default.svc.cluster.local, IP Address:10.96.0.1, IP Address:172.17.0.27
 ```
-
+  - Follow the same steps to inspect the other certificates
+  - What to look for:
+    - tbd
 
 
 ---
