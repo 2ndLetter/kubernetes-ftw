@@ -1,4 +1,4 @@
-# TLS Basics:
+# TLS:
 ## Documentation:
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 
@@ -21,7 +21,24 @@ spec:
 - `kubectl describe ...`
 
 ## Notes:
-- TBD
+
+## Server Certificates:
+- KUBE-API SERVER:
+  - apiserver.crt (certificate)
+  - apiserver.key (priv key)
+- ETCD SERVER:
+  - etcdserver.crt (certificate)
+  - etcdserver.key (priv key)
+- KUBELET SERVER:
+  - kubelet.crt (certificate)
+  - kubelet.key (priv key)
+## Client Certificates:
+- ADMIN: (kubectl REST API)
+  - admin.crt (certificate)
+  - admin.key (priv key)
+- 
+
+
 
 ## KodeKloud Lab:
 - `kubectl ...`
