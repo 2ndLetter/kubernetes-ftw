@@ -170,6 +170,7 @@ tlsCertFile: "/var/lib/kubelet/node01.crt"
 tlsPrivateKeyFile: "/var/lib/kubelet/node01.key"
 ```
 
+### KUBECTL NODES (CLIENT CERT)
 
 
 
