@@ -105,8 +105,48 @@ users:
 - All these names MUST be present in the Kube API Server certificate
 - Generate certificate with additional names:
   - `openssl genrsa -out apiserver.key 2048`
-
-
+```
+apiserver.key
+```
+  - Reference this file (openssl.cnf) with the next command:
+```conf
+[req]
+req_extensions = v3_reg
+distinguished_name = req_distinguised_name
+[ v3_req ]
+basicConstraints = CA:FALSE
+keyUsage = nonRepudiation,
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = kubernetes
+DNS.2 = kubernetes.default
+DNS.3 = kubernetes.default.svc
+DNS.4 = kubernetes.default.svc.cluster.local
+IP.1 = 10.96.0.1
+IP.2 = 172.17.0.87
+```
+  - `openssl req -new -key apiserver.key -subj "/CN=kube-apiserver" -out apiserver.csr -config openssl.cnf`
+```
+apiserver.csr
+```
+  - `openssl x509 -req -in apiserver.csr -CA ca.crt -CAkey ca.key -out apiserver.crt`
+```
+apiserver.crt
+```
+- Configuration passed into the Kube API Servers executable or config file:
+```yaml
+ExecStart=/usr/local/bin/kube-apiserver \\
+  --etcd-cafile=/var/lib/kubernetes/ca.pem \\
+  --etcd-certfile=/var/lib/kubernetes/apiserver-etcd-client.crt \\
+  --etcd-keyfile=/var/lib/kubernetes/apiserver-etcd-client.key \\
+  --kubelet-certificate-authority=/var/lib/kubernetes/ca.pem \\
+  --kubelet-client-certificate=/var/lib/kubernetes/apiserver-kubelet-client.crt \\
+  --kubelet-client-key=/var/lib/kubernetes/apiserver-kubelete-client.key \\
+  --client-ca-file=/var/lib/kubernetes/ca.pem \\
+  --tls-cert-file=/var/lib/kubernetes/apiserver.crt \\
+  --tls-private-key-file=/var/lib/kubernetes/apiserver.key \\
+  ...
+```
 
 
 
