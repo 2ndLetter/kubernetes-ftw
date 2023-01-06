@@ -2,6 +2,7 @@
 ## Documentation:
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 - https://kubernetes.io/docs/tasks/administer-cluster/certificates/
+- https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/#securing-etcd-clusters
 
 ## Commands/Notes:
 
@@ -73,8 +74,24 @@ users:
 ```
 
 ### ETCD SERVERS:
-- 
-
+- ETCD can be deployed as a Cluster across multiple servers
+- Additional Peer Certificates must be generated:
+  - etcdpeer1.crt | etcdpeer1.key
+  - etcdpeer2.crt | etcdpeer2.key
+- Once created, specify them when starting the ETCD server (etcd.yaml)
+- etcd.yaml:
+```
+...
+- etcd
+  - --key-file=/path-to-certs/etcdserver.key
+  - --cert-file=/path-to-certs/etcdserver.crt
+  - --peer-cert-file=/path-to-certs/etcdpeer1.crt
+  - --peer-client-cert-auth=true
+  - --peer-key-file=/etc/kubernetes/pki/etcd/peer.key
+  - --peer-trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+  - --trusted-ca-file=/etc/kubernetes/pki/etcd/ca.crt
+  ...
+```
 
 
 
