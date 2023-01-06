@@ -149,7 +149,8 @@ ExecStart=/usr/local/bin/kube-apiserver \\
 ```
 
 ### KUBELET NODES (SERVER CERT):
-- Lives on each node in the cluster
+- kubelet.crt | kubelet.key
+- Runs on each node in the cluster, responsible for managing the node
 - Named after the node it lives on
 - They are specified on the kubelet-config.yaml:
 ```yaml
@@ -170,7 +171,10 @@ tlsCertFile: "/var/lib/kubelet/node01.crt"
 tlsPrivateKeyFile: "/var/lib/kubelet/node01.key"
 ```
 
-### KUBECTL NODES (CLIENT CERT)
+### KUBECTL NODES (CLIENT CERT):
+- kubelet-client.crt | kubelet-client.key
+- Used by the kubelet to communcation with kube api server
+- Certificate name: "system:node:<node_name>"
 
 
 
