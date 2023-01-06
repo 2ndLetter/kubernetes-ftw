@@ -1,39 +1,17 @@
 # View Certificate Details:
 ## Documentation:
 - https://kubernetes.io/docs/home/
+---
 
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+## Commands/Notes:
+- When trying to analyse the TLS configuations, find out how the cluster was setup:
+  - The Hard Way:
+    - Manually generated certificates yourself
+  - kubeadm:
+    - Automatically generated certificates by the tool (kubeadm)
 
-## Notes:
-- TBD
 
-## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
+
+
+---
+
