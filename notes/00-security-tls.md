@@ -22,7 +22,7 @@ spec:
 
 ## Notes:
 
-## Server Certificates:
+### Server Certificates:
 - KUBE-API SERVER: #
   - apiserver.crt (cert)
   - apiserver.key (priv key)
@@ -36,7 +36,7 @@ spec:
 - KUBELET SERVER:
   - kubelet.crt (cert)
   - kubelet.key (priv key)
-## Client Certificates:
+### Client Certificates:
 - ADMIN: (kubectl REST API) # <--------- ACCESSES THE KUBE-API SERVER
   - admin.crt (cert)
   - admin.key (priv key)
@@ -49,20 +49,3 @@ spec:
 - KUBE-PROXY:               # <--------- ACCESSES THE KUBE-API SERVER
   - kube-proxy.crt (cert)
   - kybe-proxy.key (priv key)
-
-
-
-## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
