@@ -175,7 +175,7 @@ tlsPrivateKeyFile: "/var/lib/kubelet/node01.key"
 - kubelet-client.crt | kubelet-client.key
 - Used by the kubelet to communcation with kube api server
 - Certificate name: "system:node:<node_name>"
-
+- Needs to be added to group SYSTEM:NODES
 
 
 ### Server Certificates:
