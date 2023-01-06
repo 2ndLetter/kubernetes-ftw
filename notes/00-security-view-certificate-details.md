@@ -60,8 +60,8 @@ Certificate:
       - `kubectl logs etcd-master`
     - If kube-apiserver or etcd-server is down, you need to inspect the docker logs:
       - `docker ps -a`
-      - `docker logs <container_id>`
-  
-
+      - `docker logs <container_id>`  
 ---
 
+## KodeKloud Lab:
+- ``
