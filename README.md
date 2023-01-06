@@ -6,6 +6,9 @@
 - [x] [Docker Certified Associate (A Cloud Guru)](https://learn.acloud.guru/course/6b00566d-6246-4ebe-8257-f98f989321cf/overview)
 - [x] [Learn Kubernetes by Doing (A Cloud Guru)](https://learn.acloud.guru/course/82b39fac-b9f7-43d1-8f52-6a89efe5202f/dashboard)
 - [ ] [Certified Kubernetes Administrator (CKA) with Practice Tests (Udemy)](https://www.udemy.com/course/certified-kubernetes-administrator-with-practice-tests/)
+  - [x] 1st run through the course without notes/labs
+  - [ ] 2nd run through the course  with notes/labs
+  - [ ] Do the KodeKloud labs only using https://kubernetes.io/docs/home/
 - [ ] [Killer Shell Simulator](https://killer.sh/)
 
 ## My Notes:
