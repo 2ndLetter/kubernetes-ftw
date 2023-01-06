@@ -38,14 +38,14 @@ spec:
     ```
     - Restart kube-server for changes to take affect
     - If running in a Pod:
-      ```
-      ...
-      spec:
-        containers:
-        - command:
-          - --basic-auth-file=user-details.csv
-          ...
-      ```
+    ```
+    ...
+    spec:
+      containers:
+      - command:
+        - --basic-auth-file=user-details.csv
+        ...
+    ```
 
   - Static Token File
   - Certificates
