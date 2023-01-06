@@ -31,7 +31,8 @@ spec:
     ```
     kube-apiserver.service:
     ```
-    ....
+    ExecStart=/usr/local/bin/kube-apiserver \\
+    ...
     --basic-auth-file=user-details.csv
     ...
     ```
