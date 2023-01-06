@@ -4,7 +4,7 @@
 
 ## Commands:
 
-### Generate Key for Kubernetes Certificate Authority:
+### Generate Certificate for the Kubernetes Certificate Authority:
 - Generate Private Key: `openssl genrsa -out ca.key 2048`
 ```
 ca.key
