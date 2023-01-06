@@ -49,7 +49,7 @@
 - [00-cluster-maintenance-backup-restore-2](notes/00-cluster-maintenance-backup-restore-2.md) [DO LAB AGAIN!!!!]
 ---
 ### Security:
-- [00-security-primities](notes/00-security-primitives.md)
+- [00-security-authentication](notes/00-security-authentication.md)
 
 # Sections Left to Cover:
 
