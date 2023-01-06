@@ -3,18 +3,40 @@
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 
 ## Commands:
-- Generate Keys: `openssl genrsa -out ca.key 2048`
+
+### Generate Key for Kubernetes Certificate Authority:
+- Generate Private Key: `openssl genrsa -out ca.key 2048`
 ```
 ca.key
 ```
-- Certificate Signing Request: `openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr`
+- Create Certificate Signing Request: `openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr`
 ```
 ca.csr
 ```
-- Sign Certificates: `openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt`
+- Generate a Signed Certificate (self-signed by private key): `openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt`
 ```
 ca.crt
 ```
+
+### Generate Client Certificates:
+- Generate Private Key: `openssl genrsa -out admin.key 2048`
+```
+admin.key
+```
+- Create Certificate Signing Request: `openssl req -new -key admin.key -subj "/CN=kube-admin" -out admin.csr`
+```
+admin.csr
+```
+- Generate Signed Certificate : `openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -out admin.crt`
+```
+admin.crt
+```
+
+
+
+
+
+
 
 ## Notes:
 
