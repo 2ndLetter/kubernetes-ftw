@@ -2,23 +2,19 @@
 ## Documentation:
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
 ## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+- Generate Keys: `openssl genrsa -out ca.key 2048`
+```
+ca.key
+```
+- Certificate Signing Request: `openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA" -out ca.csr`
+```
+ca.csr
+```
+- Sign Certificates: `openssl x509 -req -in ca.csr -signkey ca.key -out ca.crt`
+```
+ca.crt
+```
 
 ## Notes:
 
