@@ -42,7 +42,7 @@ admin.crt
   - SYSTEM:KUBE-PROXY
 
 ### Using the admin key/certificate:
-- `curl https://kube-apiserver:6443/api/v1/pods --key admin.key --cert admin.crt --cacert ca.crt`
+- Rest API Call: `curl https://kube-apiserver:6443/api/v1/pods --key admin.key --cert admin.crt --cacert ca.crt`
 ```
 {
   "kind": "PodList",
@@ -52,6 +52,21 @@ admin.crt
   },
   "items": []
 }
+```
+- kube-config.yaml:
+```
+apiVersion: v1
+kind: Config
+clusters:
+- cluster:
+    certificate-authority: ca.crt
+    server: https://kube-apiserver:6443
+  name: kubernetes
+users:
+- name: kubernetes-admin
+  user:
+    client-certificate: admin.crt
+    client-key: admin.key
 ```
 
 ## Notes:
