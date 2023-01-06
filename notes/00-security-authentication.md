@@ -65,6 +65,3 @@ spec:
     - Consider volume mount while providing the auth file in kubeadm setup
     - Setup RBAC for new users
     - Basic Authentication was deprecated in 1.19 (2020-08-26)
-  ### Certificates:
-  ### Identity Services:
-
