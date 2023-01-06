@@ -1,6 +1,6 @@
-# Section Title:
+# Basic Authentication:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/access-authn-authz/authentication/
 
 ## Usage:
 - Imperative Way:
