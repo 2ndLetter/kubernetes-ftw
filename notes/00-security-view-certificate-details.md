@@ -44,8 +44,22 @@ Certificate:
 ```
   - Follow the same steps to inspect the other certificates
   - What to look for:
-    - tbd
-
+    - CN Name (corrrect name)
+    - ALT Names (includes all names)
+    - Organization
+    - Issuer (not self)
+    - Expiration (not expired)
+  - If you run into issues, Inspect Service Logs:
+    - If The Hard Way If stood up The Hard Way:
+      - `journalctl -u etcd.service -l`
+      - Look for "failed" and "error"
+      - Look for incorrect paths to certificates
+    - If kubeadm:
+      - `kubectl logs etcd-master`
+    - If kube-apiserver or etcd-server is down, you need to inspect the docker logs:
+      - `docker ps -a`
+      - `docker logs <container_id>`
+  
 
 ---
 
