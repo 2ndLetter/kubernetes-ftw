@@ -18,7 +18,7 @@ ca.csr
 ca.crt
 ```
 
-### Generate Client Certificates:
+### Generate Client Certificate:
 - Generate Private Key: `openssl genrsa -out admin.key 2048`
 ```
 admin.key
