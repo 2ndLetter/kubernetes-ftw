@@ -2,24 +2,6 @@
 ## Documentation:
 - https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
-
 ## Notes:
 
 ### Server Certificates:
