@@ -29,7 +29,7 @@ spec:
     password123,user2,u0002
     password123,user3,u0003
     ```
-    If NOT running in a Pod: (kube-apiserver.service)
+    - If NOT running in a Pod: (kube-apiserver.service)
     ```
     ExecStart=/usr/local/bin/kube-apiserver \\
     ...
