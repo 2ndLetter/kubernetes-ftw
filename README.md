@@ -56,6 +56,7 @@
 - [00-security-tls](notes/00-security-tls.md)
 - [00-security-tls-certificate-creation](notes/00-security-tls-certificate-creation.md)
 - [00-security-view-certificate-details](notes/00-security-view-certificate-details.md)
+- [00-security-certificates-api](notes/00-security-certificates-api.md)
 
 # Sections Left to Cover:
 
