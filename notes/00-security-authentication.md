@@ -29,13 +29,24 @@ spec:
     password123,user2,u0002
     password123,user3,u0003
     ```
-    kube-apiserver.service:
+    If NOT running in a Pod: (kube-apiserver.service)
     ```
     ExecStart=/usr/local/bin/kube-apiserver \\
     ...
     --basic-auth-file=user-details.csv
     ...
     ```
+    - Restart kube-server for changes to take affect
+    - If running in a Pod:
+      ```
+      ...
+      spec:
+        containers:
+        - command:
+          - --basic-auth-file=user-details.csv
+          ...
+      ```
+
   - Static Token File
   - Certificates
   - Identity Services
