@@ -47,14 +47,11 @@
 - [00-cluster-maintenance-cluster-upgrade](notes/00-cluster-maintenance-cluster-upgrade.md)
 - [00-cluster-maintenance-backup-restore](notes/00-cluster-maintenance-backup-restore.md)
 - [00-cluster-maintenance-backup-restore-2](notes/00-cluster-maintenance-backup-restore-2.md) [DO LAB AGAIN!!!!]
-
+---
+### Security:
+- [00-security-primities](notes/00-security-primitives.md)
 
 # Sections Left to Cover:
-
-# ==Cluster Maintenance==
-## Backup and Restore Methods:
-## Backup and Restore Methods 2:
----
 
 # ==Security==
 ## View Certificate Details:
