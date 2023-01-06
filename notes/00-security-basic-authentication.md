@@ -38,7 +38,7 @@ spec:
   ```
   - Restart kube-server for changes to take affect
   - If running in a Pod:
-  ```
+  ```yaml
   ...
   spec:
     containers:
