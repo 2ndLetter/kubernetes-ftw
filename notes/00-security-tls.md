@@ -24,19 +24,21 @@ spec:
 
 ## Server Certificates:
 - KUBE-API SERVER:
-  - apiserver.crt (certificate)
+  - apiserver.crt (cert)
   - apiserver.key (priv key)
 - ETCD SERVER:
-  - etcdserver.crt (certificate)
+  - etcdserver.crt (cert)
   - etcdserver.key (priv key)
 - KUBELET SERVER:
-  - kubelet.crt (certificate)
+  - kubelet.crt (cert)
   - kubelet.key (priv key)
 ## Client Certificates:
 - ADMIN: (kubectl REST API)
-  - admin.crt (certificate)
+  - admin.crt (cert)
   - admin.key (priv key)
-- 
+- KUBE-SCHEDULER:
+  - scheduler.crt (cert)
+  - scheduler.key (priv key)
 
 
 
