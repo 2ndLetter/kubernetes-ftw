@@ -47,7 +47,7 @@ admin.crt
 
 ### Using the admin key/certificate:
 - Rest API Call: `curl https://kube-apiserver:6443/api/v1/pods --key admin.key --cert admin.crt --cacert ca.crt`
-```
+```json
 {
   "kind": "PodList",
   "apiVersion": "v1",
@@ -58,7 +58,7 @@ admin.crt
 }
 ```
 - kube-config.yaml:
-```
+```yaml
 apiVersion: v1
 kind: Config
 clusters:
@@ -80,7 +80,7 @@ users:
   - etcdpeer2.crt | etcdpeer2.key
 - Once created, specify them when starting the ETCD server (etcd.yaml)
 - etcd.yaml:
-```
+```yaml
 ...
 - etcd
   - --key-file=/path-to-certs/etcdserver.key
@@ -93,6 +93,18 @@ users:
   ...
 ```
 
+### KUBE API SERVER:
+- Most popular component, everyone talks to the Kube API Server:
+- Various names:
+  - KUBE-API SERVER
+  - kubernetes
+  - kubernetes.default
+  - kubernetes.default.svc
+  - kubernetes.default.svc.cluster.local
+  - <host_ip_address>
+- All these names MUST be present in the Kube API Server certificate
+- Generate certificate with additional names:
+  - `openssl genrsa -out apiserver.key 2048`
 
 
 
