@@ -148,6 +148,9 @@ ExecStart=/usr/local/bin/kube-apiserver \\
   ...
 ```
 
+### KUBELET NODES (SERVER CERT):
+- tbd
+
 
 
 
