@@ -31,7 +31,7 @@ admin.csr
 ```
 admin.crt
 ```
-- NOTE: Add group to Certificate Signing Request when you need to identify the user as a member:
+- NOTE: Add group to Certificate Signing Request when you need to identify the user as a Admin:
   - `openssl req -new -key admin.key -subj "/CN=kube-admin/OU=system:masters" -out admin.csr`
 
 
