@@ -64,6 +64,8 @@ Certificate:
 ---
 
 ## KodeKloud Lab:
+- `cat /etc/kubernetes/manifests/kube-apiserver.yaml`
+- 
 - `cat akshay.csr | base64 -w 0`
 - Create akshay.yaml:
 ```yaml
