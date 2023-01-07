@@ -50,5 +50,6 @@ users:
   ...omitted...
 ```
 ## KodeKloud Lab:
-- `kubectl ...`
-`
+- `kubectl config --kubeconfig=/root/my-kube-config use-context research`
+- `kubectl config --kubeconfig=/root/my-kube-config current-context`
+- Copy contents of my-kube-config into .kube/config to make the current settings the default
