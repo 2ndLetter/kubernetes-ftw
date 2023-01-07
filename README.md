@@ -59,60 +59,35 @@
 - [00-security-certificates-api](notes/00-security-certificates-api.md)
 - [00-security-kubeconfig](notes/00-security-kubeconfig.md)
 
+
+
 # Sections Left to Cover:
 
-# ==Security==
-## View Certificate Details:
-## Certificates API:
-## KubeConfig:
-## Role Based Access Controls:
-## Cluster Roles:
-## Service Accounts:
-## Image Security:
-## Security Contexts:
-## Network Policies:
+### ==Security==
+
 ---
 
-# ==Storage==
-## Persistent Volume Claims:
-## storage Class:
+### ==Storage==
+
 ---
 
-# ==Networking==
-## Explore Environment:
-## CNI:
-## Deploy Network Solution:
-## Networking Weave:
-## Service Networking:
-## CoreDNS in Kubernetes:
-## Ingress Networking - 1:
-## Ingress Networking - 2:
+### ==Networking==
+
 ---
 
-# ==Install==
-## cluster Installation using Kubeadm:
+### ==Install==
+
 ---
 
-# ==Troubleshooting==
-## Appliation Failure:
-## Control Plane Failure:
-## Worker Node Failure:
-## Troubleshoot Network:
+### ==Troubleshooting==
+
 ---
 
-# ==Other Topics==
-## JSON PATH:
-## Advanced Kubectl Commands:
+### ==Other Topics==
 ---
 
-# ==Lighting Labs==
-## Ligtning Lab - 1:
+### ==Lighting Labs==
 ---
 
-# ==Mock Exams==
-## Mock Exam - 1:
-## Mock Exam - 2:
-## Mock Exam - 3:
-## CKA Mock Exam - 2 Solution:
-## CKA Mock Exam - 3 Solution:
+### ==Mock Exams==
 ---
