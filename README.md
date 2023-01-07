@@ -65,9 +65,6 @@
 
 # Sections Left to Cover:
 
-### ==Security==
----
-
 ### ==Storage==
 ---
 
