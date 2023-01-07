@@ -57,6 +57,7 @@
 - [00-security-tls-certificate-creation](notes/00-security-tls-certificate-creation.md)
 - [00-security-view-certificate-details](notes/00-security-view-certificate-details.md)
 - [00-security-certificates-api](notes/00-security-certificates-api.md)
+- [00-security-kubeconfig](notes/00-security-kubeconfig.md)
 
 # Sections Left to Cover:
 
