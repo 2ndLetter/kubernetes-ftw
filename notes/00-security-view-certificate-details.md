@@ -88,6 +88,8 @@ Certificate:
 - `vim /etc/kubernetes/manifests/etcd.yaml `
 - `crictl ps -a`
 - `crictl logs c03a126e8a1c8`
+- Error: "tcp 127.0.0.1:2379: connect: connection refused"
+  - Port 2379 is ETCD
 - `vim kube-apiserver.yaml `
 - `openssl x509 -in /etc/kubernetes/pki/ca.crt -text -noout`
 - `vim kube-apiserver.yaml `
