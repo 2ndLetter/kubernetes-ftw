@@ -27,12 +27,12 @@
       - /apps                  # API Groups
         - /v1
           - /deployments         # Resources
-            - list                 # Verbs
-            - get                  # Verbs
-            - create               # Verbs
-            - delete               # Verbs
-            - update               # Verbs
-            - watch                # Verbs
+            - list                 # Verbs (actions)
+            - get                  # Verbs (actions)
+            - create               # Verbs (actions)
+            - delete               # Verbs (actions)
+            - update               # Verbs (actions)
+            - watch                # Verbs (actions)
           - /replicasets         # Resources
           - /statefulsets        # Resources
       - /extentions            # API Groups
@@ -66,51 +66,3 @@
 - kube proxy != kubectl proxy
   - kube proxy: Used to enable access to K8s cluster
   - kubectl proxy: http proxy service created by kube control utility to access the kube api server
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Usage:
-- Imperative Way:
-  - `kubectl ...`
-- Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-
-## KodeKloud Lab:
-- `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
