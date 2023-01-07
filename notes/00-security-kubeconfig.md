@@ -6,7 +6,10 @@
 - `kubectl get pods --kubeconfig config`
 - KubeConfig file default location: $HOME/.kube/config
 - The config file does NOT create a Kubernetes object
+- `kubectl config -h`
 - `kubectl config view`
+- `kubectl config view --kubeconfig=my-custom-config`
+- `kubectl config use-context prod-user@production`
 
 ## Usage:
 - Imperative Way:
