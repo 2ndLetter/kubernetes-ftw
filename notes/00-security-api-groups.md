@@ -9,7 +9,7 @@
     - /healthz - Monitor cluster health
     - /version - Version of cluster
     - /logs - 3rd party logging application integration
-    - /api - core functionality:
+    - /api                   # Core API Group
       - /v1:
         - namespaces
         - events
@@ -23,7 +23,7 @@
         - nodes
         - PVC
         - services
-    - /apis - named:
+    - /apis                  # Named API Group
       - /apps                  # API Groups
         - /v1
           - /deployments         # Resources
@@ -60,9 +60,12 @@
   ```
   Starting to serve on 127.0.0.1:8001
   ```
-  - This starts a proxy service on local port 8001
+  - This launches a proxy service on local port 8001
   - Uses ".kube/config" credentials to access the cluster
-  - tbd
+  - So you don't have to include certificates in each curl command
+- kube proxy != kubectl proxy
+  - kube proxy: Used to enable access to K8s cluster
+  - kubectl proxy: http proxy service created by kube control utility to access the kube api server
 
 
 
