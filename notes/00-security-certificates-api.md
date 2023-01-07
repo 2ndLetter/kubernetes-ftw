@@ -98,10 +98,6 @@
 - The Controller Manager is responsible for carrying out these tasks:
   - CSR-APPROVING
   - CSR-SIGNING
-
-
-
-
 ---
 
 ## KodeKloud Lab:
