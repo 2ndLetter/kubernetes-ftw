@@ -1,6 +1,6 @@
 # API Groups:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/using-api/
 
 ## Notes/Commands:
 - APIs:
@@ -27,12 +27,12 @@
     - /apps                  # API Groups
       - /v1
         - /deployments         # Resources
-          - list                 # Actions
-          - get                  # Actions
-          - create               # Actions
-          - delete               # Actions
-          - update               # Actions
-          - watch                # Actions
+          - list                 # Verbs
+          - get                  # Verbs
+          - create               # Verbs
+          - delete               # Verbs
+          - update               # Verbs
+          - watch                # Verbs
         - /replicasets         # Resources
         - /statefulsets        # Resources
     - /extentions            # API Groups
