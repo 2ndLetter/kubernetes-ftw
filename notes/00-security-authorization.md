@@ -2,6 +2,14 @@
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
+## Notes/Commands:
+- Authorization Mechanisms:
+  - Node:
+  - ABAC:
+  - RBAC:
+  - Webhook:
+
+
 ## Usage:
 - Imperative Way:
   - `kubectl ...`
@@ -16,12 +24,6 @@ spec:
   - name: nginx-container
     image: nginx
 ```
-## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
-
-## Notes:
-- TBD
 
 ## KodeKloud Lab:
 - `kubectl ...`
