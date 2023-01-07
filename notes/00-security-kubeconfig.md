@@ -5,15 +5,19 @@
 ## Notes/Commands:
 - `kubectl get pods --kubeconfig config`
 - KubeConfig file default location: $HOME/.kube/config
-
+- The config file does NOT create a Kubernetes object
+- `kubectl config view`
 
 ## Usage:
 - Imperative Way:
   - `kubectl ...`
 - Delcarative Way:
+  - config:
 ```yaml
 apiVersion: v1
 kind: Config
+
+current-context: my-kube-admin@my-kube-playground
 
 clusters:
 - name: my-kube-playground
@@ -22,7 +26,7 @@ clusters:
     server: https://my-kube-playground:6443
 - name: production
   ...omitted...
-  
+
 contexts:
 - name: my-kube-admin@my-kube-playground
   context:
