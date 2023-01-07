@@ -4,47 +4,82 @@
 
 ## Notes/Commands:
 - APIs:
-```
-  - /metrics - Monitor cluster health
-  - /healthz - Monitor cluster health
-  - /version - Version of cluster
-  - /logs - 3rd party logging application integration
-  - /api - core functionality:
-    - /v1:
-      - namespaces
-      - events
-      - bindings
-      - configmaps
-      - pods
-      - endpoints
-      - PV
-      - secrets
-      - rc
-      - nodes
-      - PVC
-      - services
-  - /apis - named:
-    - /apps                  # API Groups
-      - /v1
-        - /deployments         # Resources
-          - list                 # Verbs
-          - get                  # Verbs
-          - create               # Verbs
-          - delete               # Verbs
-          - update               # Verbs
-          - watch                # Verbs
-        - /replicasets         # Resources
-        - /statefulsets        # Resources
-    - /extentions            # API Groups
-    - /networking.k8s.io     # API Groups
-      - /v1
-        - /networkpolicies
-    - /storage.k8s.io        # API Groups
-    - /authentication.k8s.io # API Groups
-    - /certificates.k8s.io   # API Groups
-      - /v1
-        - /certificatesigningrequests
-```
+  ```
+    - /metrics - Monitor cluster health
+    - /healthz - Monitor cluster health
+    - /version - Version of cluster
+    - /logs - 3rd party logging application integration
+    - /api - core functionality:
+      - /v1:
+        - namespaces
+        - events
+        - bindings
+        - configmaps
+        - pods
+        - endpoints
+        - PV
+        - secrets
+        - rc
+        - nodes
+        - PVC
+        - services
+    - /apis - named:
+      - /apps                  # API Groups
+        - /v1
+          - /deployments         # Resources
+            - list                 # Verbs
+            - get                  # Verbs
+            - create               # Verbs
+            - delete               # Verbs
+            - update               # Verbs
+            - watch                # Verbs
+          - /replicasets         # Resources
+          - /statefulsets        # Resources
+      - /extentions            # API Groups
+      - /networking.k8s.io     # API Groups
+        - /v1
+          - /networkpolicies
+      - /storage.k8s.io        # API Groups
+      - /authentication.k8s.io # API Groups
+      - /certificates.k8s.io   # API Groups
+        - /v1
+          - /certificatesigningrequests
+  ```
+- `curl http://localhost:6443 -k`
+  ```json
+  {
+    "paths": [
+      "/api",
+      "/api/v1",
+      "/apis",
+      "/apis/",
+      ...omitted...
+  ```
+  - You have to pass in your certificate files in order to use these curl commands, or (do the below)
+- `kubectl proxy`
+  ```
+  Starting to serve on 127.0.0.1:8001
+  ```
+  - This starts a proxy service on local port 8001
+  - Uses ".kube/config" credentials to access the cluster
+  - tbd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Usage:
