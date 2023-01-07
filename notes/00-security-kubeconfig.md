@@ -12,6 +12,7 @@
 - `kubectl config use-context prod-user@production`
 - Its better to use Full Paths to certificates
 - Instead of "certificate-authority", you can use "certificate-authority-data" and the base64 encoded output
+- Context names are arbitrary, they can be named anything
 
 ## Usage:
 - Imperative Way:
@@ -50,6 +51,10 @@ users:
   ...omitted...
 ```
 ## KodeKloud Lab:
+- `cat .kube/config`
+
+
+- `kubectl config use-context -h`
 - `kubectl config --kubeconfig=/root/my-kube-config use-context research`
 - `kubectl config --kubeconfig=/root/my-kube-config current-context`
 - Copy contents of my-kube-config into .kube/config to make the current settings the default
