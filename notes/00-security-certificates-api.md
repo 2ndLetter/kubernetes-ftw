@@ -1,6 +1,6 @@
 # Certificates API:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
 ---
 
 ## Commands/Notes:
