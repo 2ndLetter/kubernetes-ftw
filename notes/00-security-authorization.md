@@ -1,6 +1,6 @@
 # Authorization:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/access-authn-authz/authorization/
 
 ## Notes/Commands:
 - Authorization Mechanisms:
