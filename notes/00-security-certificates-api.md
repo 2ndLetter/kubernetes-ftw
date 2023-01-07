@@ -84,6 +84,20 @@
   reason: KubectlApprove
   type: Approved
   ```
+  - The above certificate is in a base64 encoded format
+  - To decode: `echo "LS0...Qo=" | base64 --decode`
+  ```
+  -----BEGIN CERTIFICATE-----
+  MIIDCjCCAfKgAwIBAgIUFl2Cl1az1iiy3rMV++xTXAJ0SwgwDQYJKoZIhvcNAQEL
+  BQAwFTETMBEGA1UEAxMKa3ViZXJuZXRlczAeFw0xOTAyMTMxNjMyMDBaFwWgcFEx9vj3nIv7xWCKSHFnlSN5sKygEqRL3LS9WoFzXGd7V
+  iDgaN1UQ0PWMXc7OEVucIg5bN0xEGNEpENmuIA6VVxucKXzhoet640Gu0e4aqJYR
+  ZeLn0oE1BcwhwlbsB54=
+  -----END CERTIFICATE-----
+  ```
+  - Share the plain text format with the End User
+- The Controller Manager is responsible for carrying out these tasks:
+  - CSR-APPROVING
+  - CSR-SIGNING
 
 
 
