@@ -1,4 +1,4 @@
-# Section Title:
+# Authorization:
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
