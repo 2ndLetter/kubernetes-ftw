@@ -48,6 +48,47 @@
       K0RYc0FKU0lyanBObzV2UklCcGxuemcrNnhjOStVVnd
       rS2kwCkxmQzI3dCsxZUVuT041TXVxOTlOZXZtTUVPbn
   ```
+  - `kubectl get csr` # View CSRs
+  - `kubectl certificate approve jane`
+  ```
+  jane approved!
+  ```
+  - `kubectl get csr jane -o yaml`
+  ```yaml
+  apiVersion: certificates.k8s.io/v1beta1
+  kind: CertificateSigningRequest
+  metadata:
+  creationTimestamp: 2019-02-13T16:36:43Z
+  name: new-user
+  spec:
+  groups:
+  - system:masters
+  - system:authenticated
+  usages:
+  - digital signature
+  - key encipherment
+  - server auth
+  username: kubernetes-admin
+  status:
+  certificate:
+  LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURDakNDQWZLZ0F3SUJBZ0lVRmwy
+  Q2wxYXoxaWl5M3JNVisreFRYQUowU3dnd0RRWUpLb1pJaHZjTkFRRUwKQlFBd0ZURVRN
+  QkVHQTFVRUF4TUthM1ZpWlhKdVpYUmxjekFlRncweE9UQXlNVE14TmpNeU1EQmFGd1dn
+  Y0ZFeDl2ajNuSXY3eFdDS1NIRm5sU041c0t5Z0VxUkwzTFM5V29GelhHZDdWCmlEZ2FO
+  MVVRMFBXTVhjN09FVnVjSWc1Yk4weEVHTkVwRU5tdUlBNlZWeHVjS1h6aG9ldDY0MEd1
+  MGU0YXFKWVIKWmVMbjBvRTFCY3dod2xic0I1ND0KLS0tLS1FTkQgQ0VSVElGSUNBVEUt
+  LS0tLQo=
+  conditions:
+  - lastUpdateTime: 2019-02-13T16:37:21Z
+  message: This CSR was approved by kubectl certificate approve.
+  reason: KubectlApprove
+  type: Approved
+  ```
+
+
+
+
+---
 
 ## KodeKloud Lab:
 - `cat /etc/kubernetes/manifests/kube-apiserver.yaml`
