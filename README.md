@@ -58,6 +58,7 @@
 - [00-security-view-certificate-details](notes/00-security-view-certificate-details.md)
 - [00-security-certificates-api](notes/00-security-certificates-api.md)
 - [00-security-kubeconfig](notes/00-security-kubeconfig.md)
+- [00-security-api-groups](notes/00-security-api-groups.md)
 
 
 
