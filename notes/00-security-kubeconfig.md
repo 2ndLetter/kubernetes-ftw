@@ -10,6 +10,8 @@
 - `kubectl config view`
 - `kubectl config view --kubeconfig=my-custom-config`
 - `kubectl config use-context prod-user@production`
+- Its better to use Full Paths to certificates
+- Instead of "certificate-authority", you can use "certificate-authority-data" and the base64 encoded output
 
 ## Usage:
 - Imperative Way:
@@ -25,7 +27,7 @@ current-context: my-kube-admin@my-kube-playground
 clusters:
 - name: my-kube-playground
   cluster:
-    certificate-authority:
+    certificate-authority: /etc/kubernetes/pki/ca.crt
     server: https://my-kube-playground:6443
 - name: production
   ...omitted...
@@ -35,6 +37,7 @@ contexts:
   context:
     user: my-kube-admin
     cluster: my-kube-playground
+    namespace: finance # <------ Optional default namespace when in this context
 - name: prod-user@production
   ...omitted...
 
