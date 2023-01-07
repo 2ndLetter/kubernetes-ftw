@@ -20,18 +20,24 @@ clusters:
   cluster:
     certificate-authority:
     server: https://my-kube-playground:6443
+- name: production
+  ...omitted...
   
 contexts:
 - name: my-kube-admin@my-kube-playground
   context:
-    cluster: my-kube-playground
     user: my-kube-admin
+    cluster: my-kube-playground
+- name: prod-user@production
+  ...omitted...
 
 users:
 - name: my-kube-admin
   user:
     client-certificate: admin.crt
     client-key: admin.key
+- name: prod-user
+  ...omitted...
 ```
 
 
