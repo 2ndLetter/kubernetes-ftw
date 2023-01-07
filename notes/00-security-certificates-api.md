@@ -4,7 +4,26 @@
 ---
 
 ## Commands/Notes:
-- `kubectl`
+- Certificate Signing Process:
+  - Create CertificateSigningRequest Object
+  - Review Requests
+  - Approve Requests
+  - Share Certs to Users
+- Full Process:
+  - User generates a private key and certificate signing request:
+  - `openssl genrsa -out jane.key 2048`
+```
+jane.key
+```
+  - `openssl req -new -key jane.key -subj "/CN=jane" -out jane.csr`
+```
+jane.csr
+
+-----BEGIN CERTIFICATE REQUEST-----
+...
+...
+-----END CERTIFICATE REQUEST-----
+```
 ---
 
 ## KodeKloud Lab:
