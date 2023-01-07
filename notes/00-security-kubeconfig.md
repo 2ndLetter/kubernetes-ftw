@@ -22,11 +22,16 @@ clusters:
     server: https://my-kube-playground:6443
   
 contexts:
-- context:
-  name: development
+- name: my-kube-admin@my-kube-playground
+  context:
+    cluster: my-kube-playground
+    user: my-kube-admin
 
 users:
-- name: developer
+- name: my-kube-admin
+  user:
+    client-certificate: admin.crt
+    client-key: admin.key
 ```
 
 
