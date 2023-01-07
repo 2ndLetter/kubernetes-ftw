@@ -9,6 +9,26 @@
   - RBAC:
   - Webhook:
 
+- Node Authorizer:
+  - Part of the SYSTEM:NODES group
+  - sysem:node:node01, using the kubelet, is authorized by the Node Authorizer
+- ABAC:
+  - tbd
+- RBAC:
+  - tbd
+- Webhook:
+  - tbd
+
+
+
+
+
+
+
+
+
+
+
 
 ## Usage:
 - Imperative Way:
