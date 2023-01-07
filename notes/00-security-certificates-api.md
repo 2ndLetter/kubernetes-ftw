@@ -16,6 +16,7 @@
 jane.key
 ```
   - `openssl req -new -key jane.key -subj "/CN=jane" -out jane.csr`
+
 ```
 jane.csr
 
@@ -24,7 +25,29 @@ jane.csr
 ...
 -----END CERTIFICATE REQUEST-----
 ```
----
+  - User send the jane.csr to the Admin
+  - Admin runs this command to retrieve the "request" data: `cat jane.csr | base64 | tr -d "\n"`
+  - The Admin creates a CertificateSigningRequest Object (jane-csr.yaml):
+```yaml
+apiVersion: certificates.k8s.io/v1beta1
+kind: CertificateSigningRequest
+metadata:
+  name: jane
+spec:
+  groups:
+  - system:authenticated
+  usages:
+  - digital signature
+  - key encipherment
+  - server auth
+  request:
+    LS0tLS1CRUdJTiBDRVJUSUZJQ0FURSBSRVFVRVNULS0
+    tLS0KTUlJQ1dEQ0NBVUFDQVFBd0V6RVJNQThHQTFVRU
+    F3d0libVYzTFhWelpYSXdnZ0VpTUEwR0NTcUdTSWIzR
+    FFFQgpBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRE8wV0pX
+    K0RYc0FKU0lyanBObzV2UklCcGxuemcrNnhjOStVVnd
+    rS2kwCkxmQzI3dCsxZUVuT041TXVxOTlOZXZtTUVPbn
+```
 
 ## KodeKloud Lab:
 - `cat /etc/kubernetes/manifests/kube-apiserver.yaml`
