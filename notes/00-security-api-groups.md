@@ -1,4 +1,4 @@
-# Section Title:
+# API Groups:
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
