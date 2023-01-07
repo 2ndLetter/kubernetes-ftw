@@ -52,9 +52,10 @@ users:
 ```
 ## KodeKloud Lab:
 - `cat .kube/config`
-
-
-- `kubectl config use-context -h`
-- `kubectl config --kubeconfig=/root/my-kube-config use-context research`
-- `kubectl config --kubeconfig=/root/my-kube-config current-context`
-- Copy contents of my-kube-config into .kube/config to make the current settings the default
+- `kubectl config use-context research --kubeconfig /root/my-kube-config`
+- `mv /root/my-kube-config .kube/config`
+- `kubectl config view`
+- `kubectl get nodes`
+  - Error: unabled to read client-cert /etc/kubernetes/pki/users/dev-user/developer-user.crt 
+  - no such file or directory
+- Update the dev-user file path within .kube/config
