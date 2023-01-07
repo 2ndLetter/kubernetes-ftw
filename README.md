@@ -64,23 +64,18 @@
 # Sections Left to Cover:
 
 ### ==Security==
-
 ---
 
 ### ==Storage==
-
 ---
 
 ### ==Networking==
-
 ---
 
 ### ==Install==
-
 ---
 
 ### ==Troubleshooting==
-
 ---
 
 ### ==Other Topics==
