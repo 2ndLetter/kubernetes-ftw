@@ -2,6 +2,10 @@
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
+## Notes/Commands:
+- `kubectl get ...`
+- `kubectl describe ...`
+
 ## Usage:
 - Imperative Way:
   - `kubectl ...`
@@ -16,12 +20,6 @@ spec:
   - name: nginx-container
     image: nginx
 ```
-## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
-
-## Notes:
-- TBD
 
 ## KodeKloud Lab:
 - `kubectl ...`
