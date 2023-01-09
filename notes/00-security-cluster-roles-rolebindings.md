@@ -3,8 +3,26 @@
 - https://kubernetes.io/docs/home/
 
 ## Notes/Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+- Roles/RoleBindings are namespace scoped
+- ClusterRoles/ClusterRoleBindings are cluster scoped
+- `kubectl api-resources --namespaces=true`  # View namespace scoped resources
+- `kubectl api-resources --namespaces=false` # View Cluster scoped resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Usage:
 - Imperative Way:
