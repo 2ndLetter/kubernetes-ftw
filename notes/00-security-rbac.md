@@ -19,6 +19,7 @@
   ```
   no
   ```
+- `kubectl auth can-i create deployments --as dev-user` # To test as a different user
 
 ## Usage:
 - Imperative Way:
