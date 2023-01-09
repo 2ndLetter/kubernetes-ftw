@@ -59,13 +59,13 @@ roleRef:
   - Another method: `ps -aux | grep authorization`
 - `kubectl get roles`
 - `kubectl get roles -A --no-headers | wc -l`
-- `kubectl create role developer --verb=list,create,delete --resource=pods --dry-run=client -o yaml > developer-role.yaml`
 - `kubectl describe -n kube-system role kube-proxy`
 - `kubectl get -n kube-system rolebindings`
 - `kubectl describe -n kube-system rolebindings kube-proxy`
 - `kubectl config view`
 - `k get pods --as dev-user`
 - `kubectl auth can-i get pods --as dev-user`
+- `kubectl create role developer --verb=list,create,delete --resource=pods --dry-run=client -o yaml > developer-role.yaml`
 - developer-role.yaml:
   ```yaml
   apiVersion: rbac.authorization.k8s.io/v1
@@ -83,6 +83,7 @@ roleRef:
     - create
     - delete
   ```
+- `kubectl describe role developer`
 - `kubectl create rolebinding dev-user-binding --user=dev-user --role=developer --dry-run=client -o yaml > developer-role.yaml`
 - dev-user-binding.yaml:
   ```yaml
@@ -100,6 +101,7 @@ roleRef:
     kind: User
     name: dev-user
   ```
+  `kubectl describe rolebinding dev-user-binding`
 - `kubectl apply -f developer-role.yaml`
 - `kubectl apply -f dev-user-binding.yaml`
 - `kubectl get ...`
