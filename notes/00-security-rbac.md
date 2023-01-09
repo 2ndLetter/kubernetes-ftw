@@ -11,6 +11,14 @@
 - `kubectl get rolebindings`
 - `kubectl describe role developer`
 - `kubectl describe rolebindings`
+- `kubectl auth can-i create deployments`
+  ```
+  yes
+  ```
+- `kubectl auth can-i delete notes`
+  ```
+  no
+  ```
 
 ## Usage:
 - Imperative Way:
