@@ -12,7 +12,7 @@ kind: Role
 metadata:
   name: developer
 rules:
-- apiGroups: [""]
+- apiGroups: [""] # <------ Core Group can be blank, any other group you specify
   resources: ["pods"]
   verbs: ["list", "get", "create", "update", "delete"]
 ```
