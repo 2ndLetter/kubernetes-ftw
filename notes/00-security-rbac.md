@@ -90,3 +90,6 @@ roleRef:
     kind: User
     name: dev-user
   ```
+- `kubectl apply -f developer-role.yaml`
+- `kubectl apply -f dev-user-binding.yaml`
+- `kubectl get 
