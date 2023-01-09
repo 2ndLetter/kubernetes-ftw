@@ -5,6 +5,8 @@
 ## Notes/Commands:
 - Roles/RoleBindings are namespace scoped
 - ClusterRoles/ClusterRoleBindings are cluster scoped
+  - You *can* create a ClusterRole for a non-cluster wide resource
+  - It will have access to that resource across all namespaces
 - `kubectl api-resources --namespaces=true`  # View namespace scoped resources
 - `kubectl api-resources --namespaces=false` # View Cluster scoped resources
 
