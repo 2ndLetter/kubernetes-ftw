@@ -2,6 +2,10 @@
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
+## Commands:
+- `kubectl get roles`
+
+
 ## Usage:
 - Imperative Way:
   - `kubectl ...`
@@ -15,10 +19,24 @@ rules:
 - apiGroups: [""] # <------ Core Group can be blank, any other group you specify
   resources: ["pods"]
   verbs: ["list", "get", "create", "update", "delete"]
+- apiGroups: [""]
+  resources: ["ConfigMap"]
+  verbs: ["create"]
 ```
-## Commands:
-- `kubectl get ...`
-- `kubectl describe ...`
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding #<--------- Links User to Role
+metadata:
+  name: devuser-devloper-binding
+subjects:
+- kind: User
+  name: dev-user
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+- kind: Role
+  name: developer
+  apiGroup: rbac.authorization.k8s.io
+```
 
 ## Notes:
 - TBD
