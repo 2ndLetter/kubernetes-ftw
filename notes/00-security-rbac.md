@@ -56,15 +56,37 @@ roleRef:
 
 ## KodeKloud Lab:
 - `kubectl ...`
-- `kubectl ... --dry-run=client -o yaml > template.yaml`
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
-- `kubectl apply -f template.yaml`
+
+- developer-role.yaml:
+  ```yaml
+  apiVersion: rbac.authorization.k8s.io/v1
+  kind: Role
+  metadata:
+    creationTimestamp: null
+    name: developer
+  rules:
+  - apiGroups:
+    - ""
+    resources:
+    - pods
+    verbs:
+    - list
+    - create
+    - delete
+  ```
+- dev-user-binding.yaml:
+  ```yaml
+  apiVersion: rbac.authorization.k8s.io/v1
+  kind: RoleBinding
+  metadata:
+    creationTimestamp: null
+    name: dev-user-binding
+  roleRef:
+    apiGroup: rbac.authorization.k8s.io
+    kind: Role
+    name: developer
+  subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: dev-user
+  ```
