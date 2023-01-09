@@ -2,7 +2,7 @@
 ## Documentation:
 - https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 
-## Commands:
+## Notes/Commands:
 - `kubectl get roles`
   ```
   NAME      AGE
@@ -53,9 +53,6 @@ roleRef:
   name: developer
   apiGroup: rbac.authorization.k8s.io
 ```
-
-## Notes:
-- TBD
 
 ## KodeKloud Lab:
 - `kubectl ...`
