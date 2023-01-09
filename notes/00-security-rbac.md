@@ -55,8 +55,7 @@ roleRef:
 ```
 
 ## KodeKloud Lab:
-- `kubectl ...`
-
+- `kubectl create role developer --verb=list,create,delete --resource=pods --dry-run=client -o yaml > developer-role.yaml`
 - developer-role.yaml:
   ```yaml
   apiVersion: rbac.authorization.k8s.io/v1
@@ -74,6 +73,7 @@ roleRef:
     - create
     - delete
   ```
+- `kubectl create rolebinding dev-user-binding --user=dev-user --role=developer --dry-run=client -o yaml > developer-role.yaml`
 - dev-user-binding.yaml:
   ```yaml
   apiVersion: rbac.authorization.k8s.io/v1
