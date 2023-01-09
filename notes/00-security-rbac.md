@@ -19,7 +19,7 @@
   ```
   no
   ```
-- `kubectl auth can-i create deployments --as dev-user` # To test as a different user
+- `kubectl auth can-i create deployments --as dev-user --namespace test` # To test as a different user
 
 ## Usage:
 - Imperative Way:
@@ -34,6 +34,7 @@ rules:
 - apiGroups: [""] # <------ Core Group can be blank, any other group you specify
   resources: ["pods"]
   verbs: ["list", "get", "create", "update", "delete"]
+  resourceNames: ["blue", "orange"] #<------- Add permissions to specific resources
 - apiGroups: [""]
   resources: ["ConfigMap"]
   verbs: ["create"]
