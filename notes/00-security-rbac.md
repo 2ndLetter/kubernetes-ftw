@@ -23,7 +23,7 @@
 
 ## Usage:
 - Imperative Way:
-  - `kubectl ...`
+  - Link: https://kubernetes.io/docs/reference/access-authn-authz/rbac/#command-line-utilities
 - Delcarative Way:
 ```yaml
 apiVersion: rbac.authorization.k8s.io/v1
