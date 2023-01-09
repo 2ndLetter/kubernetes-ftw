@@ -61,6 +61,7 @@
 - [00-security-api-groups](notes/00-security-api-groups.md)
 - [00-security-authorization](notes/00-security-authorization.md)
 - [00-security-rbac](notes/00-security-rbac.md)
+- [00-security-cluster-roles-rolebindings](notes/00-security-cluster-roles-rolebindings.md)
 
 
 
