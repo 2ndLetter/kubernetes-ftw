@@ -1,6 +1,6 @@
 # Role Based Access Control:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 
 ## Commands:
 - `kubectl get roles`
