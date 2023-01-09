@@ -10,6 +10,7 @@
   ```
 - `kubectl get rolebindings`
 - `kubectl describe role developer`
+- `kubectl describe rolebindings`
 
 ## Usage:
 - Imperative Way:
