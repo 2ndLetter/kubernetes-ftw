@@ -1,6 +1,6 @@
 # Cluster Roles and Role Bindings:
 ## Documentation:
-- https://kubernetes.io/docs/home/
+- https://kubernetes.io/docs/reference/access-authn-authz/rbac/
 
 ## Notes/Commands:
 - Roles/RoleBindings are namespace scoped
@@ -26,18 +26,9 @@
 
 ## Usage:
 - Imperative Way:
-  - `kubectl ...`
+  - https://kubernetes.io/docs/reference/access-authn-authz/rbac/#kubectl-create-clusterrole
 - Delcarative Way:
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
-```
+  - https://kubernetes.io/docs/reference/access-authn-authz/rbac/#clusterrole-example
 
 ## KodeKloud Lab:
 - `kubectl ...`
