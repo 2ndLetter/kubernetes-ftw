@@ -4,7 +4,12 @@
 
 ## Commands:
 - `kubectl get roles`
-
+  ```
+  NAME      AGE
+  developer 4s
+  ```
+- `kubectl get rolebindings`
+- `kubectl describe role developer`
 
 ## Usage:
 - Imperative Way:
