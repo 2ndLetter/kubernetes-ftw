@@ -104,4 +104,31 @@ roleRef:
   `kubectl describe rolebinding dev-user-binding`
 - `kubectl apply -f developer-role.yaml`
 - `kubectl apply -f dev-user-binding.yaml`
-- `kubectl get ...`
+- `kubectl --as dev-user get pod dark-blue-app -n blue`
+- `k get roles -n blue`
+- `k get rolebindings -n blue`
+- `k describe -n blue role developer`
+- Fix the Resource name
+- `k get -n blue role developer -o yaml > dark-blue-app-role.yaml`
+- `k replace --force -f dark-blue-app-role.yaml`
+- Would have been faster if I edited the object in place (imperative):
+  - `k edit role developer -n blue`
+- `k --as dev-user create deployment nginx --image=nginx n blue`
+  - This is just a test, to receive the error
+- `k edit role developer -n blue`
+  - Add new rule, don't forget the apiGroups
+  - Save time and copy the existing rule, and paste at the end
+  - Save and exit
+  ```yaml
+  ...OMITTED...
+  rules:
+  - apiGroups:
+    - apps
+    resources:
+    - deployments
+    verbs:
+    - create
+  ```
+  - `k describe role developer -n blue`
+  - `kubectl auth can-i create deployment --as dev-user -n blue`
+  - `k --as dev-user create deployment nginx --image=nginx -n blue`
