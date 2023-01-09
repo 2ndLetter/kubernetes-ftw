@@ -10,27 +10,14 @@
 - `kubectl api-resources --namespaces=true`  # View namespace scoped resources
 - `kubectl api-resources --namespaces=false` # View Cluster scoped resources
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Usage:
 - Imperative Way:
   - https://kubernetes.io/docs/reference/access-authn-authz/rbac/#kubectl-create-clusterrole
 - Delcarative Way:
   - https://kubernetes.io/docs/reference/access-authn-authz/rbac/#clusterrole-example
+
+
+
 
 ## KodeKloud Lab:
 - `kubectl ...`
