@@ -55,6 +55,8 @@ roleRef:
 ```
 
 ## KodeKloud Lab:
+- `cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep authorization`
+  - Another method: `ps -aux | grep authorization`
 - `kubectl create role developer --verb=list,create,delete --resource=pods --dry-run=client -o yaml > developer-role.yaml`
 - developer-role.yaml:
   ```yaml
