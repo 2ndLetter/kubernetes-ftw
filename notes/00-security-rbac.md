@@ -57,7 +57,15 @@ roleRef:
 ## KodeKloud Lab:
 - `cat /etc/kubernetes/manifests/kube-apiserver.yaml | grep authorization`
   - Another method: `ps -aux | grep authorization`
+- `kubectl get roles`
+- `kubectl get roles -A --no-headers | wc -l`
 - `kubectl create role developer --verb=list,create,delete --resource=pods --dry-run=client -o yaml > developer-role.yaml`
+- `kubectl describe -n kube-system role kube-proxy`
+- `kubectl get -n kube-system rolebindings`
+- `kubectl describe -n kube-system rolebindings kube-proxy`
+- `kubectl config view`
+- `k get pods --as dev-user`
+- `kubectl auth can-i get pods --as dev-user`
 - developer-role.yaml:
   ```yaml
   apiVersion: rbac.authorization.k8s.io/v1
