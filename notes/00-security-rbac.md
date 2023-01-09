@@ -1,4 +1,4 @@
-# Section Title:
+# Role Based Access Control:
 ## Documentation:
 - https://kubernetes.io/docs/home/
 
@@ -7,14 +7,14 @@
   - `kubectl ...`
 - Delcarative Way:
 ```yaml
-apiVersion: v1
-kind: Pod
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
 metadata:
-  name: myapp-pod
-spec:
-  containers:
-  - name: nginx-container
-    image: nginx
+  name: developer
+rules:
+- apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["list", "get", "create", "update", "delete"]
 ```
 ## Commands:
 - `kubectl get ...`
