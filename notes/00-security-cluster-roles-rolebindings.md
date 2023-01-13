@@ -23,10 +23,6 @@
 - ``
 - `kubectl api-resources --namespaced=false`
 
-
-
-
-
 api-resources:
 PersistentVolume,StorageClass
 
@@ -107,53 +103,44 @@ subjects:
   kind: User
   name: michelle
 
-    1  kubectl get clusterroles
-    2  kubectl get clusterroles --no-headers
-    3  kubectl get clusterroles --no-headers | wc -l
-    4* kubectl get clusterrolebindings --no-hea
-    5  kubectl get clusterroles -o wide
-    6  kubectl get clusterrole cluster-admin
-    7  k describe clusterrole cluster-admin
-    8  k describe clusterrolebinding cluster-admin
-    9  ls
-   10  kubectl config view
-   11  vim clusterrole.yaml
-   12  ls
-   13* kubectl create clusterrole cluster-role-storage --verb=get,list,watch,create,delete --resource=nodes --dry-run=client -o yaml
-   14  kubectl create clusterrole cluster-role-nodes --verb=get,list,watch,create,delete --resource=nodes --dry-run=client -o yaml > cluster-role-nodes.yaml
-   15  kubectl create clusterrolebinding cluster-role-nodes-binding --clusterrole=cluster-role-nodes --user=michelle --dry-run=client -o yaml
-   16  kubectl create clusterrolebinding cluster-role-nodes-binding --clusterrole=cluster-role-nodes --user=michelle --dry-run=client -o yaml
-   17  kubectl create clusterrolebinding cluster-role-nodes-binding --clusterrole=cluster-role-nodes --user=michelle --dry-run=client -o yaml > cluster-role-nodes-binding.yaml
-   18  ls
-   19  kubectl apply -f cluster-role-nodes.yaml 
-   20  kubectl apply -f cluster-role-nodes-binding.yaml
-   21  kubectl api-resources
-   22  kubectl api-resources --namespaces=true
-   23  kubectl api-resources -h
-   24  kubectl api-resources --namespaced=true
-   25  kubectl api-resources --namespaced=false
-   26  kubectl api-resources --namespaced=false
-   27  echo "PersistentVolume,StorageClass" > api-resources
-   28  cat api-resources 
-   29  kubetl create clusterrole storage-admin --resource= -h
-   30  cat api-resources 
-   31  kubectl create clusterrole storage-admin --resource=PersistentVolume,StorageClass --verb= --help
-   32  kubectl create clusterrole storage-admin --resource=PersistentVolume,StorageClass --verb=get,watch,list,create,delete --dry-run=client
-   33  kubectl create clusterrole storage-admin --resource=PersistentVolume,StorageClass --verb=get,watch,list,create,delete --dry-run=client -o yaml
-   34  kubectl create clusterrole storage-admin --resource=PersistentVolume,StorageClass --verb=get,watch,list,create,delete --dry-run=client -o yaml > storage-admin.yaml
-   35  vim storage-admin.yaml 
-   36  kubectl create clusterrolebinding michelle-storage-admin --clusterrole=storage-admin --user=michelle --dry-run=client -o yaml
-   37  kubectl create clusterrolebinding michelle-storage-admin --clusterrole=storage-admin --user=michelle --dry-run=client -o yaml > michelle-storage-admin.yaml
-   38  ls
-   39  ls -l
-   40  kubectl apply -f storage-admin.yaml 
-   41  kubectl apply -f michelle-storage-admin.yaml 
-   42  ls
-   43  cat api-resources 
-   44  ls
-   45  cat cluster-role-nodes.yaml 
-   46  ls
-   47  cat cluster-role-nodes-binding.yaml 
-   48  cat storage-admin.yaml
-   49  cat michelle-storage-admin.yaml 
-   50  history
+    1  k get po -A
+    2  cd /etc/kubernetes/manifests/
+    3  lsw
+    4  ls
+    5  ls
+    6  cat kube-apiserver.yaml 
+    7  vim kube-apiserver.yaml 
+    8  k get roles
+    9  k get roles -a
+   10  k get roles -A
+   11  k get roles -A --no-headers | wc -l
+   12  k describe -n kube-system role kube-proxy 
+   13  k describe -n kube-system rolebindings kube-proxy 
+   14  kubectl config view
+   15  k get pods --as dev-user
+   16  kubectl create role developer --verb=list,create,delete --resource=pods
+   17  k get role developer 
+   18  k get role developer -o yaml
+   19  k describe role developer 
+   20  k create rolebinding dev-user-binding --role=developer --user=dev-user
+   21  k get roles
+   22  k get rolebindings
+   23  k get role developer -o yaml
+   24  k get rolebinding dev-user-binding -o yaml
+   25  k describe role developer 
+   26  k get role developer -o yaml
+   27  k get role developer -o yaml
+   28  k edit role developer 
+   29  k get pods -A
+   30  k describe -n blue po dark-blue-app --as dev-user
+   31  k edit role developer 
+   32  k get -n blue role developer 
+   33  k get -n blue role developer -o yaml
+   34  k edit -n blue role developer 
+   35  k describe -n blue po dark-blue-app --as dev-user
+   36  k edit -n blue role developer 
+   37  kubectl api-resources
+   38  kubectl api-resources | grep -i deployment
+   39  k edit -n blue role developer 
+   40  k create deployment nginx --image=nginx --as dev-user -n blue
+   41  history
