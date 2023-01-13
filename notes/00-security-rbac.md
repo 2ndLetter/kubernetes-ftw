@@ -132,45 +132,46 @@ roleRef:
   - `k describe role developer -n blue`
   - `kubectl auth can-i create deployment --as dev-user -n blue`
   - `k --as dev-user create deployment nginx --image=nginx -n blue`
-
-    1  k get po -A
-    2  cd /etc/kubernetes/manifests/
-    3  lsw
-    4  ls
-    5  ls
-    6  cat kube-apiserver.yaml 
-    7  vim kube-apiserver.yaml 
-    8  k get roles
-    9  k get roles -a
-   10  k get roles -A
-   11  k get roles -A --no-headers | wc -l
-   12  k describe -n kube-system role kube-proxy 
-   13  k describe -n kube-system rolebindings kube-proxy 
-   14  kubectl config view
-   15  k get pods --as dev-user
-   16  kubectl create role developer --verb=list,create,delete --resource=pods
-   17  k get role developer 
-   18  k get role developer -o yaml
-   19  k describe role developer 
-   20  k create rolebinding dev-user-binding --role=developer --user=dev-user
-   21  k get roles
-   22  k get rolebindings
-   23  k get role developer -o yaml
-   24  k get rolebinding dev-user-binding -o yaml
-   25  k describe role developer 
-   26  k get role developer -o yaml
-   27  k get role developer -o yaml
-   28  k edit role developer 
-   29  k get pods -A
-   30  k describe -n blue po dark-blue-app --as dev-user
-   31  k edit role developer 
-   32  k get -n blue role developer 
-   33  k get -n blue role developer -o yaml
-   34  k edit -n blue role developer 
-   35  k describe -n blue po dark-blue-app --as dev-user
-   36  k edit -n blue role developer 
-   37  kubectl api-resources
-   38  kubectl api-resources | grep -i deployment
-   39  k edit -n blue role developer 
-   40  k create deployment nginx --image=nginx --as dev-user -n blue
-   41  history
+  - history output:
+    - k get po -A
+    - cd /etc/kubernetes/manifests/
+    - Another way: ps -aux | grep authorization
+    - lsw
+    - ls
+    - ls
+    - cat kube-apiserver.yaml 
+    - vim kube-apiserver.yaml 
+    - k get roles
+    - k get roles -a
+    - k get roles -A
+    - k get roles -A --no-headers | wc -l
+    - k describe -n kube-system role kube-proxy 
+    - k describe -n kube-system rolebindings kube-proxy 
+    - kubectl config view
+    - k get pods --as dev-user
+    - kubectl create role developer --verb=list,create,delete --resource=pods
+    - k get role developer 
+    - k get role developer -o yaml
+    - k describe role developer 
+    - k create rolebinding dev-user-binding --role=developer --user=dev-user
+    - k get roles
+    - k get rolebindings
+    - k get role developer -o yaml
+    - k get rolebinding dev-user-binding -o yaml
+    - k describe role developer 
+    - k get role developer -o yaml
+    - k get role developer -o yaml
+    - k edit role developer 
+    - k get pods -A
+    - k describe -n blue po dark-blue-app --as dev-user
+    - k edit role developer 
+    - k get -n blue role developer 
+    - k get -n blue role developer -o yaml
+    - k edit -n blue role developer 
+    - k describe -n blue po dark-blue-app --as dev-user
+    - k edit -n blue role developer 
+    - kubectl api-resources
+    - kubectl api-resources | grep -i deployment
+    - k edit -n blue role developer 
+    - k create deployment nginx --image=nginx --as dev-user -n blue
+    - history
