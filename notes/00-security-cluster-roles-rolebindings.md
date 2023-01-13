@@ -157,3 +157,28 @@ subjects:
    48  cat storage-admin.yaml
    49  cat michelle-storage-admin.yaml 
    50  history
+
+    1  k get clusterrole
+    2  k get clusterroles
+    3  k get clusterrole
+    4  k get clusterroles --no-headers | wc -l
+    5  k get clusterrolebindings.rbac.authorization.k8s.io --no-headers | wc -l
+    6  k get clusterrole cluster-admin 
+    7  k get clusterrole cluster-admin -o yaml
+    8  k get clusterrole -o wide
+    9  k describe clusterrole cluster-admin 
+   10  k describe clusterrole cluster-admin -o wide
+   11  k describe clusterrole cluster-admin 
+   12  k get clusterrole cluster-admin -o yaml
+   13  k get clusterrolebindings.rbac.authorization.k8s.io 
+   14  k get clusterrolebindings.rbac.authorization.k8s.io | grep cluster-admin
+   15  k describe clusterrolebindings.rbac.authorization.k8s.io cluster-admin
+   16  k describe clusterrole cluster-admin 
+   17  k create clusterrole michelle-role --verb=create,list,get,delete --resource=nodes
+   18  k create clusterrolebinding michelle-role-binding --user=michelle --clusterrole=michelle-role
+   19  k get api-resource
+   20  k get api-resources
+   21  kubectl api-resources
+   22  kubectl api-resources | grep persistent
+   23  k create clusterrole storage-admin --verb=create,list,get,delete --resource=persistentvolumes,storageclasses
+   24  k create clusterrolebinding michelle-storage-admin --user=michelle --clusterrole=storage-admin
